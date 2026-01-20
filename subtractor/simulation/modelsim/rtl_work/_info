@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/franc/Documents/Quartus/subtractor/simulation/modelsim
+Efull_subtractor
+Z1 w1768951474
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd
+Z5 FC:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd
+l0
+L4 1
+V;H5ZiZ^O=cLP3@^lW8Q]]3
+!s100 hJIlb;c?3<[R8EH>d3Q6O0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1768951775
+!i10b 1
+Z8 !s108 1768951774.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd|
+Z10 !s107 C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+DEx4 work 15 full_subtractor 0 22 ;H5ZiZ^O=cLP3@^lW8Q]]3
+!i122 0
+l16
+L14 8
+VFQ<jJ3DP2G1[0zB5W5NhV2
+!s100 aV7_3<4@NX^OaP:jH1>ka0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Esubtractor
+Z13 w1768951139
+R2
+R3
+!i122 1
+R0
+Z14 8C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd
+Z15 FC:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd
+l0
+L4 1
+V2d=e<Yi:GKdf72Lzz?_2U3
+!s100 f^D5ObV[OhiQiLcim4ZFT2
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1768951775.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd|
+Z18 !s107 C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 10 subtractor 0 22 2d=e<Yi:GKdf72Lzz?_2U3
+!i122 1
+l27
+L14 52
+VCa=AY;^PeDl^DA9AgeVT93
+!s100 D8=79BmmVGY48MfMi7CfR3
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Esubtractor_vhd_tst
+Z19 w1768951668
+R2
+R3
+!i122 2
+R0
+Z20 8C:/Users/franc/Documents/Quartus/subtractor/simulation/modelsim/subtractor.vht
+Z21 FC:/Users/franc/Documents/Quartus/subtractor/simulation/modelsim/subtractor.vht
+l0
+L31 1
+VK:9EU__WCJm@mDgEUZnaF2
+!s100 :AmcHPCB0^UTGV]i6ZOgh1
+R6
+31
+R7
+!i10b 1
+R16
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/subtractor/simulation/modelsim/subtractor.vht|
+!s107 C:/Users/franc/Documents/Quartus/subtractor/simulation/modelsim/subtractor.vht|
+!i113 1
+R11
+R12
+Asubtractor_arch
+R2
+R3
+DEx4 work 18 subtractor_vhd_tst 0 22 K:9EU__WCJm@mDgEUZnaF2
+!i122 2
+l48
+L33 39
+V[D6ee2c[nXYUd33X@F2D71
+!s100 ]R1j[Gh1003^l^`O`CcLY3
+R6
+31
+R7
+!i10b 1
+R16
+R22
+Z23 !s107 C:/Users/franc/Documents/Quartus/subtractor/simulation/modelsim/subtractor.vht|
+!i113 1
+R11
+R12

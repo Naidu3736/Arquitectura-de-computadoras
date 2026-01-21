@@ -1,0 +1,11 @@
+|bitwise_identity
+a[0] => s[0].DATAIN
+a[1] => s[1].DATAIN
+a[2] => s[2].DATAIN
+a[3] => s[3].DATAIN
+s[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

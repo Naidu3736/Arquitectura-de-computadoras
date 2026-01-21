@@ -7,11 +7,11 @@ b[0] => full_adder:U0.b
 b[1] => full_adder:U1.b
 b[2] => full_adder:U2.b
 b[3] => full_adder:U3.b
-s[0] << full_adder:U0.s
-s[1] << full_adder:U1.s
-s[2] << full_adder:U2.s
-s[3] << full_adder:U3.s
-c << full_adder:U3.cout
+s[0] <= full_adder:U0.s
+s[1] <= full_adder:U1.s
+s[2] <= full_adder:U2.s
+s[3] <= full_adder:U3.s
+c <= full_adder:U3.cout
 
 
 |adder|full_adder:U0

@@ -1,0 +1,187 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity alu is
+	port (
+		a : in std_logic_vector(3 downto 0);
+		b : in std_logic_vector(3 downto 0);
+		alu_ctrl : in std_logic_vector(2 downto 0);
+		s : out std_logic_vector(3 downto 0)
+	);
+end alu;
+
+architecture structural of alu is
+	component bitwise_identity is
+		port (
+			a : in std_logic_vector(3 downto 0);
+			s : out std_logic_vector(3 dowto 0)
+		);
+	end component;
+	
+	component adder is
+		port (
+			a : in std_logic_vector(3 downto 0);
+			b : in std_logic_vector(3 downto 0);
+			s : out std_logic_vector(3 downto 0);
+			c : out std_logic
+		);
+	end component;
+	
+	component subtractor is
+		port (
+			a : in std_logic_vector(3 downto 0);
+			b : in std_logic_vector(3 downto 0);
+			s : out std_logic_vector(3 downto 0);
+			c : out std_logic
+		);
+	end component;
+	
+	component incrementer is
+		port (
+			a : in std_logic_vector(3 downto 0);
+			s : out std_logic_vector(3 downto 0);
+			c : out std_logic
+		);
+	end component;
+	
+	component decrementer is
+		port (
+			a : in std_logic_vector(3 downto 0);
+			s : out std_logic_vector(3 downto 0);
+			c : out std_logic
+		);
+	end component;
+	
+	component bitwise_and is
+		port (
+			a : in std_logic_vector(3 downto 0);
+			b : in std_logic_vector(3 downto 0);
+			s : out std_logic_vector(3 downto 0);
+		);
+	end component;
+	
+	component bitwise_or is
+		port (
+			a : in std_logic_vector(3 downto 0);
+			b : in std_logic_vector(3 downto 0);
+			s : out std_logic_vector
+		);
+	end component;
+	
+	component bitwise_not is
+		port (
+			a : in std_logic_vector(3 downto 0);
+			s : out std_logic_vector(3 downto 0)
+		);
+	end component;
+	
+	-- Señales para cada salida de los componentes
+	signal s_iden : std_logic_vector(3 downto 0);
+	signal s_add : std_logic_vector(3 downto 0);
+	signal s_sub : std_logic_vector(3 downto 0);
+	signal s_inc : std_logic_vector(3 downto 0);
+	signal s_dec : std_logic_vector(3 downto 0);
+	signal s_and : std_logic_vector(3 downto 0);
+	signal s_or : std_logic_vector(3 downto 0);
+	signal s_not : std_logic_vector(3 downto 0);
+
+	-- Señales de acarreo para operaciones aritmeticas
+	signal c_add : std_logic;
+	signal c_sub : std_logic;
+	signal c_inc : std_logic;
+	signal c_dec : std_logic;
+	
+begin
+
+	U_IDEN : bitwise_identity 
+		port map (
+			a => a,
+			s => s_identity
+		);
+		
+	U_ADD : adder
+		port map (	
+			a => a,
+			b => b,
+			s => s_add,
+			c => c_add
+		);
+		
+	U_SUB : subtractor  
+		port map (
+			a => a,
+			b => b,
+			s => s_sub,
+			c => c_sub
+		);
+		
+	U_INC : incrementer
+		port map (
+			a => a,
+			s => s_inc,
+			c => c_inc
+		);
+		
+	U_DEC : decrementer
+		port map (
+			a => a,
+			s => s_dec,
+			c => c_dec
+		);
+		
+	U_AND : bitwise_and
+		port map (
+			a => a,
+			b => b,
+			s => s_and
+		);
+		
+	U_OR : bitwise_or 
+		port map (
+			a => a,
+			b => b,
+			s => s_or
+		);
+		
+	U_NOT : bitwise_not 
+		port map (
+			a => a,
+			s => s_not
+		);
+		
+	process (alu_ctrl, s_iden, s_add, s_sub, s_inc, s_dec, s_and, s_or, s_not)
+	begin
+	
+		case alu_ctrol is
+			when "000": => 
+				s <= s_iden;
+				
+			when "001" => 
+				s <= s_add;
+			
+			when "010" => 
+				s <= s_sub;
+			
+			when "011" => 
+				s <= s_inc;
+			
+			when "100" => 
+				s <= s_dec;
+			
+			when "101" =>
+				s <= s_and;
+			
+			when "110" => 
+				s <= s_or;
+				
+			when "111" =>
+				s <= s_not;
+			
+			when others =>
+				s <= (others => '0');
+				
+		end case;
+		
+	end process;
+
+end architecture structural;

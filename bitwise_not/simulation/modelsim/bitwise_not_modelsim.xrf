@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/franc/Documents/Quartus/bitwise_not/bitwise_not.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/franc/Documents/Quartus/bitwise_not/db/bitwise_not.cbx.xml
+design_name = bitwise_not
+instance = comp, \s[0]~output\, s[0]~output, bitwise_not, 1
+instance = comp, \s[1]~output\, s[1]~output, bitwise_not, 1
+instance = comp, \s[2]~output\, s[2]~output, bitwise_not, 1
+instance = comp, \s[3]~output\, s[3]~output, bitwise_not, 1
+instance = comp, \a[0]~input\, a[0]~input, bitwise_not, 1
+instance = comp, \a[1]~input\, a[1]~input, bitwise_not, 1
+instance = comp, \a[2]~input\, a[2]~input, bitwise_not, 1
+instance = comp, \a[3]~input\, a[3]~input, bitwise_not, 1
+instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, bitwise_not, 1

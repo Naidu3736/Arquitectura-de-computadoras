@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/franc/Documents/Quartus/bitwise_or/simulation/modelsim
+Ebitwise_or
+Z1 w1768967121
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd
+Z5 FC:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd
+l0
+L4 1
+V`Oge3`_ZmgLAhe;WhUdMS3
+!s100 IXkHDAhkSRHgXIl<NARW52
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1768967389
+!i10b 1
+Z8 !s108 1768967389.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd|
+Z10 !s107 C:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+DEx4 work 10 bitwise_or 0 22 `Oge3`_ZmgLAhe;WhUdMS3
+!i122 0
+l14
+L12 7
+V@FR2XBdUzon;fIh^fK[U;3
+!s100 oS=8dM]0fjRQ52L8MAham2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebitwise_or_vhd_tst
+Z13 w1768967361
+R2
+R3
+!i122 1
+R0
+Z14 8C:/Users/franc/Documents/Quartus/bitwise_or/simulation/modelsim/bitwise_or.vht
+Z15 FC:/Users/franc/Documents/Quartus/bitwise_or/simulation/modelsim/bitwise_or.vht
+l0
+L31 1
+V40oE6D6>>g@@;3Jg[;;8D3
+!s100 z`g^7iWl=`=NJ^jhS2fXN1
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/bitwise_or/simulation/modelsim/bitwise_or.vht|
+!s107 C:/Users/franc/Documents/Quartus/bitwise_or/simulation/modelsim/bitwise_or.vht|
+!i113 1
+R11
+R12
+Abitwise_or_arch
+R2
+R3
+DEx4 work 18 bitwise_or_vhd_tst 0 22 40oE6D6>>g@@;3Jg[;;8D3
+!i122 1
+l46
+L33 36
+VA@5Hha1P1FR453:TBJVZZ3
+!s100 l[U<mRjh=<YFIRj>ZnPC13
+R6
+31
+R7
+!i10b 1
+R8
+R16
+Z17 !s107 C:/Users/franc/Documents/Quartus/bitwise_or/simulation/modelsim/bitwise_or.vht|
+!i113 1
+R11
+R12

@@ -1,0 +1,63 @@
+# Reading pref.tcl
+# do bitwise_and_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/franc/Documents/Quartus/bitwise_and/bitwise_and.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:20 on Jan 20,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/Quartus/bitwise_and/bitwise_and.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bitwise_and
+# -- Compiling architecture behavioral of bitwise_and
+# End time: 21:37:20 on Jan 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/franc/Documents/Quartus/bitwise_and/simulation/modelsim/bitwise_and.vht}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:37:20 on Jan 20,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/Quartus/bitwise_and/simulation/modelsim/bitwise_and.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bitwise_and_vhd_tst
+# -- Compiling architecture bitwise_and_arch of bitwise_and_vhd_tst
+# End time: 21:37:20 on Jan 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  bitwise_and
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" bitwise_and 
+# Start time: 21:37:21 on Jan 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.bitwise_and(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+force -freeze sim:/bitwise_and/a 1101 0
+force -freeze sim:/bitwise_and/b 101 0
+# Value length (3) does not equal array index length (4).
+# ** UI-Msg: (vsim-4011) Invalid force value: 101 0.
+# 
+force -freeze sim:/bitwise_and/b 1010 0
+run
+force -freeze sim:/bitwise_and/a 0011 0
+run
+force -freeze sim:/bitwise_and/a 1010 0
+run
+# End time: 21:41:11 on Jan 20,2026, Elapsed time: 0:03:50
+# Errors: 0, Warnings: 0

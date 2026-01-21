@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "01/19/2026 20:22:38"
+-- DATE "01/20/2026 21:12:31"
 
 -- 
 -- Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -38,8 +38,8 @@ ENTITY 	adder IS
     PORT (
 	a : IN std_logic_vector(3 DOWNTO 0);
 	b : IN std_logic_vector(3 DOWNTO 0);
-	s : BUFFER std_logic_vector(3 DOWNTO 0);
-	c : BUFFER std_logic
+	s : OUT std_logic_vector(3 DOWNTO 0);
+	c : OUT std_logic
 	);
 END adder;
 

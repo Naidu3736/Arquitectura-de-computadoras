@@ -1,0 +1,175 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/franc/Documents/Quartus/decrementer/simulation/modelsim
+Edecrementer
+Z1 w1768962115
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z4 8C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd
+Z5 FC:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd
+l0
+L4 1
+V]`9G^61F6d5FZZmQ`NGVT0
+!s100 <eR;46WE]VMic3;d6AmoB2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1768962746
+!i10b 1
+Z8 !s108 1768962746.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd|
+Z10 !s107 C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Astructural
+R2
+R3
+DEx4 work 11 decrementer 0 22 ]`9G^61F6d5FZZmQ`NGVT0
+!i122 2
+l22
+L12 21
+VB_[5;m?T9VkcRIFmNGHL21
+!s100 hYCiA:UAmd7m]Q7F]H=^^1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edecrementer_vhd_tst
+Z13 w1768962659
+R2
+R3
+!i122 3
+R0
+Z14 8C:/Users/franc/Documents/Quartus/decrementer/simulation/modelsim/decrementer.vht
+Z15 FC:/Users/franc/Documents/Quartus/decrementer/simulation/modelsim/decrementer.vht
+l0
+L31 1
+Vih<m@DNWYnJifePKe;J@g2
+!s100 kBh4N^cY2OglgQPAVo^i;2
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/decrementer/simulation/modelsim/decrementer.vht|
+!s107 C:/Users/franc/Documents/Quartus/decrementer/simulation/modelsim/decrementer.vht|
+!i113 1
+R11
+R12
+Adecrementer_arch
+R2
+R3
+DEx4 work 19 decrementer_vhd_tst 0 22 ih<m@DNWYnJifePKe;J@g2
+!i122 3
+l46
+L33 36
+VJ1W_6OMWb>3gMh8@eB_9G3
+!s100 `A;Na=9`]z<CaKg1nlKCa1
+R6
+31
+R7
+!i10b 1
+R8
+R16
+Z17 !s107 C:/Users/franc/Documents/Quartus/decrementer/simulation/modelsim/decrementer.vht|
+!i113 1
+R11
+R12
+Efull_subtractor
+Z18 w1768951474
+R2
+R3
+!i122 0
+R0
+Z19 8C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd
+Z20 FC:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd
+l0
+L4 1
+V;H5ZiZ^O=cLP3@^lW8Q]]3
+!s100 hJIlb;c?3<[R8EH>d3Q6O0
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd|
+Z22 !s107 C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 15 full_subtractor 0 22 ;H5ZiZ^O=cLP3@^lW8Q]]3
+!i122 0
+l16
+L14 8
+VFQ<jJ3DP2G1[0zB5W5NhV2
+!s100 aV7_3<4@NX^OaP:jH1>ka0
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Esubtractor
+Z23 w1768951139
+R2
+R3
+!i122 1
+R0
+Z24 8C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd
+Z25 FC:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd
+l0
+L4 1
+V2d=e<Yi:GKdf72Lzz?_2U3
+!s100 f^D5ObV[OhiQiLcim4ZFT2
+R6
+31
+R7
+!i10b 1
+R8
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd|
+Z27 !s107 C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 10 subtractor 0 22 2d=e<Yi:GKdf72Lzz?_2U3
+!i122 1
+l27
+L14 52
+VCa=AY;^PeDl^DA9AgeVT93
+!s100 D8=79BmmVGY48MfMi7CfR3
+R6
+31
+R7
+!i10b 1
+R8
+R26
+R27
+!i113 1
+R11
+R12

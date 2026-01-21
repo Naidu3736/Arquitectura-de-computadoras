@@ -1,5 +1,5 @@
 Analysis & Synthesis report for adder
-Mon Jan 19 20:21:32 2026
+Tue Jan 20 21:11:35 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,10 +14,15 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "full_adder:U0"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |adder
+ 10. Parameter Settings for User Entity Instance: full_adder:U0
+ 11. Parameter Settings for User Entity Instance: full_adder:U1
+ 12. Parameter Settings for User Entity Instance: full_adder:U2
+ 13. Parameter Settings for User Entity Instance: full_adder:U3
+ 14. Port Connectivity Checks: "full_adder:U0"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jan 19 20:21:32 2026       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jan 20 21:11:35 2026       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; adder                                       ;
 ; Top-level Entity Name           ; adder                                       ;
@@ -233,6 +238,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |adder ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: full_adder:U0 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 4     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: full_adder:U1 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 4     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: full_adder:U2 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 4     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: full_adder:U3 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 4     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------+
 ; Port Connectivity Checks: "full_adder:U0" ;
 +------+-------+----------+-----------------+
@@ -275,18 +330,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Jan 19 20:21:23 2026
+    Info: Processing started: Tue Jan 20 21:11:26 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adder -c adder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
-    Info (12022): Found design unit 1: adder-structural File: C:/Users/franc/Documents/Quartus/adder/adder.vhd Line: 13
+    Info (12022): Found design unit 1: adder-structural File: C:/Users/franc/Documents/Quartus/adder/adder.vhd Line: 17
     Info (12023): Found entity 1: adder File: C:/Users/franc/Documents/Quartus/adder/adder.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
-    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Users/franc/Documents/Quartus/adder/full_adder.vhd Line: 14
+    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Users/franc/Documents/Quartus/adder/full_adder.vhd Line: 18
     Info (12023): Found entity 1: full_adder File: C:/Users/franc/Documents/Quartus/adder/full_adder.vhd Line: 4
 Info (12127): Elaborating entity "adder" for the top level hierarchy
-Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:U0" File: C:/Users/franc/Documents/Quartus/adder/adder.vhd Line: 29
+Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:U0" File: C:/Users/franc/Documents/Quartus/adder/adder.vhd Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -295,9 +350,9 @@ Info (21057): Implemented 19 device resources after synthesis - the final resour
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 6 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4861 megabytes
-    Info: Processing ended: Mon Jan 19 20:21:32 2026
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Tue Jan 20 21:11:35 2026
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:18
 
 

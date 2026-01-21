@@ -2,10 +2,14 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity adder is
+	generic (
+		WIDTH : integer := 4
+	);
+	
 	port (
-		a : in std_logic_vector(3 downto 0);
-		b : in std_logic_vector(3 downto 0);
-		s : out std_logic_vector(3 downto 0);
+		a : in std_logic_vector(WIDTH - 1 downto 0);
+		b : in std_logic_vector(WIDTH - 1 downto 0);
+		s : out std_logic_vector(WIDTH - 1 downto 0);
 		c : out std_logic
 	);
 end adder;

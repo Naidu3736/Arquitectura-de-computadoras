@@ -2,6 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity full_adder is
+	generic (
+		WIDTH : integer := 4
+	);
+	
 	port (
 		a : in std_logic;
 		b : in std_logic;

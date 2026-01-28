@@ -1,0 +1,47 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity mux2a1_tb is
+end mux2a1_tb;
+
+architecture Behavioral of mux2a1_tb is
+
+    signal A : STD_LOGIC := '0';
+    signal B : STD_LOGIC := '0';
+    signal S : STD_LOGIC := '0';
+    signal Y : STD_LOGIC;
+
+begin
+
+    uut: entity work.mux2a1
+        port map (
+            A => A,
+            B => B,
+            S => S,
+            Y => Y
+        );
+
+    stimulus: process
+    begin
+        A <= '0'; B <= '0'; S <= '0';
+        wait for 10 ns;
+
+        A <= '1';
+        wait for 10 ns;
+
+        S <= '1';
+        wait for 10 ns;
+
+        B <= '1';
+        wait for 10 ns;
+
+        A <= '0';
+        wait for 10 ns;
+
+        S <= '0';
+        wait for 10 ns;
+
+        wait;
+    end process;
+
+end Behavioral;

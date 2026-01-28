@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "01/20/2026 23:10:57"
+-- DATE "01/28/2026 04:47:02"
 
 -- 
 -- Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -39,7 +39,7 @@ ENTITY 	alu IS
 	a : IN std_logic_vector(3 DOWNTO 0);
 	b : IN std_logic_vector(3 DOWNTO 0);
 	alu_ctrl : IN std_logic_vector(2 DOWNTO 0);
-	s : OUT std_logic_vector(3 DOWNTO 0)
+	s : BUFFER std_logic_vector(3 DOWNTO 0)
 	);
 END alu;
 
@@ -105,6 +105,9 @@ SIGNAL \U_SUB|U2|cout~0_combout\ : std_logic;
 SIGNAL \Mux0~1_combout\ : std_logic;
 SIGNAL \U_ADD|U3|s~combout\ : std_logic;
 SIGNAL \Mux0~2_combout\ : std_logic;
+SIGNAL \ALT_INV_a[2]~input_o\ : std_logic;
+SIGNAL \ALT_INV_b[3]~input_o\ : std_logic;
+SIGNAL \ALT_INV_a[3]~input_o\ : std_logic;
 SIGNAL \ALT_INV_b[2]~input_o\ : std_logic;
 SIGNAL \ALT_INV_a[1]~input_o\ : std_logic;
 SIGNAL \ALT_INV_b[1]~input_o\ : std_logic;
@@ -127,9 +130,6 @@ SIGNAL \U_ADD|U1|ALT_INV_cout~0_combout\ : std_logic;
 SIGNAL \ALT_INV_Mux1~1_combout\ : std_logic;
 SIGNAL \U_SUB|U1|ALT_INV_cout~0_combout\ : std_logic;
 SIGNAL \ALT_INV_Mux1~0_combout\ : std_logic;
-SIGNAL \ALT_INV_a[2]~input_o\ : std_logic;
-SIGNAL \ALT_INV_b[3]~input_o\ : std_logic;
-SIGNAL \ALT_INV_a[3]~input_o\ : std_logic;
 
 BEGIN
 
@@ -140,6 +140,9 @@ s <= ww_s;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
+\ALT_INV_a[2]~input_o\ <= NOT \a[2]~input_o\;
+\ALT_INV_b[3]~input_o\ <= NOT \b[3]~input_o\;
+\ALT_INV_a[3]~input_o\ <= NOT \a[3]~input_o\;
 \ALT_INV_b[2]~input_o\ <= NOT \b[2]~input_o\;
 \ALT_INV_a[1]~input_o\ <= NOT \a[1]~input_o\;
 \ALT_INV_b[1]~input_o\ <= NOT \b[1]~input_o\;
@@ -162,9 +165,6 @@ ww_devpor <= devpor;
 \ALT_INV_Mux1~1_combout\ <= NOT \Mux1~1_combout\;
 \U_SUB|U1|ALT_INV_cout~0_combout\ <= NOT \U_SUB|U1|cout~0_combout\;
 \ALT_INV_Mux1~0_combout\ <= NOT \Mux1~0_combout\;
-\ALT_INV_a[2]~input_o\ <= NOT \a[2]~input_o\;
-\ALT_INV_b[3]~input_o\ <= NOT \b[3]~input_o\;
-\ALT_INV_a[3]~input_o\ <= NOT \a[3]~input_o\;
 
 -- Location: IOOBUF_X89_Y21_N22
 \s[0]~output\ : cyclonev_io_obuf

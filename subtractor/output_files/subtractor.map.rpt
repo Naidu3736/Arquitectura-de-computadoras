@@ -1,5 +1,5 @@
 Analysis & Synthesis report for subtractor
-Tue Jan 20 17:24:50 2026
+Mon Jan 26 20:19:49 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "full_subtractor:U0"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |subtractor
+ 10. Port Connectivity Checks: "full_subtractor:U_FIRST"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +45,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jan 20 17:24:50 2026       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jan 26 20:19:49 2026       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; subtractor                                  ;
 ; Top-level Entity Name           ; subtractor                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 13                                          ;
+; Total pins                      ; 14                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -172,8 +173,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
-; full_subtractor.vhd              ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd ;         ;
-; subtractor.vhd                   ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd      ;         ;
+; full_subtractor.vhd              ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd ;         ;
+; subtractor.vhd                   ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd      ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
 
 
@@ -193,28 +194,28 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;            ;
 ; Dedicated logic registers                   ; 0          ;
 ;                                             ;            ;
-; I/O pins                                    ; 13         ;
+; I/O pins                                    ; 14         ;
 ;                                             ;            ;
 ; Total DSP Blocks                            ; 0          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; a[0]~input ;
 ; Maximum fan-out                             ; 4          ;
-; Total fan-out                               ; 44         ;
-; Average fan-out                             ; 1.38       ;
+; Total fan-out                               ; 45         ;
+; Average fan-out                             ; 1.32       ;
 +---------------------------------------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                   ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name     ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+-----------------+--------------+
-; |subtractor                ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 13   ; 0            ; |subtractor                    ; subtractor      ; work         ;
-;    |full_subtractor:U0|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |subtractor|full_subtractor:U0 ; full_subtractor ; work         ;
-;    |full_subtractor:U1|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |subtractor|full_subtractor:U1 ; full_subtractor ; work         ;
-;    |full_subtractor:U2|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |subtractor|full_subtractor:U2 ; full_subtractor ; work         ;
-;    |full_subtractor:U3|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |subtractor|full_subtractor:U3 ; full_subtractor ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+-----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name     ; Library Name ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+-----------------+--------------+
+; |subtractor                                   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 14   ; 0            ; |subtractor                                          ; subtractor      ; work         ;
+;    |full_subtractor:U_FIRST|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |subtractor|full_subtractor:U_FIRST                  ; full_subtractor ; work         ;
+;    |full_subtractor:U_LAST|                   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |subtractor|full_subtractor:U_LAST                   ; full_subtractor ; work         ;
+;    |full_subtractor:\GEN_SUBTRACTORS:1:U_MID| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |subtractor|full_subtractor:\GEN_SUBTRACTORS:1:U_MID ; full_subtractor ; work         ;
+;    |full_subtractor:\GEN_SUBTRACTORS:2:U_MID| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |subtractor|full_subtractor:\GEN_SUBTRACTORS:2:U_MID ; full_subtractor ; work         ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -233,13 +234,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------+
-; Port Connectivity Checks: "full_subtractor:U0" ;
-+------+-------+----------+----------------------+
-; Port ; Type  ; Severity ; Details              ;
-+------+-------+----------+----------------------+
-; cin  ; Input ; Info     ; Stuck at GND         ;
-+------+-------+----------+----------------------+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |subtractor ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "full_subtractor:U_FIRST" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; cin  ; Input ; Info     ; Stuck at GND              ;
++------+-------+----------+---------------------------+
 
 
 +-----------------------------------------------------+
@@ -253,7 +264,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;         4 data inputs ; 2                           ;
 ;         5 data inputs ; 2                           ;
 ;         6 data inputs ; 1                           ;
-; boundary_port         ; 13                          ;
+; boundary_port         ; 14                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
 ; Average LUT depth     ; 1.50                        ;
@@ -275,29 +286,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Jan 20 17:24:36 2026
+    Info: Processing started: Mon Jan 26 20:19:40 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off subtractor -c subtractor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file full_subtractor.vhd
-    Info (12022): Found design unit 1: full_subtractor-behavioral File: C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd Line: 14
-    Info (12023): Found entity 1: full_subtractor File: C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd Line: 4
+    Info (12022): Found design unit 1: full_subtractor-behavioral File: C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd Line: 15
+    Info (12023): Found entity 1: full_subtractor File: C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file subtractor.vhd
-    Info (12022): Found design unit 1: subtractor-structural File: C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd Line: 14
-    Info (12023): Found entity 1: subtractor File: C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd Line: 4
+    Info (12022): Found design unit 1: subtractor-structural File: C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd Line: 18
+    Info (12023): Found entity 1: subtractor File: C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file subtractor_tb.vhd
+    Info (12022): Found design unit 1: subtractor_tb-testbench File: C:/Users/franc/Documents/quartus/subtractor/subtractor_tb.vhd Line: 9
+    Info (12023): Found entity 1: subtractor_tb File: C:/Users/franc/Documents/quartus/subtractor/subtractor_tb.vhd Line: 6
 Info (12127): Elaborating entity "subtractor" for the top level hierarchy
-Info (12128): Elaborating entity "full_subtractor" for hierarchy "full_subtractor:U0" File: C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd Line: 29
+Info (12128): Elaborating entity "full_subtractor" for hierarchy "full_subtractor:U_FIRST" File: C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd Line: 34
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd Line: 9
+Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 6 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4867 megabytes
-    Info: Processing ended: Tue Jan 20 17:24:50 2026
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:30
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4863 megabytes
+    Info: Processing ended: Mon Jan 26 20:19:49 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 

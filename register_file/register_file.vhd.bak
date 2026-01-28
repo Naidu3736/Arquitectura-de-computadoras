@@ -1,0 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity register_file is
+    generic (
+        WIDTH : integer := 4;
+        REG_COUNT : integer := 4
+    );
+    
+    port (
+        clk : in std_logic;
+        we : in std_logic;                       -- Write enable
+        wa : in std_logic_vector(1 downto 0);    -- Write address
+        wd : in std_logic_vector(WIDTH-1 downto 0); -- Write data
+        
+        raa : in std_logic_vector(1 downto 0);   -- Read address port A
+        aout : out std_logic_vector(WIDTH-1 downto 0); -- Output port A
+        
+        rba : in std_logic_vector(1 downto 0);   -- Read address port B
+        bout : out std_logic_vector(WIDTH-1 downto 0)  -- Output port B
+    );
+end register_file;
+
+architecture behavioral of register_file is
+    subtype reg_type is std_logic_vector(WIDTH-1 downto 0);
+    type reg_array_type is array (0 to REG_COUNT-1) of reg_type;
+    
+    signal registers : reg_array_type := (others => (others => '0'));
+    
+begin
+
+    -- Proceso de escritura (sincrónico)
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if we = '1' then
+                registers(to_integer(unsigned(wa))) <= wd;
+            end if;
+        end if;
+    end process;
+    
+    -- Lecturas combinacionales (siempre activas)
+    aout <= registers(to_integer(unsigned(raa)));
+    bout <= registers(to_integer(unsigned(rba)));
+    
+end architecture behavioral;

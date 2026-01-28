@@ -1,0 +1,97 @@
+# Reading pref.tcl
+# do register_file_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/register_file/register_file.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:05:05 on Jan 27,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/register_file/register_file.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity register_file
+# -- Compiling architecture behavioral of register_file
+# End time: 23:05:05 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/register_file/simulation/modelsim/register_file.vht}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:05:05 on Jan 27,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/register_file/simulation/modelsim/register_file.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity register_file_vhd_tst
+# -- Compiling architecture register_file_arch of register_file_vhd_tst
+# End time: 23:05:05 on Jan 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  register_file
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" register_file 
+# Start time: 23:05:05 on Jan 27,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.register_file(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+force -freeze sim:/register_file/we 1 0
+force -freeze sim:/register_file/wa 00 0
+force -freeze sim:/register_file/wd 0101 0
+force -freeze sim:/register_file/rae 1 0
+force -freeze sim:/register_file/rae 0 0
+force -freeze sim:/register_file/rae U 0
+run
+force -freeze sim:/register_file/rae 0 0
+force -freeze sim:/register_file/raa 00 0
+force -freeze sim:/register_file/rbe 0 0
+force -freeze sim:/register_file/rba 00 0
+run
+force -freeze sim:/register_file/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+force -freeze sim:/register_file/wa 11 0
+run
+run
+force -freeze sim:/register_file/rae 1 0
+run
+force -freeze sim:/register_file/rbe 11 0
+# ** UI-Msg: (vsim-4026) Value "11" does not represent a literal of the enumeration type.
+# ** UI-Msg: (vsim-4011) Invalid force value: 11 0.
+# 
+run
+run
+force -freeze sim:/register_file/rbe 1 0
+force -freeze sim:/register_file/rba 11 0
+run
+force -freeze sim:/register_file/we 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 23:11:22 on Jan 27,2026, Elapsed time: 0:06:17
+# Errors: 0, Warnings: 0

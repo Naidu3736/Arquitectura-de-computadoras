@@ -8,26 +8,26 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/franc/Documents/Quartus/adder/simulation/modelsim
+Z0 dC:/Users/franc/Documents/quartus/adder/simulation/modelsim
 Eadder
-Z1 w1768875485
+Z1 w1769590902
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 0
 R0
-Z4 8C:/Users/franc/Documents/Quartus/adder/adder.vhd
-Z5 FC:/Users/franc/Documents/Quartus/adder/adder.vhd
+Z4 8C:/Users/franc/Documents/quartus/adder/adder.vhd
+Z5 FC:/Users/franc/Documents/quartus/adder/adder.vhd
 l0
 L4 1
 VkRgL4lk9bZPMDa_VMU58K2
 !s100 l86[N[14]S6oR]J605fcG0
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1768920032
+Z7 !s110 1769597962
 !i10b 1
-Z8 !s108 1768920032.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/adder/adder.vhd|
-Z10 !s107 C:/Users/franc/Documents/Quartus/adder/adder.vhd|
+Z8 !s108 1769597962.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/adder/adder.vhd|
+Z10 !s107 C:/Users/franc/Documents/quartus/adder/adder.vhd|
 !i113 1
 Z11 o-93 -work work
 Z12 tExplicit 1 CvgOpt 0
@@ -37,9 +37,9 @@ R3
 DEx4 work 5 adder 0 22 kRgL4lk9bZPMDa_VMU58K2
 !i122 0
 l27
-L13 53
-VIRZm_lIlmLA?o@YHdBCDC1
-!s100 iRH78YEKcoJEi<AY7gYhN2
+L13 55
+VOCe;SFJJPe8Q[o?;lG:al3
+!s100 e18n<aD^A@f;KFfWPJzL<0
 R6
 31
 R7
@@ -50,66 +50,68 @@ R10
 !i113 1
 R11
 R12
-Eadder_vhd_tst
-Z13 w1768875881
+Eadder_tb
+Z13 w1769597940
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
 !i122 2
 R0
-Z14 8C:/Users/franc/Documents/Quartus/adder/simulation/modelsim/adder.vht
-Z15 FC:/Users/franc/Documents/Quartus/adder/simulation/modelsim/adder.vht
+Z15 8C:/Users/franc/Documents/quartus/adder/adder_tb.vhd
+Z16 FC:/Users/franc/Documents/quartus/adder/adder_tb.vhd
 l0
-L31 1
-V_S[PGj]i`PGdMoeDK]z503
-!s100 JTKT0^?cM;lRZ>d8I6dHY0
+L5 1
+VPcBBK[Em_`aZ4dc><m>7=0
+!s100 6LfDhd>:TAz`1B:oGRKEA2
 R6
 31
-Z16 !s110 1768920033
+Z17 !s110 1769597963
 !i10b 1
-Z17 !s108 1768920033.000000
-Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/adder/simulation/modelsim/adder.vht|
-!s107 C:/Users/franc/Documents/Quartus/adder/simulation/modelsim/adder.vht|
+R8
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/adder/adder_tb.vhd|
+!s107 C:/Users/franc/Documents/quartus/adder/adder_tb.vhd|
 !i113 1
 R11
 R12
-Aadder_arch
+Atestbench
+R14
 R2
 R3
-DEx4 work 13 adder_vhd_tst 0 22 _S[PGj]i`PGdMoeDK]z503
+DEx4 work 8 adder_tb 0 22 PcBBK[Em_`aZ4dc><m>7=0
 !i122 2
-l48
-L33 39
-V]O[7joXGUbWAC8[H>F0SL0
-!s100 dbUni2N@>JJddULXO0F413
+l26
+L8 64
+VfFm]E1OI2R0C<RgmklT8i0
+!s100 j3JKFQkkiWAkWCGM;Fz:13
 R6
 31
-R16
-!i10b 1
 R17
+!i10b 1
+R8
 R18
-Z19 !s107 C:/Users/franc/Documents/Quartus/adder/simulation/modelsim/adder.vht|
+Z19 !s107 C:/Users/franc/Documents/quartus/adder/adder_tb.vhd|
 !i113 1
 R11
 R12
 Efull_adder
-Z20 w1768875521
+Z20 w1769590550
 R2
 R3
 !i122 1
 R0
-Z21 8C:/Users/franc/Documents/Quartus/adder/full_adder.vhd
-Z22 FC:/Users/franc/Documents/Quartus/adder/full_adder.vhd
+Z21 8C:/Users/franc/Documents/quartus/adder/full_adder.vhd
+Z22 FC:/Users/franc/Documents/quartus/adder/full_adder.vhd
 l0
 L4 1
 VgOKdM??b_BY`0Di?k<_cz1
 !s100 NollC]h=U>U;XP9a:NF252
 R6
 31
-R16
+R7
 !i10b 1
-R17
-Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/adder/full_adder.vhd|
-Z24 !s107 C:/Users/franc/Documents/Quartus/adder/full_adder.vhd|
+R8
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/adder/full_adder.vhd|
+Z24 !s107 C:/Users/franc/Documents/quartus/adder/full_adder.vhd|
 !i113 1
 R11
 R12
@@ -124,9 +126,9 @@ VN@O3e]2X_mKm>Oj0cjOdn2
 !s100 IHcDC2mfMa49^fYBZn3Z83
 R6
 31
-R16
+R7
 !i10b 1
-R17
+R8
 R23
 R24
 !i113 1

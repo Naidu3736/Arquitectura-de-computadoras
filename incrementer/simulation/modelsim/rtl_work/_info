@@ -8,26 +8,26 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/franc/Documents/Quartus/incrementer/simulation/modelsim
+Z0 dC:/Users/franc/Documents/quartus/incrementer/simulation/modelsim
 Eadder
-Z1 w1768875485
+Z1 w1769590902
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 1
 R0
-Z4 8C:/Users/franc/Documents/Quartus/adder/adder.vhd
-Z5 FC:/Users/franc/Documents/Quartus/adder/adder.vhd
+Z4 8C:/Users/franc/Documents/quartus/adder/adder.vhd
+Z5 FC:/Users/franc/Documents/quartus/adder/adder.vhd
 l0
 L4 1
 VkRgL4lk9bZPMDa_VMU58K2
 !s100 l86[N[14]S6oR]J605fcG0
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1768963534
+Z7 !s110 1769598935
 !i10b 1
-Z8 !s108 1768963534.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/adder/adder.vhd|
-Z10 !s107 C:/Users/franc/Documents/Quartus/adder/adder.vhd|
+Z8 !s108 1769598935.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/adder/adder.vhd|
+Z10 !s107 C:/Users/franc/Documents/quartus/adder/adder.vhd|
 !i113 1
 Z11 o-93 -work work
 Z12 tExplicit 1 CvgOpt 0
@@ -37,9 +37,9 @@ R3
 DEx4 work 5 adder 0 22 kRgL4lk9bZPMDa_VMU58K2
 !i122 1
 l27
-L13 53
-VIRZm_lIlmLA?o@YHdBCDC1
-!s100 iRH78YEKcoJEi<AY7gYhN2
+L13 55
+VOCe;SFJJPe8Q[o?;lG:al3
+!s100 e18n<aD^A@f;KFfWPJzL<0
 R6
 31
 R7
@@ -51,13 +51,13 @@ R10
 R11
 R12
 Efull_adder
-Z13 w1768875521
+Z13 w1769590550
 R2
 R3
 !i122 0
 R0
-Z14 8C:/Users/franc/Documents/Quartus/adder/full_adder.vhd
-Z15 FC:/Users/franc/Documents/Quartus/adder/full_adder.vhd
+Z14 8C:/Users/franc/Documents/quartus/adder/full_adder.vhd
+Z15 FC:/Users/franc/Documents/quartus/adder/full_adder.vhd
 l0
 L4 1
 VgOKdM??b_BY`0Di?k<_cz1
@@ -67,8 +67,8 @@ R6
 R7
 !i10b 1
 R8
-Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/adder/full_adder.vhd|
-Z17 !s107 C:/Users/franc/Documents/Quartus/adder/full_adder.vhd|
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/adder/full_adder.vhd|
+Z17 !s107 C:/Users/franc/Documents/quartus/adder/full_adder.vhd|
 !i113 1
 R11
 R12
@@ -92,24 +92,24 @@ R17
 R11
 R12
 Eincrementer
-Z18 w1768963237
+Z18 w1769591198
 R2
 R3
 !i122 2
 R0
-Z19 8C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd
-Z20 FC:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd
+Z19 8C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd
+Z20 FC:/Users/franc/Documents/quartus/incrementer/incrementer.vhd
 l0
 L4 1
 VII_a_zkTUYn>`M70i:_170
 !s100 MJ<J<<<mm:BU>@6moRh062
 R6
 31
-R7
+Z21 !s110 1769598936
 !i10b 1
-R8
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd|
-Z22 !s107 C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd|
+Z22 !s108 1769598936.000000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd|
+Z24 !s107 C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd|
 !i113 1
 R11
 R12
@@ -124,52 +124,54 @@ V7BRL89jTgNCj=gS]o?HCZ1
 !s100 M?faNWTlh4FD[KXe001k:3
 R6
 31
-R7
-!i10b 1
-R8
 R21
+!i10b 1
 R22
+R23
+R24
 !i113 1
 R11
 R12
-Eincrementer_vhd_tst
-Z23 w1768963332
+Eincrementer_tb
+Z25 w1769598914
+Z26 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
 !i122 3
 R0
-Z24 8C:/Users/franc/Documents/Quartus/incrementer/simulation/modelsim/incrementer.vht
-Z25 FC:/Users/franc/Documents/Quartus/incrementer/simulation/modelsim/incrementer.vht
+Z27 8C:/Users/franc/Documents/quartus/incrementer/incrementer_tb.vhd
+Z28 FC:/Users/franc/Documents/quartus/incrementer/incrementer_tb.vhd
 l0
-L31 1
-VkCUDkHAXnERS5P193XzRY3
-!s100 BaDo4]:WF>]LSM@0dQH5D1
+L6 1
+VIC:4A0X4QfaS4QM9N7mhd1
+!s100 O5>ZSnB>44S;566TQ5[d13
 R6
 31
-R7
+R21
 !i10b 1
-R8
-Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/incrementer/simulation/modelsim/incrementer.vht|
-!s107 C:/Users/franc/Documents/Quartus/incrementer/simulation/modelsim/incrementer.vht|
+R22
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/incrementer/incrementer_tb.vhd|
+!s107 C:/Users/franc/Documents/quartus/incrementer/incrementer_tb.vhd|
 !i113 1
 R11
 R12
-Aincrementer_arch
+Atestbench
+R26
 R2
 R3
-DEx4 work 19 incrementer_vhd_tst 0 22 kCUDkHAXnERS5P193XzRY3
+DEx4 work 14 incrementer_tb 0 22 IC:4A0X4QfaS4QM9N7mhd1
 !i122 3
-l46
-L33 36
-VK::GEd5Pf<3DnW8k^<Z=N1
-!s100 ?RWAabiQ]5MiJK4IE78fT1
+l26
+L9 73
+Vf^nGWP0ccjDg1C^2Z8NeO1
+!s100 oHV;Wb]gGb1^5[9;NREaj0
 R6
 31
-R7
+R21
 !i10b 1
-R8
-R26
-Z27 !s107 C:/Users/franc/Documents/Quartus/incrementer/simulation/modelsim/incrementer.vht|
+R22
+R29
+Z30 !s107 C:/Users/franc/Documents/quartus/incrementer/incrementer_tb.vhd|
 !i113 1
 R11
 R12

@@ -8,38 +8,38 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/franc/Documents/Quartus/alu/simulation/modelsim
+Z0 dC:/Users/franc/Documents/quartus/alu/simulation/modelsim
 Eadder
-Z1 w1768965085
+Z1 w1769590902
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 1
 R0
-Z4 8C:/Users/franc/Documents/Quartus/adder/adder.vhd
-Z5 FC:/Users/franc/Documents/Quartus/adder/adder.vhd
+Z4 8C:/Users/franc/Documents/quartus/adder/adder.vhd
+Z5 FC:/Users/franc/Documents/quartus/adder/adder.vhd
 l0
 L4 1
-V_>H_KlIX0`;b>G0DLQI_g1
-!s100 :?RAKj3gRHjb8j8bbVOD42
+VkRgL4lk9bZPMDa_VMU58K2
+!s100 l86[N[14]S6oR]J605fcG0
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1768972298
+Z7 !s110 1769597235
 !i10b 1
-Z8 !s108 1768972298.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/adder/adder.vhd|
-Z10 !s107 C:/Users/franc/Documents/Quartus/adder/adder.vhd|
+Z8 !s108 1769597235.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/adder/adder.vhd|
+Z10 !s107 C:/Users/franc/Documents/quartus/adder/adder.vhd|
 !i113 1
 Z11 o-93 -work work
 Z12 tExplicit 1 CvgOpt 0
 Astructural
 R2
 R3
-DEx4 work 5 adder 0 22 _>H_KlIX0`;b>G0DLQI_g1
+DEx4 work 5 adder 0 22 kRgL4lk9bZPMDa_VMU58K2
 !i122 1
-l31
-L17 53
-VkJBh5c[jFLLTmlLBzhC?@3
-!s100 =9[4NTnOc7TQ`PXVDRVh=1
+l27
+L13 55
+VOCe;SFJJPe8Q[o?;lG:al3
+!s100 e18n<aD^A@f;KFfWPJzL<0
 R6
 31
 R7
@@ -51,24 +51,24 @@ R10
 R11
 R12
 Ealu
-Z13 w1768972187
+Z13 w1769591226
 R2
 R3
 !i122 10
 R0
-Z14 8C:/Users/franc/Documents/Quartus/alu/alu.vhd
-Z15 FC:/Users/franc/Documents/Quartus/alu/alu.vhd
+Z14 8C:/Users/franc/Documents/quartus/alu/alu.vhd
+Z15 FC:/Users/franc/Documents/quartus/alu/alu.vhd
 l0
 L4 1
 VcnTQC:cg[jYl[JBXn8M[l2
 !s100 bG5OL7zEh7W?04ifFZmM63
 R6
 31
-Z16 !s110 1768972299
+Z16 !s110 1769597236
 !i10b 1
-Z17 !s108 1768972299.000000
-Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/alu/alu.vhd|
-Z19 !s107 C:/Users/franc/Documents/Quartus/alu/alu.vhd|
+Z17 !s108 1769597236.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/alu/alu.vhd|
+Z19 !s107 C:/Users/franc/Documents/quartus/alu/alu.vhd|
 !i113 1
 R11
 R12
@@ -91,55 +91,57 @@ R19
 !i113 1
 R11
 R12
-Ealu_vhd_tst
-Z20 w1768972264
+Ealu_tb
+Z20 w1769597155
+Z21 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
 !i122 11
 R0
-Z21 8C:/Users/franc/Documents/Quartus/alu/simulation/modelsim/alu.vht
-Z22 FC:/Users/franc/Documents/Quartus/alu/simulation/modelsim/alu.vht
+Z22 8C:/Users/franc/Documents/quartus/alu/alu_tb.vhd
+Z23 FC:/Users/franc/Documents/quartus/alu/alu_tb.vhd
 l0
-L31 1
-VIPD_;jNgRlCBjNVIh?o741
-!s100 n6zfhPk8ZI`I@BX_26R6:0
+L6 1
+VOKo?2cFUaSUMe^=EAf0A]0
+!s100 ]C]kIdd8CkIQFmQBOfTM_2
 R6
 31
 R16
 !i10b 1
 R17
-Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/alu/simulation/modelsim/alu.vht|
-!s107 C:/Users/franc/Documents/Quartus/alu/simulation/modelsim/alu.vht|
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/alu/alu_tb.vhd|
+!s107 C:/Users/franc/Documents/quartus/alu/alu_tb.vhd|
 !i113 1
 R11
 R12
-Aalu_arch
+Atestbench
+R21
 R2
 R3
-DEx4 work 11 alu_vhd_tst 0 22 IPD_;jNgRlCBjNVIh?o741
+DEx4 work 6 alu_tb 0 22 OKo?2cFUaSUMe^=EAf0A]0
 !i122 11
-l48
-L33 39
-VA?^DM>_lId^6MAm=iROh[3
-!s100 FC:=oiZag;d>4odP2L7ii3
+l25
+L9 100
+VQdVI;]i^4T2FbChhP>k<R3
+!s100 BSHNVzRicDoOM5HL_Bmz?3
 R6
 31
 R16
 !i10b 1
 R17
-R23
-Z24 !s107 C:/Users/franc/Documents/Quartus/alu/simulation/modelsim/alu.vht|
+R24
+Z25 !s107 C:/Users/franc/Documents/quartus/alu/alu_tb.vhd|
 !i113 1
 R11
 R12
 Ebitwise_and
-Z25 w1768966131
+Z26 w1769590730
 R2
 R3
 !i122 2
 R0
-Z26 8C:/Users/franc/Documents/Quartus/bitwise_and/bitwise_and.vhd
-Z27 FC:/Users/franc/Documents/Quartus/bitwise_and/bitwise_and.vhd
+Z27 8C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd
+Z28 FC:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd
 l0
 L4 1
 VcTF?`:QZHJK@9WOX`3@jb1
@@ -149,8 +151,8 @@ R6
 R7
 !i10b 1
 R8
-Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/bitwise_and/bitwise_and.vhd|
-Z29 !s107 C:/Users/franc/Documents/Quartus/bitwise_and/bitwise_and.vhd|
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd|
+Z30 !s107 C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd|
 !i113 1
 R11
 R12
@@ -160,7 +162,7 @@ R3
 DEx4 work 11 bitwise_and 0 22 cTF?`:QZHJK@9WOX`3@jb1
 !i122 2
 l14
-Z30 L12 7
+Z31 L12 7
 V6;>TkZ2j5[V]P294SAICh0
 !s100 8JDono944XQXJIlJ]J19A0
 R6
@@ -168,19 +170,19 @@ R6
 R7
 !i10b 1
 R8
-R28
 R29
+R30
 !i113 1
 R11
 R12
 Ebitwise_identity
-Z31 w1768965677
+Z32 w1769590718
 R2
 R3
 !i122 3
 R0
-Z32 8C:/Users/franc/Documents/Quartus/bitwise_identity/bitwise_identity.vhd
-Z33 FC:/Users/franc/Documents/Quartus/bitwise_identity/bitwise_identity.vhd
+Z33 8C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd
+Z34 FC:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd
 l0
 L4 1
 V_0BDg9>m8Z;07mK^g`?792
@@ -190,8 +192,8 @@ R6
 R7
 !i10b 1
 R8
-Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/bitwise_identity/bitwise_identity.vhd|
-Z35 !s107 C:/Users/franc/Documents/Quartus/bitwise_identity/bitwise_identity.vhd|
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd|
+Z36 !s107 C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd|
 !i113 1
 R11
 R12
@@ -201,7 +203,7 @@ R3
 DEx4 work 16 bitwise_identity 0 22 _0BDg9>m8Z;07mK^g`?792
 !i122 3
 l13
-Z36 L11 7
+Z37 L11 7
 V_iDoWlP_4>^7NTW6LDHgR1
 !s100 ME1XU_0FZF^<@N<Dh01<[2
 R6
@@ -209,30 +211,30 @@ R6
 R7
 !i10b 1
 R8
-R34
 R35
+R36
 !i113 1
 R11
 R12
 Ebitwise_not
-Z37 w1768967615
+Z38 w1769590702
 R2
 R3
 !i122 9
 R0
-Z38 8C:/Users/franc/Documents/Quartus/bitwise_not/bitwise_not.vhd
-Z39 FC:/Users/franc/Documents/Quartus/bitwise_not/bitwise_not.vhd
+Z39 8C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd
+Z40 FC:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd
 l0
 L4 1
 V@c_LF5E_VfcD70aSDSOB52
 !s100 7kZRBR=R5XFhCHj[i]_DE3
 R6
 31
-R7
+R16
 !i10b 1
-R8
-Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/bitwise_not/bitwise_not.vhd|
-Z41 !s107 C:/Users/franc/Documents/Quartus/bitwise_not/bitwise_not.vhd|
+R17
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd|
+Z42 !s107 C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd|
 !i113 1
 R11
 R12
@@ -242,27 +244,27 @@ R3
 DEx4 work 11 bitwise_not 0 22 @c_LF5E_VfcD70aSDSOB52
 !i122 9
 l13
-R36
+R37
 V9FdI]I@S8OHe<Wz^Beibm2
 !s100 i`J`9E=DZdBC8jP[o0WcC1
 R6
 31
-R7
+R16
 !i10b 1
-R8
-R40
+R17
 R41
+R42
 !i113 1
 R11
 R12
 Ebitwise_or
-Z42 w1768967121
+Z43 w1769590688
 R2
 R3
 !i122 4
 R0
-Z43 8C:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd
-Z44 FC:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd
+Z44 8C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd
+Z45 FC:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd
 l0
 L4 1
 V`Oge3`_ZmgLAhe;WhUdMS3
@@ -272,8 +274,8 @@ R6
 R7
 !i10b 1
 R8
-Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd|
-Z46 !s107 C:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd|
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd|
+Z47 !s107 C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd|
 !i113 1
 R11
 R12
@@ -283,7 +285,7 @@ R3
 DEx4 work 10 bitwise_or 0 22 `Oge3`_ZmgLAhe;WhUdMS3
 !i122 4
 l14
-R30
+R31
 V@FR2XBdUzon;fIh^fK[U;3
 !s100 oS=8dM]0fjRQ52L8MAham2
 R6
@@ -291,19 +293,19 @@ R6
 R7
 !i10b 1
 R8
-R45
 R46
+R47
 !i113 1
 R11
 R12
 Edecrementer
-Z47 w1768962115
+Z48 w1769591171
 R2
 R3
 !i122 5
 R0
-Z48 8C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd
-Z49 FC:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd
+Z49 8C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd
+Z50 FC:/Users/franc/Documents/quartus/decrementer/decrementer.vhd
 l0
 L4 1
 V]`9G^61F6d5FZZmQ`NGVT0
@@ -313,8 +315,8 @@ R6
 R7
 !i10b 1
 R8
-Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd|
-Z51 !s107 C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd|
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd|
+Z52 !s107 C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd|
 !i113 1
 R11
 R12
@@ -324,7 +326,7 @@ R3
 DEx4 work 11 decrementer 0 22 ]`9G^61F6d5FZZmQ`NGVT0
 !i122 5
 l22
-Z52 L12 21
+Z53 L12 21
 VB_[5;m?T9VkcRIFmNGHL21
 !s100 hYCiA:UAmd7m]Q7F]H=^^1
 R6
@@ -332,71 +334,71 @@ R6
 R7
 !i10b 1
 R8
-R50
 R51
+R52
 !i113 1
 R11
 R12
 Efull_adder
-Z53 w1768965039
+Z54 w1769590550
 R2
 R3
 !i122 0
 R0
-Z54 8C:/Users/franc/Documents/Quartus/adder/full_adder.vhd
-Z55 FC:/Users/franc/Documents/Quartus/adder/full_adder.vhd
+Z55 8C:/Users/franc/Documents/quartus/adder/full_adder.vhd
+Z56 FC:/Users/franc/Documents/quartus/adder/full_adder.vhd
 l0
 L4 1
-VfT4H:VN39@HP^fhn;aa;L1
-!s100 gDYCZj1Z;@N:7F_e8nS8S2
+VgOKdM??b_BY`0Di?k<_cz1
+!s100 NollC]h=U>U;XP9a:NF252
 R6
 31
-Z56 !s110 1768972297
+R7
 !i10b 1
-Z57 !s108 1768972297.000000
-Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/adder/full_adder.vhd|
-Z59 !s107 C:/Users/franc/Documents/Quartus/adder/full_adder.vhd|
+R8
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/adder/full_adder.vhd|
+Z58 !s107 C:/Users/franc/Documents/quartus/adder/full_adder.vhd|
 !i113 1
 R11
 R12
 Abehavioral
 R2
 R3
-DEx4 work 10 full_adder 0 22 fT4H:VN39@HP^fhn;aa;L1
+DEx4 work 10 full_adder 0 22 gOKdM??b_BY`0Di?k<_cz1
 !i122 0
-l20
-L18 8
-Vg5]5=bZc=zjWzm8=nnbDR1
-!s100 APad>g__f?_iB>IZU8A=R3
+l16
+Z59 L14 8
+VN@O3e]2X_mKm>Oj0cjOdn2
+!s100 IHcDC2mfMa49^fYBZn3Z83
 R6
 31
-R56
+R7
 !i10b 1
+R8
 R57
 R58
-R59
 !i113 1
 R11
 R12
 Efull_subtractor
-Z60 w1768951474
+Z60 w1769590497
 R2
 R3
 !i122 8
 R0
-Z61 8C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd
-Z62 FC:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd
+Z61 8C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd
+Z62 FC:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd
 l0
 L4 1
 V;H5ZiZ^O=cLP3@^lW8Q]]3
 !s100 hJIlb;c?3<[R8EH>d3Q6O0
 R6
 31
-R7
+R16
 !i10b 1
-R8
-Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd|
-Z64 !s107 C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd|
+R17
+Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd|
+Z64 !s107 C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd|
 !i113 1
 R11
 R12
@@ -406,27 +408,27 @@ R3
 DEx4 work 15 full_subtractor 0 22 ;H5ZiZ^O=cLP3@^lW8Q]]3
 !i122 8
 l16
-L14 8
+R59
 VFQ<jJ3DP2G1[0zB5W5NhV2
 !s100 aV7_3<4@NX^OaP:jH1>ka0
 R6
 31
-R7
+R16
 !i10b 1
-R8
+R17
 R63
 R64
 !i113 1
 R11
 R12
 Eincrementer
-Z65 w1768963237
+Z65 w1769591198
 R2
 R3
 !i122 6
 R0
-Z66 8C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd
-Z67 FC:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd
+Z66 8C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd
+Z67 FC:/Users/franc/Documents/quartus/incrementer/incrementer.vhd
 l0
 L4 1
 VII_a_zkTUYn>`M70i:_170
@@ -436,8 +438,8 @@ R6
 R7
 !i10b 1
 R8
-Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd|
-Z69 !s107 C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd|
+Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd|
+Z69 !s107 C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd|
 !i113 1
 R11
 R12
@@ -447,7 +449,7 @@ R3
 DEx4 work 11 incrementer 0 22 II_a_zkTUYn>`M70i:_170
 !i122 6
 l22
-R52
+R53
 V7BRL89jTgNCj=gS]o?HCZ1
 !s100 M?faNWTlh4FD[KXe001k:3
 R6
@@ -461,13 +463,13 @@ R69
 R11
 R12
 Esubtractor
-Z70 w1768951139
+Z70 w1769593167
 R2
 R3
 !i122 7
 R0
-Z71 8C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd
-Z72 FC:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd
+Z71 8C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd
+Z72 FC:/Users/franc/Documents/quartus/subtractor/subtractor.vhd
 l0
 L4 1
 V2d=e<Yi:GKdf72Lzz?_2U3
@@ -477,8 +479,8 @@ R6
 R7
 !i10b 1
 R8
-Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd|
-Z74 !s107 C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd|
+Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd|
+Z74 !s107 C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd|
 !i113 1
 R11
 R12
@@ -488,9 +490,9 @@ R3
 DEx4 work 10 subtractor 0 22 2d=e<Yi:GKdf72Lzz?_2U3
 !i122 7
 l27
-L14 52
-VCa=AY;^PeDl^DA9AgeVT93
-!s100 D8=79BmmVGY48MfMi7CfR3
+L14 54
+V=5zOa`fIQh?b>n`i;W9@E0
+!s100 89DLDe^jFkOc=0hKVV]3a2
 R6
 31
 R7

@@ -59,10 +59,10 @@ alu_ctrl[2] => Mux0.IN0
 alu_ctrl[2] => Mux1.IN0
 alu_ctrl[2] => Mux2.IN0
 alu_ctrl[2] => Mux3.IN0
-s[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-s[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-s[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+s[0] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+s[1] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+s[2] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+s[3] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu|bitwise_identity:U_IDEN

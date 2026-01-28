@@ -1,0 +1,53 @@
+# Reading pref.tcl
+# do shifter_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Jorge/OneDrive/Documentos/QuartusT/Arquitectura-de-computadoras-main/shifter/shifter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:52:24 on Jan 26,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/Jorge/OneDrive/Documentos/QuartusT/Arquitectura-de-computadoras-main/shifter/shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity shifter
+# -- Compiling architecture structural of shifter
+# End time: 12:52:24 on Jan 26,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/Jorge/OneDrive/Documentos/QuartusT/Arquitectura-de-computadoras-main/shifter/tb_shifter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:52:24 on Jan 26,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/Jorge/OneDrive/Documentos/QuartusT/Arquitectura-de-computadoras-main/shifter/tb_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_shifter
+# -- Compiling architecture behavior of tb_shifter
+# End time: 12:52:24 on Jan 26,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  tb_shifter
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" tb_shifter 
+# Start time: 12:52:24 on Jan 26,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_shifter(behavior)
+# Loading work.shifter(structural)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 12:53:00 on Jan 26,2026, Elapsed time: 0:00:36
+# Errors: 0, Warnings: 0

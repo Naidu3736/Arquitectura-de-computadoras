@@ -1,11 +1,12 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/franc/Documents/Quartus/adder/adder.vhd
-source_file = 1, C:/Users/franc/Documents/Quartus/adder/full_adder.vhd
+source_file = 1, C:/Users/franc/Documents/quartus/adder/adder.vhd
+source_file = 1, C:/Users/franc/Documents/quartus/adder/full_adder.vhd
+source_file = 1, C:/Users/franc/Documents/quartus/adder/adder_tb.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, C:/Users/franc/Documents/Quartus/adder/db/adder.cbx.xml
+source_file = 1, C:/Users/franc/Documents/quartus/adder/db/adder.cbx.xml
 design_name = adder
 instance = comp, \s[0]~output\, s[0]~output, adder, 1
 instance = comp, \s[1]~output\, s[1]~output, adder, 1

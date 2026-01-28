@@ -1,0 +1,125 @@
+-- File: alu_tb_quiet.vhd
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity alu_tb is
+end entity alu_tb;
+
+architecture testbench of alu_tb is
+    constant CLK_PERIOD : time := 10 ns;
+    
+    component alu
+        port (
+            clk : in std_logic;
+            a : in std_logic_vector(3 downto 0);
+            b : in std_logic_vector(3 downto 0);
+            alu_ctrl : in std_logic_vector(2 downto 0);
+            s : out std_logic_vector(3 downto 0)
+        );
+    end component;
+    
+    signal clk : std_logic := '0';
+    signal a, b, s : std_logic_vector(3 downto 0);
+    signal alu_ctrl : std_logic_vector(2 downto 0);
+    
+    signal sim_done : boolean := false;
+    
+begin
+    UUT: alu
+        port map (
+            clk => clk,
+            a => a,
+            b => b,
+            alu_ctrl => alu_ctrl,
+            s => s
+        );
+    
+    -- Clock process
+    clk_process: process
+    begin
+        while not sim_done loop
+            clk <= '0';
+            wait for CLK_PERIOD/2;
+            clk <= '1';
+            wait for CLK_PERIOD/2;
+        end loop;
+        wait;
+    end process;
+    
+    -- Stimulus process
+    stimulus: process
+        variable error_count : integer := 0;
+        variable test_count : integer := 0;
+        variable expected_result : std_logic_vector(3 downto 0);
+    begin
+--        wait for 100 ns;
+        
+        -- Probar cada operación
+        for opcode in 0 to 7 loop
+            alu_ctrl <= std_logic_vector(to_unsigned(opcode, 3));
+            
+            -- Probar todas las combinaciones
+            for i in 0 to 15 loop
+                for j in 0 to 15 loop
+                    a <= std_logic_vector(to_unsigned(i, 4));
+                    b <= std_logic_vector(to_unsigned(j, 4));
+                    
+                    test_count := test_count + 1;
+                    
+                    wait until rising_edge(clk);
+                    wait for CLK_PERIOD/4;
+                    
+                    -- Calcular resultado esperado
+                    case opcode is
+                        when 0 => expected_result := a;
+                        when 1 => expected_result := std_logic_vector(
+                                   to_unsigned((i + j) mod 16, 4));
+                        when 2 => 
+                            if i >= j then
+                                expected_result := std_logic_vector(to_unsigned(i - j, 4));
+                            else
+                                expected_result := std_logic_vector(to_unsigned(16 + i - j, 4));
+                            end if;
+                        when 3 => expected_result := std_logic_vector(
+                                   to_unsigned((i + 1) mod 16, 4));
+                        when 4 => 
+                            if i = 0 then
+                                expected_result := "1111";
+                            else
+                                expected_result := std_logic_vector(to_unsigned(i - 1, 4));
+                            end if;
+                        when 5 => expected_result := a and b;
+                        when 6 => expected_result := a or b;
+                        when 7 => expected_result := not a;
+                        when others => expected_result := "0000";
+                    end case;
+                    
+                    -- Verificar
+                    if s /= expected_result then
+                        error_count := error_count + 1;
+                        assert false
+                            report "Error: Op=" & integer'image(opcode) & 
+                                   ", a=" & integer'image(i) & 
+                                   ", b=" & integer'image(j) & 
+                                   ", got=" & integer'image(to_integer(unsigned(s))) &
+                                   ", exp=" & integer'image(to_integer(unsigned(expected_result)))
+                            severity error;
+                    end if;
+                    
+                    wait until rising_edge(clk);
+                end loop;
+            end loop;
+        end loop;
+        
+        -- Solo un mensaje final
+        assert false
+            report "ALU test: " & integer'image(test_count) & 
+                   " tests, " & integer'image(error_count) & " errors"
+            severity note;
+        
+        sim_done <= true;
+        wait;
+    end process;
+    
+end architecture testbench;

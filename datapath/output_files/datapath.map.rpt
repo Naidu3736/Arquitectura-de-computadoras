@@ -1,0 +1,487 @@
+Analysis & Synthesis report for datapath
+Wed Jan 28 04:27:34 2026
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "alu:U2|decrementer:U_DEC|subtractor:U0"
+ 11. Port Connectivity Checks: "alu:U2|decrementer:U_DEC"
+ 12. Port Connectivity Checks: "alu:U2|incrementer:U_INC|adder:U0"
+ 13. Port Connectivity Checks: "alu:U2|incrementer:U_INC"
+ 14. Port Connectivity Checks: "alu:U2|subtractor:U_SUB|full_subtractor:U0"
+ 15. Port Connectivity Checks: "alu:U2|subtractor:U_SUB"
+ 16. Port Connectivity Checks: "alu:U2|adder:U_ADD|full_adder:U0"
+ 17. Port Connectivity Checks: "alu:U2|adder:U_ADD"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Jan 28 04:27:34 2026       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; datapath                                    ;
+; Top-level Entity Name           ; datapath                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 16                                          ;
+; Total pins                      ; 25                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; datapath           ; datapath           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
++------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; ../adder/full_adder.vhd                  ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/adder/full_adder.vhd                  ;         ;
+; ../adder/adder.vhd                       ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/adder/adder.vhd                       ;         ;
+; ../bitwise_and/bitwise_and.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd           ;         ;
+; ../bitwise_identity/bitwise_identity.vhd ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd ;         ;
+; ../bitwise_not/bitwise_not.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd           ;         ;
+; ../bitwise_or/bitwise_or.vhd             ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd             ;         ;
+; ../decrementer/decrementer.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd           ;         ;
+; ../incrementer/incrementer.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd           ;         ;
+; ../subtractor/subtractor.vhd             ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd             ;         ;
+; ../subtractor/full_subtractor.vhd        ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd        ;         ;
+; ../register_file/register_file.vhd       ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/register_file/register_file.vhd       ;         ;
+; ../mux/mux2a1.vhd                        ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/mux/mux2a1.vhd                        ;         ;
+; ../shifter/shifter.vhd                   ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/shifter/shifter.vhd                   ;         ;
+; ../alu/alu.vhd                           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/alu/alu.vhd                           ;         ;
+; ../tri_state_buffer/tri_state_buffer.vhd ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/tri_state_buffer/tri_state_buffer.vhd ;         ;
+; datapath.vhd                             ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/datapath/datapath.vhd                 ;         ;
++------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 36        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 49        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 20        ;
+;     -- 5 input functions                    ; 8         ;
+;     -- 4 input functions                    ; 8         ;
+;     -- <=3 input functions                  ; 13        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 16        ;
+;                                             ;           ;
+; I/O pins                                    ; 25        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 16        ;
+; Total fan-out                               ; 309       ;
+; Average fan-out                             ; 2.69      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Entity Name     ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------+-----------------+--------------+
+; |datapath                        ; 49 (0)              ; 16 (0)                    ; 0                 ; 0          ; 25   ; 0            ; |datapath                                                           ; datapath        ; work         ;
+;    |alu:U2|                      ; 22 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|alu:U2                                                    ; alu             ; work         ;
+;       |adder:U_ADD|              ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|alu:U2|adder:U_ADD                                        ; adder           ; work         ;
+;          |full_adder:U1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|alu:U2|adder:U_ADD|full_adder:U1                          ; full_adder      ; work         ;
+;          |full_adder:U3|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|alu:U2|adder:U_ADD|full_adder:U3                          ; full_adder      ; work         ;
+;       |decrementer:U_DEC|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|alu:U2|decrementer:U_DEC                                  ; decrementer     ; work         ;
+;          |subtractor:U0|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|alu:U2|decrementer:U_DEC|subtractor:U0                    ; subtractor      ; work         ;
+;             |full_subtractor:U1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|alu:U2|decrementer:U_DEC|subtractor:U0|full_subtractor:U1 ; full_subtractor ; work         ;
+;       |subtractor:U_SUB|         ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|alu:U2|subtractor:U_SUB                                   ; subtractor      ; work         ;
+;          |full_subtractor:U2|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|alu:U2|subtractor:U_SUB|full_subtractor:U2                ; full_subtractor ; work         ;
+;    |mux2a1:U0|                   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|mux2a1:U0                                                 ; mux2a1          ; work         ;
+;    |register_file:u1|            ; 12 (12)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |datapath|register_file:u1                                          ; register_file   ; work         ;
+;    |shifter:U3|                  ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |datapath|shifter:U3                                                ; shifter         ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 16    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |datapath|shifter:U3|Mux2  ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |datapath|alu:U2|Mux2      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:U2|decrementer:U_DEC|subtractor:U0" ;
++---------+-------+----------+---------------------------------------+
+; Port    ; Type  ; Severity ; Details                               ;
++---------+-------+----------+---------------------------------------+
+; b[3..1] ; Input ; Info     ; Stuck at GND                          ;
+; b[0]    ; Input ; Info     ; Stuck at VCC                          ;
++---------+-------+----------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:U2|decrementer:U_DEC"                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "alu:U2|incrementer:U_INC|adder:U0" ;
++---------+-------+----------+----------------------------------+
+; Port    ; Type  ; Severity ; Details                          ;
++---------+-------+----------+----------------------------------+
+; b[3..1] ; Input ; Info     ; Stuck at GND                     ;
+; b[0]    ; Input ; Info     ; Stuck at VCC                     ;
++---------+-------+----------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:U2|incrementer:U_INC"                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:U2|subtractor:U_SUB|full_subtractor:U0" ;
++------+-------+----------+----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                      ;
++------+-------+----------+----------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                 ;
++------+-------+----------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:U2|subtractor:U_SUB"                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "alu:U2|adder:U_ADD|full_adder:U0" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                       ;
++------+-------+----------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:U2|adder:U_ADD"                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 16                          ;
+;     ENA               ; 16                          ;
+; arriav_io_obuf        ; 4                           ;
+; arriav_lcell_comb     ; 49                          ;
+;     normal            ; 49                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 8                           ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 20                          ;
+; boundary_port         ; 25                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.97                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Wed Jan 28 04:27:24 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off datapath -c datapath
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/adder/full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Users/franc/Documents/quartus/adder/full_adder.vhd Line: 14
+    Info (12023): Found entity 1: full_adder File: C:/Users/franc/Documents/quartus/adder/full_adder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/adder/adder.vhd
+    Info (12022): Found design unit 1: adder-structural File: C:/Users/franc/Documents/quartus/adder/adder.vhd Line: 13
+    Info (12023): Found entity 1: adder File: C:/Users/franc/Documents/quartus/adder/adder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/bitwise_and/bitwise_and.vhd
+    Info (12022): Found design unit 1: bitwise_and-behavioral File: C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd Line: 12
+    Info (12023): Found entity 1: bitwise_and File: C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/bitwise_identity/bitwise_identity.vhd
+    Info (12022): Found design unit 1: bitwise_identity-behavioral File: C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd Line: 11
+    Info (12023): Found entity 1: bitwise_identity File: C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/bitwise_not/bitwise_not.vhd
+    Info (12022): Found design unit 1: bitwise_not-behavioral File: C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd Line: 11
+    Info (12023): Found entity 1: bitwise_not File: C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/bitwise_or/bitwise_or.vhd
+    Info (12022): Found design unit 1: bitwise_or-behavioral File: C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd Line: 12
+    Info (12023): Found entity 1: bitwise_or File: C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/decrementer/decrementer.vhd
+    Info (12022): Found design unit 1: decrementer-structural File: C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd Line: 12
+    Info (12023): Found entity 1: decrementer File: C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/incrementer/incrementer.vhd
+    Info (12022): Found design unit 1: incrementer-structural File: C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd Line: 12
+    Info (12023): Found entity 1: incrementer File: C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/subtractor/subtractor.vhd
+    Info (12022): Found design unit 1: subtractor-structural File: C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd Line: 14
+    Info (12023): Found entity 1: subtractor File: C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/subtractor/full_subtractor.vhd
+    Info (12022): Found design unit 1: full_subtractor-behavioral File: C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd Line: 14
+    Info (12023): Found entity 1: full_subtractor File: C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/register_file/register_file.vhd
+    Info (12022): Found design unit 1: register_file-behavioral File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 23
+    Info (12023): Found entity 1: register_file File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/mux/mux2a1.vhd
+    Info (12022): Found design unit 1: mux2a1-Behavioral File: C:/Users/franc/Documents/quartus/mux/mux2a1.vhd Line: 13
+    Info (12023): Found entity 1: mux2a1 File: C:/Users/franc/Documents/quartus/mux/mux2a1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/shifter/shifter.vhd
+    Info (12022): Found design unit 1: shifter-structural File: C:/Users/franc/Documents/quartus/shifter/shifter.vhd Line: 12
+    Info (12023): Found entity 1: shifter File: C:/Users/franc/Documents/quartus/shifter/shifter.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/alu/alu.vhd
+    Info (12022): Found design unit 1: alu-structural File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 13
+    Info (12023): Found entity 1: alu File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/tri_state_buffer/tri_state_buffer.vhd
+    Info (12022): Found design unit 1: tri_state_buffer-behavioral File: C:/Users/franc/Documents/quartus/tri_state_buffer/tri_state_buffer.vhd Line: 12
+    Info (12023): Found entity 1: tri_state_buffer File: C:/Users/franc/Documents/quartus/tri_state_buffer/tri_state_buffer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: datapath-structural File: C:/Users/franc/Documents/quartus/datapath/datapath.vhd Line: 22
+    Info (12023): Found entity 1: datapath File: C:/Users/franc/Documents/quartus/datapath/datapath.vhd Line: 4
+Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12128): Elaborating entity "mux2a1" for hierarchy "mux2a1:U0" File: C:/Users/franc/Documents/quartus/datapath/datapath.vhd Line: 84
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:u1" File: C:/Users/franc/Documents/quartus/datapath/datapath.vhd Line: 92
+Info (12128): Elaborating entity "alu" for hierarchy "alu:U2" File: C:/Users/franc/Documents/quartus/datapath/datapath.vhd Line: 106
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(89): object "c_add" assigned a value but never read File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 89
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(90): object "c_sub" assigned a value but never read File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 90
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(91): object "c_inc" assigned a value but never read File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 91
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(92): object "c_dec" assigned a value but never read File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 92
+Info (12128): Elaborating entity "bitwise_identity" for hierarchy "alu:U2|bitwise_identity:U_IDEN" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 96
+Info (12128): Elaborating entity "adder" for hierarchy "alu:U2|adder:U_ADD" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 102
+Info (12128): Elaborating entity "full_adder" for hierarchy "alu:U2|adder:U_ADD|full_adder:U0" File: C:/Users/franc/Documents/quartus/adder/adder.vhd Line: 29
+Info (12128): Elaborating entity "subtractor" for hierarchy "alu:U2|subtractor:U_SUB" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 110
+Info (12128): Elaborating entity "full_subtractor" for hierarchy "alu:U2|subtractor:U_SUB|full_subtractor:U0" File: C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd Line: 29
+Info (12128): Elaborating entity "incrementer" for hierarchy "alu:U2|incrementer:U_INC" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 118
+Info (12128): Elaborating entity "decrementer" for hierarchy "alu:U2|decrementer:U_DEC" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 125
+Info (12128): Elaborating entity "bitwise_and" for hierarchy "alu:U2|bitwise_and:U_AND" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 132
+Info (12128): Elaborating entity "bitwise_or" for hierarchy "alu:U2|bitwise_or:U_OR" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 139
+Info (12128): Elaborating entity "bitwise_not" for hierarchy "alu:U2|bitwise_not:U_NOT" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 146
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:U3" File: C:/Users/franc/Documents/quartus/datapath/datapath.vhd Line: 114
+Info (12128): Elaborating entity "tri_state_buffer" for hierarchy "tri_state_buffer:U4" File: C:/Users/franc/Documents/quartus/datapath/datapath.vhd Line: 121
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "register_file:u1|registers" is uninferred due to inappropriate RAM size File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 26
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "register_file:u1|bout[0]" feeding internal logic into a wire File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 19
+    Warning (13049): Converted tri-state buffer "register_file:u1|bout[1]" feeding internal logic into a wire File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 19
+    Warning (13049): Converted tri-state buffer "register_file:u1|bout[2]" feeding internal logic into a wire File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 19
+    Warning (13049): Converted tri-state buffer "register_file:u1|bout[3]" feeding internal logic into a wire File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 19
+    Warning (13049): Converted tri-state buffer "register_file:u1|aout[0]" feeding internal logic into a wire File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 18
+    Warning (13049): Converted tri-state buffer "register_file:u1|aout[1]" feeding internal logic into a wire File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 18
+    Warning (13049): Converted tri-state buffer "register_file:u1|aout[2]" feeding internal logic into a wire File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 18
+    Warning (13049): Converted tri-state buffer "register_file:u1|aout[3]" feeding internal logic into a wire File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 18
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rae" File: C:/Users/franc/Documents/quartus/datapath/datapath.vhd Line: 11
+    Warning (15610): No output dependent on input pin "rbe" File: C:/Users/franc/Documents/quartus/datapath/datapath.vhd Line: 13
+Info (21057): Implemented 90 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 21 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 65 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4892 megabytes
+    Info: Processing ended: Wed Jan 28 04:27:34 2026
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
+
+

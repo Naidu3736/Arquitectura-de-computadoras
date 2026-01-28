@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Tue Jan 20 23:09:59 2026
+Wed Jan 28 04:46:08 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -15,27 +15,17 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: adder:U_ADD
- 11. Parameter Settings for User Entity Instance: adder:U_ADD|full_adder:U0
- 12. Parameter Settings for User Entity Instance: adder:U_ADD|full_adder:U1
- 13. Parameter Settings for User Entity Instance: adder:U_ADD|full_adder:U2
- 14. Parameter Settings for User Entity Instance: adder:U_ADD|full_adder:U3
- 15. Parameter Settings for User Entity Instance: incrementer:U_INC|adder:U0
- 16. Parameter Settings for User Entity Instance: incrementer:U_INC|adder:U0|full_adder:U0
- 17. Parameter Settings for User Entity Instance: incrementer:U_INC|adder:U0|full_adder:U1
- 18. Parameter Settings for User Entity Instance: incrementer:U_INC|adder:U0|full_adder:U2
- 19. Parameter Settings for User Entity Instance: incrementer:U_INC|adder:U0|full_adder:U3
- 20. Port Connectivity Checks: "decrementer:U_DEC|subtractor:U0"
- 21. Port Connectivity Checks: "decrementer:U_DEC"
- 22. Port Connectivity Checks: "incrementer:U_INC|adder:U0"
- 23. Port Connectivity Checks: "incrementer:U_INC"
- 24. Port Connectivity Checks: "subtractor:U_SUB|full_subtractor:U0"
- 25. Port Connectivity Checks: "subtractor:U_SUB"
- 26. Port Connectivity Checks: "adder:U_ADD|full_adder:U0"
- 27. Port Connectivity Checks: "adder:U_ADD"
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "decrementer:U_DEC|subtractor:U0"
+ 11. Port Connectivity Checks: "decrementer:U_DEC"
+ 12. Port Connectivity Checks: "incrementer:U_INC|adder:U0"
+ 13. Port Connectivity Checks: "incrementer:U_INC"
+ 14. Port Connectivity Checks: "subtractor:U_SUB|full_subtractor:U0"
+ 15. Port Connectivity Checks: "subtractor:U_SUB"
+ 16. Port Connectivity Checks: "adder:U_ADD|full_adder:U0"
+ 17. Port Connectivity Checks: "adder:U_ADD"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -62,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jan 20 23:09:59 2026       ;
+; Analysis & Synthesis Status     ; Successful - Wed Jan 28 04:46:08 2026       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; alu                                         ;
 ; Top-level Entity Name           ; alu                                         ;
@@ -190,17 +180,17 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path         ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
 +------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
-; ../adder/full_adder.vhd                  ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/adder/full_adder.vhd                  ;         ;
-; ../adder/adder.vhd                       ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/adder/adder.vhd                       ;         ;
-; ../bitwise_and/bitwise_and.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/bitwise_and/bitwise_and.vhd           ;         ;
-; ../bitwise_identity/bitwise_identity.vhd ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/bitwise_identity/bitwise_identity.vhd ;         ;
-; ../bitwise_or/bitwise_or.vhd             ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd             ;         ;
-; ../decrementer/decrementer.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd           ;         ;
-; ../incrementer/incrementer.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd           ;         ;
-; ../subtractor/subtractor.vhd             ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd             ;         ;
-; ../subtractor/full_subtractor.vhd        ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd        ;         ;
-; ../bitwise_not/bitwise_not.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/bitwise_not/bitwise_not.vhd           ;         ;
-; alu.vhd                                  ; yes             ; User VHDL File  ; C:/Users/franc/Documents/Quartus/alu/alu.vhd                           ;         ;
+; ../adder/full_adder.vhd                  ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/adder/full_adder.vhd                  ;         ;
+; ../adder/adder.vhd                       ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/adder/adder.vhd                       ;         ;
+; ../bitwise_and/bitwise_and.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd           ;         ;
+; ../bitwise_identity/bitwise_identity.vhd ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd ;         ;
+; ../bitwise_or/bitwise_or.vhd             ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd             ;         ;
+; ../decrementer/decrementer.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd           ;         ;
+; ../incrementer/incrementer.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd           ;         ;
+; ../subtractor/subtractor.vhd             ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd             ;         ;
+; ../subtractor/full_subtractor.vhd        ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd        ;         ;
+; ../bitwise_not/bitwise_not.vhd           ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd           ;         ;
+; alu.vhd                                  ; yes             ; User VHDL File  ; C:/Users/franc/Documents/quartus/alu/alu.vhd                           ;         ;
 +------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
 
 
@@ -275,106 +265,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |alu|Mux2                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adder:U_ADD ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; WIDTH          ; 4     ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adder:U_ADD|full_adder:U0 ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adder:U_ADD|full_adder:U1 ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adder:U_ADD|full_adder:U2 ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adder:U_ADD|full_adder:U3 ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: incrementer:U_INC|adder:U0 ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: incrementer:U_INC|adder:U0|full_adder:U0 ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: incrementer:U_INC|adder:U0|full_adder:U1 ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: incrementer:U_INC|adder:U0|full_adder:U2 ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: incrementer:U_INC|adder:U0|full_adder:U3 ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------+
@@ -487,58 +377,61 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Jan 20 23:09:50 2026
+    Info: Processing started: Wed Jan 28 04:46:00 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/adder/full_adder.vhd
-    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Users/franc/Documents/Quartus/adder/full_adder.vhd Line: 18
-    Info (12023): Found entity 1: full_adder File: C:/Users/franc/Documents/Quartus/adder/full_adder.vhd Line: 4
+    Info (12022): Found design unit 1: full_adder-behavioral File: C:/Users/franc/Documents/quartus/adder/full_adder.vhd Line: 14
+    Info (12023): Found entity 1: full_adder File: C:/Users/franc/Documents/quartus/adder/full_adder.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/adder/adder.vhd
-    Info (12022): Found design unit 1: adder-structural File: C:/Users/franc/Documents/Quartus/adder/adder.vhd Line: 17
-    Info (12023): Found entity 1: adder File: C:/Users/franc/Documents/Quartus/adder/adder.vhd Line: 4
+    Info (12022): Found design unit 1: adder-structural File: C:/Users/franc/Documents/quartus/adder/adder.vhd Line: 13
+    Info (12023): Found entity 1: adder File: C:/Users/franc/Documents/quartus/adder/adder.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/bitwise_and/bitwise_and.vhd
-    Info (12022): Found design unit 1: bitwise_and-behavioral File: C:/Users/franc/Documents/Quartus/bitwise_and/bitwise_and.vhd Line: 12
-    Info (12023): Found entity 1: bitwise_and File: C:/Users/franc/Documents/Quartus/bitwise_and/bitwise_and.vhd Line: 4
+    Info (12022): Found design unit 1: bitwise_and-behavioral File: C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd Line: 12
+    Info (12023): Found entity 1: bitwise_and File: C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/bitwise_identity/bitwise_identity.vhd
-    Info (12022): Found design unit 1: bitwise_identity-behavioral File: C:/Users/franc/Documents/Quartus/bitwise_identity/bitwise_identity.vhd Line: 11
-    Info (12023): Found entity 1: bitwise_identity File: C:/Users/franc/Documents/Quartus/bitwise_identity/bitwise_identity.vhd Line: 4
+    Info (12022): Found design unit 1: bitwise_identity-behavioral File: C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd Line: 11
+    Info (12023): Found entity 1: bitwise_identity File: C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/bitwise_or/bitwise_or.vhd
-    Info (12022): Found design unit 1: bitwise_or-behavioral File: C:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd Line: 12
-    Info (12023): Found entity 1: bitwise_or File: C:/Users/franc/Documents/Quartus/bitwise_or/bitwise_or.vhd Line: 4
+    Info (12022): Found design unit 1: bitwise_or-behavioral File: C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd Line: 12
+    Info (12023): Found entity 1: bitwise_or File: C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/decrementer/decrementer.vhd
-    Info (12022): Found design unit 1: decrementer-structural File: C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd Line: 12
-    Info (12023): Found entity 1: decrementer File: C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd Line: 4
+    Info (12022): Found design unit 1: decrementer-structural File: C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd Line: 12
+    Info (12023): Found entity 1: decrementer File: C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/incrementer/incrementer.vhd
-    Info (12022): Found design unit 1: incrementer-structural File: C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd Line: 12
-    Info (12023): Found entity 1: incrementer File: C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd Line: 4
+    Info (12022): Found design unit 1: incrementer-structural File: C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd Line: 12
+    Info (12023): Found entity 1: incrementer File: C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/subtractor/subtractor.vhd
-    Info (12022): Found design unit 1: subtractor-structural File: C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd Line: 14
-    Info (12023): Found entity 1: subtractor File: C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd Line: 4
+    Info (12022): Found design unit 1: subtractor-structural File: C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd Line: 14
+    Info (12023): Found entity 1: subtractor File: C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/subtractor/full_subtractor.vhd
-    Info (12022): Found design unit 1: full_subtractor-behavioral File: C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd Line: 14
-    Info (12023): Found entity 1: full_subtractor File: C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd Line: 4
+    Info (12022): Found design unit 1: full_subtractor-behavioral File: C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd Line: 14
+    Info (12023): Found entity 1: full_subtractor File: C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file /users/franc/documents/quartus/bitwise_not/bitwise_not.vhd
-    Info (12022): Found design unit 1: bitwise_not-behavioral File: C:/Users/franc/Documents/Quartus/bitwise_not/bitwise_not.vhd Line: 11
-    Info (12023): Found entity 1: bitwise_not File: C:/Users/franc/Documents/Quartus/bitwise_not/bitwise_not.vhd Line: 4
+    Info (12022): Found design unit 1: bitwise_not-behavioral File: C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd Line: 11
+    Info (12023): Found entity 1: bitwise_not File: C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: alu-structural File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 13
-    Info (12023): Found entity 1: alu File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 4
+    Info (12022): Found design unit 1: alu-structural File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 13
+    Info (12023): Found entity 1: alu File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file alu_tb.vhd
+    Info (12022): Found design unit 1: alu_tb-testbench File: C:/Users/franc/Documents/quartus/alu/alu_tb.vhd Line: 9
+    Info (12023): Found entity 1: alu_tb File: C:/Users/franc/Documents/quartus/alu/alu_tb.vhd Line: 6
 Info (12127): Elaborating entity "alu" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at alu.vhd(89): object "c_add" assigned a value but never read File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 89
-Warning (10036): Verilog HDL or VHDL warning at alu.vhd(90): object "c_sub" assigned a value but never read File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 90
-Warning (10036): Verilog HDL or VHDL warning at alu.vhd(91): object "c_inc" assigned a value but never read File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 91
-Warning (10036): Verilog HDL or VHDL warning at alu.vhd(92): object "c_dec" assigned a value but never read File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 92
-Info (12128): Elaborating entity "bitwise_identity" for hierarchy "bitwise_identity:U_IDEN" File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 96
-Info (12128): Elaborating entity "adder" for hierarchy "adder:U_ADD" File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 102
-Info (12128): Elaborating entity "full_adder" for hierarchy "adder:U_ADD|full_adder:U0" File: C:/Users/franc/Documents/Quartus/adder/adder.vhd Line: 33
-Info (12128): Elaborating entity "subtractor" for hierarchy "subtractor:U_SUB" File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 110
-Info (12128): Elaborating entity "full_subtractor" for hierarchy "subtractor:U_SUB|full_subtractor:U0" File: C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd Line: 29
-Info (12128): Elaborating entity "incrementer" for hierarchy "incrementer:U_INC" File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 118
-Info (12128): Elaborating entity "decrementer" for hierarchy "decrementer:U_DEC" File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 125
-Info (12128): Elaborating entity "bitwise_and" for hierarchy "bitwise_and:U_AND" File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 132
-Info (12128): Elaborating entity "bitwise_or" for hierarchy "bitwise_or:U_OR" File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 139
-Info (12128): Elaborating entity "bitwise_not" for hierarchy "bitwise_not:U_NOT" File: C:/Users/franc/Documents/Quartus/alu/alu.vhd Line: 146
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(89): object "c_add" assigned a value but never read File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 89
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(90): object "c_sub" assigned a value but never read File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 90
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(91): object "c_inc" assigned a value but never read File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 91
+Warning (10036): Verilog HDL or VHDL warning at alu.vhd(92): object "c_dec" assigned a value but never read File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 92
+Info (12128): Elaborating entity "bitwise_identity" for hierarchy "bitwise_identity:U_IDEN" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 96
+Info (12128): Elaborating entity "adder" for hierarchy "adder:U_ADD" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 102
+Info (12128): Elaborating entity "full_adder" for hierarchy "adder:U_ADD|full_adder:U0" File: C:/Users/franc/Documents/quartus/adder/adder.vhd Line: 29
+Info (12128): Elaborating entity "subtractor" for hierarchy "subtractor:U_SUB" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 110
+Info (12128): Elaborating entity "full_subtractor" for hierarchy "subtractor:U_SUB|full_subtractor:U0" File: C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd Line: 29
+Info (12128): Elaborating entity "incrementer" for hierarchy "incrementer:U_INC" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 118
+Info (12128): Elaborating entity "decrementer" for hierarchy "decrementer:U_DEC" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 125
+Info (12128): Elaborating entity "bitwise_and" for hierarchy "bitwise_and:U_AND" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 132
+Info (12128): Elaborating entity "bitwise_or" for hierarchy "bitwise_or:U_OR" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 139
+Info (12128): Elaborating entity "bitwise_not" for hierarchy "bitwise_not:U_NOT" File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 146
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -547,9 +440,9 @@ Info (21057): Implemented 33 device resources after synthesis - the final resour
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 18 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Tue Jan 20 23:09:59 2026
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Wed Jan 28 04:46:08 2026
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

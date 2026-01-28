@@ -1,20 +1,25 @@
 |subtractor
-a[0] => full_subtractor:U0.a
-a[1] => full_subtractor:U1.a
-a[2] => full_subtractor:U2.a
-a[3] => full_subtractor:U3.a
-b[0] => full_subtractor:U0.b
-b[1] => full_subtractor:U1.b
-b[2] => full_subtractor:U2.b
-b[3] => full_subtractor:U3.b
-s[0] << full_subtractor:U0.s
-s[1] << full_subtractor:U1.s
-s[2] << full_subtractor:U2.s
-s[3] << full_subtractor:U3.s
-c << full_subtractor:U3.cout
+clk => full_subtractor:U_FIRST.clk
+clk => full_subtractor:GEN_SUBTRACTORS:1:U_MID.clk
+clk => full_subtractor:GEN_SUBTRACTORS:2:U_MID.clk
+clk => full_subtractor:U_LAST.clk
+a[0] => full_subtractor:U_FIRST.a
+a[1] => full_subtractor:GEN_SUBTRACTORS:1:U_MID.a
+a[2] => full_subtractor:GEN_SUBTRACTORS:2:U_MID.a
+a[3] => full_subtractor:U_LAST.a
+b[0] => full_subtractor:U_FIRST.b
+b[1] => full_subtractor:GEN_SUBTRACTORS:1:U_MID.b
+b[2] => full_subtractor:GEN_SUBTRACTORS:2:U_MID.b
+b[3] => full_subtractor:U_LAST.b
+s[0] << full_subtractor:U_FIRST.s
+s[1] << full_subtractor:GEN_SUBTRACTORS:1:U_MID.s
+s[2] << full_subtractor:GEN_SUBTRACTORS:2:U_MID.s
+s[3] << full_subtractor:U_LAST.s
+c << full_subtractor:U_LAST.cout
 
 
-|subtractor|full_subtractor:U0
+|subtractor|full_subtractor:U_FIRST
+clk => ~NO_FANOUT~
 a => s.IN0
 a => cout.IN0
 a => cout.IN0
@@ -28,7 +33,8 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|subtractor|full_subtractor:U1
+|subtractor|full_subtractor:\GEN_SUBTRACTORS:1:U_MID
+clk => ~NO_FANOUT~
 a => s.IN0
 a => cout.IN0
 a => cout.IN0
@@ -42,7 +48,8 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|subtractor|full_subtractor:U2
+|subtractor|full_subtractor:\GEN_SUBTRACTORS:2:U_MID
+clk => ~NO_FANOUT~
 a => s.IN0
 a => cout.IN0
 a => cout.IN0
@@ -56,7 +63,8 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|subtractor|full_subtractor:U3
+|subtractor|full_subtractor:U_LAST
+clk => ~NO_FANOUT~
 a => s.IN0
 a => cout.IN0
 a => cout.IN0

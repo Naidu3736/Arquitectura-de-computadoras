@@ -1,0 +1,29 @@
+|shifter
+sh_ctrl[0] => Mux0.IN2
+sh_ctrl[0] => Mux1.IN1
+sh_ctrl[0] => Mux2.IN1
+sh_ctrl[0] => Mux3.IN2
+sh_ctrl[1] => Mux0.IN1
+sh_ctrl[1] => Mux1.IN0
+sh_ctrl[1] => Mux2.IN0
+sh_ctrl[1] => Mux3.IN1
+a[0] => Mux0.IN5
+a[0] => Mux2.IN5
+a[0] => Mux3.IN5
+a[1] => Mux1.IN5
+a[1] => Mux2.IN4
+a[1] => Mux3.IN3
+a[1] => Mux3.IN4
+a[2] => Mux0.IN4
+a[2] => Mux1.IN4
+a[2] => Mux2.IN2
+a[2] => Mux2.IN3
+a[3] => Mux0.IN3
+a[3] => Mux1.IN2
+a[3] => Mux1.IN3
+s[0] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+s[1] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+s[2] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+s[3] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

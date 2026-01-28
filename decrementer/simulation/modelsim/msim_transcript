@@ -10,58 +10,61 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd}
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:32:26 on Jan 20,2026
-# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/Quartus/subtractor/full_subtractor.vhd 
+# Start time: 05:13:50 on Jan 28,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity full_subtractor
 # -- Compiling architecture behavioral of full_subtractor
-# End time: 20:32:26 on Jan 20,2026, Elapsed time: 0:00:00
+# End time: 05:13:50 on Jan 28,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd}
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:32:26 on Jan 20,2026
-# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/Quartus/subtractor/subtractor.vhd 
+# Start time: 05:13:51 on Jan 28,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity subtractor
 # -- Compiling architecture structural of subtractor
-# End time: 20:32:26 on Jan 20,2026, Elapsed time: 0:00:00
+# End time: 05:13:51 on Jan 28,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd}
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:32:26 on Jan 20,2026
-# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/Quartus/decrementer/decrementer.vhd 
+# Start time: 05:13:51 on Jan 28,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity decrementer
 # -- Compiling architecture structural of decrementer
-# End time: 20:32:26 on Jan 20,2026, Elapsed time: 0:00:00
+# End time: 05:13:51 on Jan 28,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/franc/Documents/Quartus/decrementer/simulation/modelsim/decrementer.vht}
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/decrementer/decrementer_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:32:26 on Jan 20,2026
-# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/Quartus/decrementer/simulation/modelsim/decrementer.vht 
+# Start time: 05:13:51 on Jan 28,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/decrementer/decrementer_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity decrementer_vhd_tst
-# -- Compiling architecture decrementer_arch of decrementer_vhd_tst
-# End time: 20:32:26 on Jan 20,2026, Elapsed time: 0:00:00
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decrementer_tb
+# -- Compiling architecture testbench of decrementer_tb
+# End time: 05:13:51 on Jan 28,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  decrementer
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" decrementer 
-# Start time: 20:32:26 on Jan 20,2026
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  decrementer_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" decrementer_tb 
+# Start time: 05:13:51 on Jan 28,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.decrementer_tb(testbench)
 # Loading work.decrementer(structural)
 # Loading work.subtractor(structural)
 # Loading work.full_subtractor(behavioral)
@@ -72,15 +75,9 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-force -freeze sim:/decrementer/a 1111 0
-run
-force -freeze sim:/decrementer/a 1110 0
-run
-force -freeze sim:/decrementer/a 0011 0
-run
-force -freeze sim:/decrementer/a 0001 0
-run
-force -freeze sim:/decrementer/a 0000 0
-run
-# End time: 20:34:10 on Jan 20,2026, Elapsed time: 0:01:44
-# Errors: 0, Warnings: 0
+# ** Error: Error: a=0, got s=15, c='1', expected=16
+#    Time: 10 ns  Iteration: 0  Instance: /decrementer_tb
+# ** Note: Decrementer test complete. Errors: 1
+#    Time: 320 ns  Iteration: 0  Instance: /decrementer_tb
+# End time: 05:14:21 on Jan 28,2026, Elapsed time: 0:00:30
+# Errors: 1, Warnings: 0

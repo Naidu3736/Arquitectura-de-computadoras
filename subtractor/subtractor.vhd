@@ -22,7 +22,7 @@ architecture structural of subtractor is
 		);
 	end component;
 
-	signal borrow : std_logic_vector(2 downto 0);
+	signal borrow : std_logic_vector(3 downto 0);
 
 begin
 
@@ -34,7 +34,7 @@ begin
 			s => s(0),
 			cout => borrow(0)
 		);
-		
+
 	U1 : full_subtractor
 		port map (
 			a => a(1),
@@ -43,7 +43,7 @@ begin
 			s => s(1),
 			cout => borrow(1)
 		);
-		
+
 	U2 : full_subtractor
 		port map (
 			a => a(2),
@@ -52,14 +52,16 @@ begin
 			s => s(2),
 			cout => borrow(2)
 		);
-		
+
 	U3 : full_subtractor
 		port map (
 			a => a(3),
 			b => b(3),
 			cin => borrow(2),
 			s => s(3),
-			cout => c
+			cout => borrow(3)
 		);
+		
+	c <= borrow(3);
 
 end architecture structural;

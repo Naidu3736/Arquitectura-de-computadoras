@@ -10,58 +10,61 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/franc/Documents/Quartus/adder/full_adder.vhd}
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/adder/full_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:45:34 on Jan 20,2026
-# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/Quartus/adder/full_adder.vhd 
+# Start time: 05:15:35 on Jan 28,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/adder/full_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity full_adder
 # -- Compiling architecture behavioral of full_adder
-# End time: 20:45:34 on Jan 20,2026, Elapsed time: 0:00:00
+# End time: 05:15:35 on Jan 28,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/franc/Documents/Quartus/adder/adder.vhd}
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/adder/adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:45:34 on Jan 20,2026
-# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/Quartus/adder/adder.vhd 
+# Start time: 05:15:35 on Jan 28,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/adder/adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity adder
 # -- Compiling architecture structural of adder
-# End time: 20:45:34 on Jan 20,2026, Elapsed time: 0:00:00
+# End time: 05:15:35 on Jan 28,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd}
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:45:34 on Jan 20,2026
-# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/Quartus/incrementer/incrementer.vhd 
+# Start time: 05:15:36 on Jan 28,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity incrementer
 # -- Compiling architecture structural of incrementer
-# End time: 20:45:34 on Jan 20,2026, Elapsed time: 0:00:00
+# End time: 05:15:36 on Jan 28,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/franc/Documents/Quartus/incrementer/simulation/modelsim/incrementer.vht}
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/incrementer/incrementer_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:45:34 on Jan 20,2026
-# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/Quartus/incrementer/simulation/modelsim/incrementer.vht 
+# Start time: 05:15:36 on Jan 28,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/incrementer/incrementer_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity incrementer_vhd_tst
-# -- Compiling architecture incrementer_arch of incrementer_vhd_tst
-# End time: 20:45:34 on Jan 20,2026, Elapsed time: 0:00:00
+# -- Loading package NUMERIC_STD
+# -- Compiling entity incrementer_tb
+# -- Compiling architecture testbench of incrementer_tb
+# End time: 05:15:36 on Jan 28,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  incrementer
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" incrementer 
-# Start time: 20:45:34 on Jan 20,2026
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  incrementer_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" incrementer_tb 
+# Start time: 05:15:36 on Jan 28,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.incrementer_tb(testbench)
 # Loading work.incrementer(structural)
 # Loading work.adder(structural)
 # Loading work.full_adder(behavioral)
@@ -72,13 +75,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-force -freeze sim:/incrementer/a 1100 0
-run
-force -freeze sim:/incrementer/a 1101 0
-run
-force -freeze sim:/incrementer/a 1110 0
-run
-force -freeze sim:/incrementer/a 1111 0
-run
-# End time: 20:54:02 on Jan 20,2026, Elapsed time: 0:08:28
+# ** Note: Incrementer test complete. Errors: 0
+#    Time: 315 ns  Iteration: 1  Instance: /incrementer_tb
+# End time: 05:16:22 on Jan 28,2026, Elapsed time: 0:00:46
 # Errors: 0, Warnings: 0

@@ -1,0 +1,148 @@
+-- File: adder_tb.vhd
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity adder_tb is
+end entity adder_tb;
+
+architecture testbench of adder_tb is
+    constant WIDTH : integer := 4;
+    constant CLK_PERIOD : time := 10 ns;
+    
+    -- Component Declaration for the Unit Under Test (UUT)
+    component adder
+        generic (
+            WIDTH : integer := 4
+        );
+        port (
+            clk : in std_logic;
+            a   : in std_logic_vector(WIDTH-1 downto 0);
+            b   : in std_logic_vector(WIDTH-1 downto 0);
+            s   : out std_logic_vector(WIDTH-1 downto 0);
+            c   : out std_logic
+        );
+    end component;
+    
+    -- Inputs
+    signal clk : std_logic := '0';
+    signal a   : std_logic_vector(WIDTH-1 downto 0) := (others => '0');
+    signal b   : std_logic_vector(WIDTH-1 downto 0) := (others => '0');
+    
+    -- Outputs
+    signal s   : std_logic_vector(WIDTH-1 downto 0);
+    signal c   : std_logic;
+    
+    -- Expected outputs
+    signal expected_sum : std_logic_vector(WIDTH downto 0);
+    signal error_flag   : std_logic := '0';
+    
+begin
+    -- Instantiate the Unit Under Test (UUT)
+    UUT: adder
+        generic map (
+            WIDTH => WIDTH
+        )
+        port map (
+            clk => clk,
+            a   => a,
+            b   => b,
+            s   => s,
+            c   => c
+        );
+    
+    -- Clock process
+    clk_process: process
+    begin
+        clk <= '0';
+        wait for CLK_PERIOD/2;
+        clk <= '1';
+        wait for CLK_PERIOD/2;
+    end process;
+    
+    -- Stimulus process
+    stimulus: process
+        variable test_count : integer := 0;
+        variable error_count : integer := 0;
+        variable expected_result : unsigned(WIDTH downto 0);
+    begin
+        -- Wait for global reset
+        wait for 100 ns;
+        wait until falling_edge(clk);
+        
+        report "Starting testbench for " & integer'image(2**WIDTH) & "x" & integer'image(2**WIDTH) & " = " & integer'image(2**(2*WIDTH)) & " test cases";
+        
+        -- Test all possible combinations
+        for i in 0 to 2**WIDTH-1 loop
+            for j in 0 to 2**WIDTH-1 loop
+                -- Apply test vectors
+                a <= std_logic_vector(to_unsigned(i, WIDTH));
+                b <= std_logic_vector(to_unsigned(j, WIDTH));
+                
+                -- Wait for propagation
+                wait for CLK_PERIOD;
+                
+                -- Calculate expected result using numeric_std
+                expected_result := resize(unsigned(a), WIDTH+1) + resize(unsigned(b), WIDTH+1);
+                expected_sum <= std_logic_vector(expected_result);
+                
+                -- Compare results (allowing 1 clock cycle for pipeline if needed)
+                wait for 1 ns; -- Small delta for signal settling
+                
+                -- Check if outputs match expected values
+                if (c & s) /= expected_sum then
+                    error_flag <= '1';
+                    error_count := error_count + 1;
+                    report "Error at test #" & integer'image(test_count) & 
+                           ": a=" & integer'image(i) & " (" & to_string(a) & 
+                           "), b=" & integer'image(j) & " (" & to_string(b) & 
+                           ")" & LF &
+                           "  Expected: " & to_string(expected_sum) & 
+                           " (" & integer'image(to_integer(unsigned(expected_sum))) & ")" & LF &
+                           "  Got:      " & to_string(c & s) & 
+                           " (" & integer'image(to_integer(unsigned(c & s))) & ")"
+                           severity error;
+                else
+                    error_flag <= '0';
+                    report "Test #" & integer'image(test_count) & 
+                           ": a=" & integer'image(i) & 
+                           ", b=" & integer'image(j) & 
+                           " -> s=" & integer'image(to_integer(unsigned(s))) & 
+                           ", c=" & std_logic'image(c) & 
+                           " [OK]" severity note;
+                end if;
+                
+                test_count := test_count + 1;
+                
+                -- Optional: Add delay between tests for readability in simulation
+                wait for CLK_PERIOD/4;
+            end loop;
+        end loop;
+        
+        -- Test completion report
+        wait for CLK_PERIOD;
+        report "=========================================";
+        report "Testbench completed!" severity note;
+        report "Total tests: " & integer'image(test_count);
+        report "Errors found: " & integer'image(error_count);
+        
+        if error_count = 0 then
+            report "All tests PASSED!" severity note;
+        else
+            report integer'image(error_count) & " tests FAILED!" severity error;
+        end if;
+        
+        -- Stop simulation
+        wait;
+    end process;
+    
+    -- Optional: Monitor process for debugging
+    monitor: process(clk)
+    begin
+        if rising_edge(clk) then
+            -- You can add debug prints here if needed
+            null;
+        end if;
+    end process;
+    
+end architecture testbench;

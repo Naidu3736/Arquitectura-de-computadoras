@@ -18,7 +18,7 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "01/19/2026 20:24:41"
+-- Generated on "01/26/2026 18:46:57"
                                                             
 -- Vhdl Test Bench template for design  :  adder
 -- 
@@ -36,13 +36,15 @@ ARCHITECTURE adder_arch OF adder_vhd_tst IS
 SIGNAL a : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL b : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL c : STD_LOGIC;
+SIGNAL clk : STD_LOGIC;
 SIGNAL s : STD_LOGIC_VECTOR(3 DOWNTO 0);
 COMPONENT adder
 	PORT (
 	a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	c : BUFFER STD_LOGIC;
-	s : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0)
+	c : OUT STD_LOGIC;
+	clk : IN STD_LOGIC;
+	s : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -52,6 +54,7 @@ BEGIN
 	a => a,
 	b => b,
 	c => c,
+	clk => clk,
 	s => s
 	);
 init : PROCESS                                               

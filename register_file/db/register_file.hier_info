@@ -1,0 +1,45 @@
+|register_file
+clk => registers~6.CLK
+clk => registers~0.CLK
+clk => registers~1.CLK
+clk => registers~2.CLK
+clk => registers~3.CLK
+clk => registers~4.CLK
+clk => registers~5.CLK
+clk => registers.CLK0
+we => registers~6.DATAIN
+we => registers.WE
+wa[0] => registers~1.DATAIN
+wa[0] => registers.WADDR
+wa[1] => registers~0.DATAIN
+wa[1] => registers.WADDR1
+wd[0] => registers~5.DATAIN
+wd[0] => registers.DATAIN
+wd[1] => registers~4.DATAIN
+wd[1] => registers.DATAIN1
+wd[2] => registers~3.DATAIN
+wd[2] => registers.DATAIN2
+wd[3] => registers~2.DATAIN
+wd[3] => registers.DATAIN3
+rae => aout[0].OE
+rae => aout[1].OE
+rae => aout[2].OE
+rae => aout[3].OE
+raa[0] => registers.RADDR
+raa[1] => registers.RADDR1
+aout[0] <= aout[0].DB_MAX_OUTPUT_PORT_TYPE
+aout[1] <= aout[1].DB_MAX_OUTPUT_PORT_TYPE
+aout[2] <= aout[2].DB_MAX_OUTPUT_PORT_TYPE
+aout[3] <= aout[3].DB_MAX_OUTPUT_PORT_TYPE
+rbe => bout[0].OE
+rbe => bout[1].OE
+rbe => bout[2].OE
+rbe => bout[3].OE
+rba[0] => registers.PORTBRADDR
+rba[1] => registers.PORTBRADDR1
+bout[0] <= bout[0].DB_MAX_OUTPUT_PORT_TYPE
+bout[1] <= bout[1].DB_MAX_OUTPUT_PORT_TYPE
+bout[2] <= bout[2].DB_MAX_OUTPUT_PORT_TYPE
+bout[3] <= bout[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

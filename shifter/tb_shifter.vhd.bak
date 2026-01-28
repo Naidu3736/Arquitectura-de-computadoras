@@ -1,0 +1,75 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tb_shifter is
+end tb_shifter;
+
+architecture behavior of tb_shifter is
+
+    -- Señales para conectar al shifter
+    signal a       : std_logic_vector(3 downto 0);
+    signal sh_ctrl : std_logic_vector(1 downto 0);
+    signal s       : std_logic_vector(3 downto 0);
+
+    -- Instancia del shifter
+    component shifter is
+        port (
+            a       : in  std_logic_vector(3 downto 0);
+            sh_ctrl : in  std_logic_vector(1 downto 0);
+            s       : out std_logic_vector(3 downto 0)
+        );
+    end component;
+
+begin
+
+    -- Conexión del shifter
+    UUT : shifter
+        port map (
+            a       => a,
+            sh_ctrl => sh_ctrl,
+            s       => s
+        );
+
+    -- Proceso de estímulos
+    stimulus : process
+    begin
+
+        -- Caso 1: Pass through
+        a <= "1010";
+        sh_ctrl <= "00";
+        wait for 10 ns;
+
+        -- Caso 2: Shift left lógico
+        a <= "1010";
+        sh_ctrl <= "01";
+        wait for 10 ns;
+
+        -- Caso 3: Shift right lógico
+        a <= "1010";
+        sh_ctrl <= "10";
+        wait for 10 ns;
+
+        -- Caso 4: Shift right aritmético
+        a <= "1010";
+        sh_ctrl <= "11";
+        wait for 10 ns;
+
+        -- Otro valor para ver más claro
+        a <= "0111";
+        sh_ctrl <= "01";
+        wait for 10 ns;
+
+        a <= "0111";
+        sh_ctrl <= "10";
+        wait for 10 ns;
+
+        a <= "1111";
+        sh_ctrl <= "11";
+        wait for 10 ns;
+
+        -- Terminar simulación
+        wait;
+
+    end process;
+
+end architecture behavior;

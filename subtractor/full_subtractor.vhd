@@ -17,5 +17,5 @@ begin
 
 	s <= a xor b xor cin;
 	cout <= ((not a) and b) or ((not a) and cin) or (b and cin);
-
+	
 end architecture behavioral;

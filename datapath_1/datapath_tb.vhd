@@ -34,9 +34,10 @@ architecture testbench of datapath_tb is
     signal output : std_logic_vector(3 downto 0);
     
     constant CLK_PERIOD : time := 10 ns;
-    
-    -- Señal para controlar cuando terminar
     signal sim_finished : boolean := false;
+    
+    -- Para capturar el valor de salida
+    signal output_reg : std_logic_vector(3 downto 0);
     
 begin
 
@@ -57,7 +58,7 @@ begin
             output => output
         );
     
-    -- Proceso del reloj independiente
+    -- Proceso del reloj
     clk_process: process
     begin
         while not sim_finished loop
@@ -69,14 +70,29 @@ begin
         wait;
     end process;
     
+    -- Capturar el valor de salida en cada flanco positivo
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            output_reg <= output;
+        end if;
+    end process;
+    
     -- Proceso principal de estímulos
     stimulus: process
         variable n_val : integer := 5;    -- Multiplicando
         variable m_val : integer := 3;    -- Multiplicador
-        variable m_temp : integer;        -- Para leer m
-        variable r_temp : integer;        -- Para leer resultado
-        variable estado : integer := 0;   -- Para controlar estados
+        variable expected_result : integer;
+        variable m_current : integer;     -- Para seguir el valor de m
+        variable iteration : integer := 0;
     begin
+        
+        -- Calcular resultado esperado
+        expected_result := n_val * m_val;
+        m_current := m_val;  -- Inicializar m_current
+        
+        report "Iniciando multiplicacion: " & integer'image(n_val) & " x " & 
+               integer'image(m_val) & " = " & integer'image(expected_result);
         
         -- Inicializar todas las señales
         input <= "0000";
@@ -90,19 +106,16 @@ begin
         alu_ctrl <= "000";
         sh_ctrl <= "00";
         oe <= '0';
-        m_temp := m_val;
         
-        wait for CLK_PERIOD;
+        wait for CLK_PERIOD * 2;
         
         -- PASO 1: Cargar n = 5 en R0
         input <= std_logic_vector(to_unsigned(n_val, 4));
         ie <= '1';           -- Usar input externo
         we <= '1';           -- Habilitar escritura
         wa <= "00";          -- Escribir en R0
-        alu_ctrl <= "000";   -- Identidad (pasa el input)
-        wait for CLK_PERIOD;
-        we <= '0';
-        ie <= '0';
+        sh_ctrl <= "00";     -- Pass through
+        alu_ctrl <= "000";   -- Identidad
         wait for CLK_PERIOD;
         
         -- PASO 2: Cargar m = 3 en R1
@@ -110,83 +123,145 @@ begin
         ie <= '1';
         we <= '1';
         wa <= "01";          -- Escribir en R1
-        alu_ctrl <= "000";   -- Identidad
-        wait for CLK_PERIOD;
-        we <= '0';
-        ie <= '0';
         wait for CLK_PERIOD;
         
-        -- PASO 3: Inicializar r = 0 en R2
+        -- PASO 3: Inicializar resultado r = 0 en R2
         input <= "0000";
         ie <= '1';
         we <= '1';
         wa <= "10";          -- Escribir en R2
-        alu_ctrl <= "000";   -- Identidad
         wait for CLK_PERIOD;
         we <= '0';
         ie <= '0';
+        
         wait for CLK_PERIOD;
         
-        -- Inicializar m_temp con el valor actual de m
-        -- Leer m desde R1
-        rae <= '1';
-        raa <= "01";     -- Leer R1 (m)
-        oe <= '1';       -- Habilitar salida
-        wait for CLK_PERIOD;
-        m_temp := to_integer(unsigned(output));  -- Leer valor de m
-        rae <= '0';
-        oe <= '0';
-        wait for CLK_PERIOD;
-        
-        -- BUCLE: while (m > 0)
-        while m_temp > 0 loop
+        -- BUCLE WHILE: while m > 0
+        while m_current > 0 loop
             
-            -- PASO 4: r = r + n (acumular)
-            -- Leer n desde R0 y r desde R2
-            we <= '1';
-            wa <= "10";   
+            iteration := iteration + 1;
+            report "Iteracion " & integer'image(iteration) & 
+                   ", m actual = " & integer'image(m_current);
+            
+            -- **Ciclo 1: Leer r (R2) y n (R0), calcular r + n**
+            -- Configurar para leer r y n
             rae <= '1';
-            raa <= "00";     -- Leer R0 (n)
+            raa <= "10";     -- Leer R2 (r actual)
             rbe <= '1';
-            rba <= "10";     -- Leer R2 (r)
-            alu_ctrl <= "001";  -- SUMA (r + n)
-				oe <= '1';
+            rba <= "00";     -- Leer R0 (n)
+            alu_ctrl <= "001";  -- SUMA (a + b)
+            sh_ctrl <= "00";  -- Pass through
+            oe <= '0';       -- No mostrar salida todavía
             wait for CLK_PERIOD;
             
-            -- PASO 5: m = m - 1 (decrementar contador)
-            -- Leer m desde R1
-            we <= '1';
-            wa <= "01";      -- Escribir en R1				
-            rae <= '1';
-            raa <= "01";     -- Leer R1 (m)
-            alu_ctrl <= "100";  -- m - 1
-				oe <= '1';
+            -- **Ciclo 2: Guardar r + n en R2**
+            ie <= '0';       
+            we <= '1';       -- Habilitar escritura
+            wa <= "10";      -- Escribir en R2
             wait for CLK_PERIOD;
             
-            -- Leer el nuevo valor de m para la condición del bucle
+            -- **Ciclo 3: Leer m (R1) y calcular m - 1**
+            we <= '0';       -- Deshabilitar escritura temporalmente
             rae <= '1';
             raa <= "01";     -- Leer R1 (m)
-            oe <= '1';       -- Habilitar salida
-				m_temp := to_integer(unsigned(output));
+            rbe <= '0';      -- No necesitamos puerto B
+            alu_ctrl <= "100";  -- DECREMENTO (a - 1)
+            sh_ctrl <= "00";  -- Pass through
+            oe <= '1';       -- Habilitar salida para ver m-1
+            wait for CLK_PERIOD;
+            
+            -- Capturar el nuevo valor de m
+            m_current := to_integer(unsigned(output));
+            report "Nuevo valor de m despues de decremento: " & integer'image(m_current);
+            
+            -- **Ciclo 4: Guardar m - 1 en R1**
+            we <= '1';       -- Habilitar escritura
+            wa <= "01";      -- Escribir en R1
+            oe <= '0';       -- Deshabilitar salida
+            wait for CLK_PERIOD;
+            
+            -- Pequeña pausa entre iteraciones
+            rae <= '0';
+            rbe <= '0';
+            we <= '0';
             wait for CLK_PERIOD;
             
         end loop;
         
-        -- PASO 6: Mostrar resultado final
+        report "Bucle terminado despues de " & integer'image(iteration) & " iteraciones";
+        
+        -- Desactivar escritura
+        we <= '0';
+        rae <= '0';
+        rbe <= '0';
+        
+        wait for CLK_PERIOD * 2;
+        
+        -- **Mostrar resultado final**
+        report "Lectura del resultado final";
+        
         -- Leer resultado desde R2
         rae <= '1';
-        raa <= "10";         -- Leer R2
+        raa <= "10";         -- Leer R2 (resultado)
+        alu_ctrl <= "000";   -- Identidad (pasa el valor)
+        sh_ctrl <= "00";     -- Pass through
         oe <= '1';           -- Habilitar salida
-        wait for 2*CLK_PERIOD;
         
-        -- Leer el resultado final
-        r_temp := to_integer(unsigned(output));
+        wait for CLK_PERIOD * 2;
         
-        -- Esperar un poco más para visualizar en la simulación
-        wait for 3*CLK_PERIOD;
+        -- Verificar resultado
+        report "Resultado obtenido: " & integer'image(to_integer(unsigned(output_reg)));
+        report "Resultado esperado: " & integer'image(expected_result);
+        
+        if to_integer(unsigned(output_reg)) = expected_result then
+            report "¡TEST EXITOSO! Multiplicacion correcta";
+        else
+            report "¡TEST FALLIDO! Resultado incorrecto" severity error;
+        end if;
+        
+        wait for CLK_PERIOD * 2;
+        
+        -- **Leer m final para verificación**
+        oe <= '0';
+        wait for CLK_PERIOD;
+        
+        -- Leer m desde R1
+        rae <= '1';
+        raa <= "01";         -- Leer R1 (m)
+        alu_ctrl <= "000";   -- Identidad
+        oe <= '1';           -- Habilitar salida
+        
+        wait for CLK_PERIOD * 2;
+        
+        report "Valor final de m en R1: " & integer'image(to_integer(unsigned(output)));
+        
+        -- Verificar que m sea 0
+        if to_integer(unsigned(output)) = 0 then
+            report "m final es 0 - CORRECTO";
+        else
+            report "m final es " & integer'image(to_integer(unsigned(output))) & 
+                   " - DEBERIA SER 0" severity warning;
+        end if;
         
         oe <= '0';
         rae <= '0';
+        
+        wait for CLK_PERIOD * 2;
+        
+        -- **Lectura adicional para depuración**
+        -- Leer n desde R0 para verificar que no cambió
+        rae <= '1';
+        raa <= "00";         -- Leer R0 (n)
+        oe <= '1';
+        wait for CLK_PERIOD;
+        report "Valor final de n en R0: " & integer'image(to_integer(unsigned(output)));
+        
+        oe <= '0';
+        rae <= '0';
+        
+        wait for CLK_PERIOD * 2;
+        
+        report "=== SIMULACION COMPLETADA ===";
         
         -- Terminar simulación
         sim_finished <= true;

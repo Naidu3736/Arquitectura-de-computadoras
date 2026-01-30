@@ -1,5 +1,5 @@
 Analysis & Synthesis report for register_file
-Tue Jan 27 22:54:40 2026
+Thu Jan 29 11:46:55 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,10 +14,9 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |register_file
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jan 27 22:54:40 2026       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jan 29 11:46:55 2026       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; register_file                               ;
 ; Top-level Entity Name           ; register_file                               ;
@@ -228,17 +227,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |register_file ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; DATA_WIDTH     ; 4     ; Signed Integer                                       ;
-; ADDR_WIDTH     ; 2     ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -273,19 +261,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Jan 27 22:54:31 2026
+    Info: Processing started: Thu Jan 29 11:46:41 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off register_file -c register_file
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
-    Info (12022): Found design unit 1: register_file-behavioral File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 26
+    Info (12022): Found design unit 1: register_file-behavioral File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 23
     Info (12023): Found entity 1: register_file File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_file_tb.vhd
     Info (12022): Found design unit 1: register_file_tb-testbench File: C:/Users/franc/Documents/quartus/register_file/register_file_tb.vhd Line: 9
     Info (12023): Found entity 1: register_file_tb File: C:/Users/franc/Documents/quartus/register_file/register_file_tb.vhd Line: 6
 Info (12127): Elaborating entity "register_file" for the top level hierarchy
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "registers" is uninferred due to inappropriate RAM size File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 29
+    Info (276004): RAM logic "registers" is uninferred due to inappropriate RAM size File: C:/Users/franc/Documents/quartus/register_file/register_file.vhd Line: 26
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -294,9 +282,9 @@ Info (21057): Implemented 50 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 28 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Tue Jan 27 22:54:40 2026
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Thu Jan 29 11:46:55 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:31
 
 

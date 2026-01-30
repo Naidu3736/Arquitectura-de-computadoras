@@ -1,0 +1,121 @@
+# Reading pref.tcl
+# do reg_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/reg/reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:12 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/reg/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture behavioral of reg
+# End time: 15:45:13 on Jan 29,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/reg/reg_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:45:13 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/reg/reg_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity reg_tb
+# -- Compiling architecture behavioral of reg_tb
+# End time: 15:45:13 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  reg_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" reg_tb 
+# Start time: 15:45:13 on Jan 29,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.reg_tb(behavioral)
+# Loading work.reg(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: Test 1: Clear asíncrono
+#    Time: 20 ns  Iteration: 0  Instance: /reg_tb
+# ** Note: Time: 20000 ps | CLK: '0' | CLEAR: '1' | LOAD: '0' | D: 0 | Q: 0
+#    Time: 20 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Test 2: Carga de dato
+#    Time: 35 ns  Iteration: 0  Instance: /reg_tb
+# ** Note: Time: 35000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 13 | Q: 13
+#    Time: 35 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Test 3: No carga cuando load = '0'
+#    Time: 36 ns  Iteration: 0  Instance: /reg_tb
+# ** Note: Test 4: Clear durante operación
+#    Time: 46 ns  Iteration: 0  Instance: /reg_tb
+# ** Note: Time: 51000 ps | CLK: '0' | CLEAR: '1' | LOAD: '1' | D: 15 | Q: 0
+#    Time: 51 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Test 5: Secuencia de valores
+#    Time: 56 ns  Iteration: 0  Instance: /reg_tb
+# ** Note: Time: 85000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 1 | Q: 1
+#    Time: 85 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 105000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 2 | Q: 2
+#    Time: 105 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 125000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 3 | Q: 3
+#    Time: 125 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 145000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 4 | Q: 4
+#    Time: 145 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 165000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 5 | Q: 5
+#    Time: 165 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 185000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 6 | Q: 6
+#    Time: 185 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 205000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 7 | Q: 7
+#    Time: 205 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 225000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 8 | Q: 8
+#    Time: 225 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 245000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 9 | Q: 9
+#    Time: 245 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 265000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 10 | Q: 10
+#    Time: 265 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 285000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 11 | Q: 11
+#    Time: 285 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 305000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 12 | Q: 12
+#    Time: 305 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 325000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 13 | Q: 13
+#    Time: 325 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 345000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 14 | Q: 14
+#    Time: 345 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Time: 365000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 15 | Q: 15
+#    Time: 365 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Test 6: Clear asíncrono prolongado
+#    Time: 376 ns  Iteration: 0  Instance: /reg_tb
+# ** Note: Time: 376000 ps | CLK: '1' | CLEAR: '1' | LOAD: '1' | D: 10 | Q: 0
+#    Time: 376 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Test 7: Transiciones en borde de clock
+#    Time: 401 ns  Iteration: 0  Instance: /reg_tb
+# ** Note: Time: 405000 ps | CLK: '1' | CLEAR: '0' | LOAD: '1' | D: 3 | Q: 3
+#    Time: 405 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: Test 8: Finalizar test bench
+#    Time: 416 ns  Iteration: 0  Instance: /reg_tb
+# ** Note: Time: 416000 ps | CLK: '1' | CLEAR: '1' | LOAD: '1' | D: 3 | Q: 0
+#    Time: 416 ns  Iteration: 2  Instance: /reg_tb
+# ** Note: ========================================
+#    Time: 436 ns  Iteration: 0  Instance: /reg_tb
+# ** Note: Todos los tests completados exitosamente
+#    Time: 436 ns  Iteration: 0  Instance: /reg_tb
+# ** Note: ========================================
+#    Time: 436 ns  Iteration: 0  Instance: /reg_tb
+# Break key hit
+# Break in Process clk_process at C:/Users/franc/Documents/quartus/reg/reg_tb.vhd line 49
+# End time: 18:28:14 on Jan 29,2026, Elapsed time: 2:43:01
+# Errors: 0, Warnings: 0

@@ -23,9 +23,9 @@ VkRgL4lk9bZPMDa_VMU58K2
 !s100 l86[N[14]S6oR]J605fcG0
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1769597235
+Z7 !s110 1769606364
 !i10b 1
-Z8 !s108 1769597235.000000
+Z8 !s108 1769606364.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/adder/adder.vhd|
 Z10 !s107 C:/Users/franc/Documents/quartus/adder/adder.vhd|
 !i113 1
@@ -64,9 +64,9 @@ VcnTQC:cg[jYl[JBXn8M[l2
 !s100 bG5OL7zEh7W?04ifFZmM63
 R6
 31
-Z16 !s110 1769597236
+Z16 !s110 1769606365
 !i10b 1
-Z17 !s108 1769597236.000000
+Z17 !s108 1769606365.000000
 Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/alu/alu.vhd|
 Z19 !s107 C:/Users/franc/Documents/quartus/alu/alu.vhd|
 !i113 1
@@ -312,7 +312,7 @@ V]`9G^61F6d5FZZmQ`NGVT0
 !s100 <eR;46WE]VMic3;d6AmoB2
 R6
 31
-R7
+R16
 !i10b 1
 R8
 Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd|
@@ -331,7 +331,7 @@ VB_[5;m?T9VkcRIFmNGHL21
 !s100 hYCiA:UAmd7m]Q7F]H=^^1
 R6
 31
-R7
+R16
 !i10b 1
 R8
 R51
@@ -435,9 +435,9 @@ VII_a_zkTUYn>`M70i:_170
 !s100 MJ<J<<<mm:BU>@6moRh062
 R6
 31
-R7
+R16
 !i10b 1
-R8
+R17
 Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd|
 Z69 !s107 C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd|
 !i113 1
@@ -454,9 +454,9 @@ V7BRL89jTgNCj=gS]o?HCZ1
 !s100 M?faNWTlh4FD[KXe001k:3
 R6
 31
-R7
+R16
 !i10b 1
-R8
+R17
 R68
 R69
 !i113 1
@@ -476,9 +476,9 @@ V2d=e<Yi:GKdf72Lzz?_2U3
 !s100 f^D5ObV[OhiQiLcim4ZFT2
 R6
 31
-R7
+R16
 !i10b 1
-R8
+R17
 Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd|
 Z74 !s107 C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd|
 !i113 1
@@ -495,9 +495,9 @@ V=5zOa`fIQh?b>n`i;W9@E0
 !s100 89DLDe^jFkOc=0hKVV]3a2
 R6
 31
-R7
+R16
 !i10b 1
-R8
+R17
 R73
 R74
 !i113 1

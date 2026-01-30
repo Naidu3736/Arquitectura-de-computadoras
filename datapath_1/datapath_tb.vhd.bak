@@ -1,0 +1,201 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity datapath_tb is
+end datapath_tb;
+
+architecture testbench of datapath_tb is
+    component datapath
+        port (
+            clk : in std_logic;
+            input : in std_logic_vector(3 downto 0);
+            ie : in std_logic;
+            we : in std_logic;
+            wa : in std_logic_vector(1 downto 0);
+            rae : in std_logic;
+            raa : in std_logic_vector(1 downto 0);
+            rbe : in std_logic;
+            rba : in std_logic_vector(1 downto 0);
+            alu_ctrl : in std_logic_vector(2 downto 0);
+            sh_ctrl : in std_logic_vector(1 downto 0);
+            oe : in std_logic;
+            output : out std_logic_vector(3 downto 0)
+        );
+    end component;
+    
+    signal clk : std_logic := '0';
+    signal input : std_logic_vector(3 downto 0);
+    signal ie, we, rae, rbe, oe : std_logic;
+    signal wa, raa, rba : std_logic_vector(1 downto 0);
+    signal alu_ctrl : std_logic_vector(2 downto 0);
+    signal sh_ctrl : std_logic_vector(1 downto 0);
+    signal output : std_logic_vector(3 downto 0);
+    
+    constant CLK_PERIOD : time := 10 ns;
+    
+    -- Asignación de registros:
+    -- R0: n (multiplicando)
+    -- R1: m (multiplicador)  
+    -- R2: r (resultado acumulado)
+    -- R3: temporal
+    
+begin
+
+    uut: datapath
+        port map (
+            clk => clk,
+            input => input,
+            ie => ie,
+            we => we,
+            wa => wa,
+            rae => rae,
+            raa => raa,
+            rbe => rbe,
+            rba => rba,
+            alu_ctrl => alu_ctrl,
+            sh_ctrl => sh_ctrl,
+            oe => oe,
+            output => output
+        );
+    
+    clk_process: process
+    begin
+        clk <= '0';
+        wait for CLK_PERIOD/2;
+        clk <= '1';
+        wait for CLK_PERIOD/2;
+    end process;
+    
+    stimulus: process
+        variable n_val : integer := 5;
+        variable m_val : integer := 3;
+        variable resultado_esperado : integer := 15;
+    begin
+        
+        -- Inicializar todas las señales
+        input <= "0000";
+        ie <= '0';
+        we <= '0';
+        wa <= "00";
+        rae <= '0';
+        raa <= "00";
+        rbe <= '0';
+        rba <= "00";
+        alu_ctrl <= "000";
+        sh_ctrl <= "00";
+        oe <= '0';
+        wait for CLK_PERIOD;
+        
+        -- PASO 1: Cargar n en R0
+        input <= std_logic_vector(to_unsigned(n_val, 4));
+        ie <= '1';           -- Usar input externo
+        we <= '1';           -- Habilitar escritura
+        wa <= "00";          -- Escribir en R0
+        alu_ctrl <= "000";   -- Identidad (pasa el input)
+        wait for CLK_PERIOD;
+        we <= '0';
+        wait for CLK_PERIOD;
+        
+        -- PASO 2: Cargar m en R1
+        input <= std_logic_vector(to_unsigned(m_val, 4));
+        ie <= '1';
+        we <= '1';
+        wa <= "01";          -- Escribir en R1
+        alu_ctrl <= "000";   -- Identidad
+        wait for CLK_PERIOD;
+        we <= '0';
+        wait for CLK_PERIOD;
+        
+        -- PASO 3: Inicializar resultado r = 0 en R2
+        input <= "0000";
+        ie <= '1';
+        we <= '1';
+        wa <= "10";          -- Escribir en R2
+        alu_ctrl <= "000";   -- Identidad
+        wait for CLK_PERIOD;
+        we <= '0';
+        wait for CLK_PERIOD;
+        
+        report "Valores iniciales cargados: n=" & integer'image(n_val) & 
+                ", m=" & integer'image(m_val) & ", r=0";
+        
+        -- BUCLE: while (m > 0)
+        loop_label: for i in 1 to m_val loop
+            
+            -- Leer m desde R1 para verificar si > 0 (esto se haría en controlador)
+            -- Pero continuamos asumiendo m > 0
+            
+            
+            -- PASO 4: r = r + n (acumular)
+            -- Leer n desde R0
+            rae <= '1';
+            raa <= "00";     -- Leer R0 (n)
+            -- Leer r desde R2  
+            rbe <= '1';
+            rba <= "10";     -- Leer R2 (r)
+            alu_ctrl <= "001";  -- SUMA (r + n)
+            wait for CLK_PERIOD;
+            
+            -- Escribir resultado en R2
+            we <= '1';
+            wa <= "10";      -- Escribir en R2
+            wait for CLK_PERIOD;
+            
+            -- Mostrar resultado parcial
+            oe <= '1';
+            oe <= '0';
+            we <= '0';
+            rae <= '0';
+            rbe <= '0';
+            wait for CLK_PERIOD;
+            
+            -- PASO 5: m = m - 1 (decrementar contador)
+            -- Leer m desde R1
+            rae <= '1';
+            raa <= "01";     -- Leer R1 (m)
+            -- Para decremento: usar IE=0 que da 1111 (-1) y sumar
+            ie <= '0';       -- Selecciona 1111
+            rbe <= '1';      -- Aunque no se usa para decremento
+            rba <= "01";
+            alu_ctrl <= "001";  -- SUMA: 1111 + m = m - 1
+            wait for CLK_PERIOD;
+            
+            -- Escribir m-1 en R1
+            we <= '1';
+            wa <= "01";      -- Escribir en R1
+            wait for CLK_PERIOD;
+            
+            -- Mostrar nuevo m
+            oe <= '1';
+            wait for CLK_PERIOD;
+            oe <= '0';
+            we <= '0';
+            rae <= '0';
+            rbe <= '0';
+            ie <= '1';       -- Volver a modo normal
+            wait for CLK_PERIOD;
+            
+            -- Verificar si m == 0 (esto sería con lógica externa)
+            if i = m_val then
+                exit;
+            end if;
+            
+        end loop loop_label;
+        
+        -- PASO 6: Mostrar resultado final
+        -- Leer resultado desde R2
+        rae <= '1';
+        raa <= "10";         -- Leer R2
+        oe <= '1';
+        wait for CLK_PERIOD;
+        
+        wait for 5*CLK_PERIOD;
+        oe <= '0';
+        rae <= '0';
+        
+        wait;
+    end process;
+    
+end testbench;

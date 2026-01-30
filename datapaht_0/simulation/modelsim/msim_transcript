@@ -1,0 +1,229 @@
+# Reading pref.tcl
+# do datapath_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:12 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity incrementer
+# -- Compiling architecture structural of incrementer
+# End time: 22:27:13 on Jan 29,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:13 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decrementer
+# -- Compiling architecture structural of decrementer
+# End time: 22:27:13 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:13 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bitwise_or
+# -- Compiling architecture behavioral of bitwise_or
+# End time: 22:27:14 on Jan 29,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:14 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bitwise_not
+# -- Compiling architecture behavioral of bitwise_not
+# End time: 22:27:14 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:14 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bitwise_identity
+# -- Compiling architecture behavioral of bitwise_identity
+# End time: 22:27:15 on Jan 29,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:15 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bitwise_and
+# -- Compiling architecture behavioral of bitwise_and
+# End time: 22:27:15 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:15 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity subtractor
+# -- Compiling architecture structural of subtractor
+# End time: 22:27:16 on Jan 29,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:16 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_subtractor
+# -- Compiling architecture behavioral of full_subtractor
+# End time: 22:27:16 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/adder/full_adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:16 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/adder/full_adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_adder
+# -- Compiling architecture behavioral of full_adder
+# End time: 22:27:16 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/adder/adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:17 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/adder/adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adder
+# -- Compiling architecture structural of adder
+# End time: 22:27:17 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/tri_state_buffer/tri_state_buffer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:17 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/tri_state_buffer/tri_state_buffer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tri_state_buffer
+# -- Compiling architecture behavioral of tri_state_buffer
+# End time: 22:27:17 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/reg/reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:18 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/reg/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture behavioral of reg
+# End time: 22:27:18 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/alu/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:18 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/alu/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu
+# -- Compiling architecture structural of alu
+# End time: 22:27:18 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/mux/mux2a1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:19 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/mux/mux2a1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2a1
+# -- Compiling architecture Behavioral of mux2a1
+# End time: 22:27:19 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/datapaht_0/datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:19 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/datapaht_0/datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity datapath
+# -- Compiling architecture structural of datapath
+# End time: 22:27:19 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/datapaht_0/datapath_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:27:20 on Jan 29,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/datapaht_0/datapath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity datapath_tb
+# -- Compiling architecture testbench of datapath_tb
+# End time: 22:27:20 on Jan 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  datapath_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" datapath_tb 
+# Start time: 22:27:20 on Jan 29,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.datapath_tb(testbench)
+# Loading work.datapath(structural)
+# Loading work.mux2a1(behavioral)
+# Loading work.alu(structural)
+# Loading work.bitwise_identity(behavioral)
+# Loading work.adder(structural)
+# Loading work.full_adder(behavioral)
+# Loading work.subtractor(structural)
+# Loading work.full_subtractor(behavioral)
+# Loading work.incrementer(structural)
+# Loading work.decrementer(structural)
+# Loading work.bitwise_and(behavioral)
+# Loading work.bitwise_or(behavioral)
+# Loading work.bitwise_not(behavioral)
+# Loading work.reg(behavioral)
+# Loading work.tri_state_buffer(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Break in Process line__19 at C:/Users/franc/Documents/quartus/reg/reg.vhd line 19
+# End time: 22:30:57 on Jan 29,2026, Elapsed time: 0:03:37
+# Errors: 0, Warnings: 0

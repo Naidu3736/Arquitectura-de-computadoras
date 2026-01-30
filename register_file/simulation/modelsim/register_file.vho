@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "01/27/2026 22:55:47"
+-- DATE "01/29/2026 11:48:12"
 
 -- 
 -- Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -39,14 +39,14 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY 	register_file IS
     PORT (
 	clk : IN std_logic;
+	wd : IN std_logic_vector(3 DOWNTO 0);
 	we : IN std_logic;
 	wa : IN std_logic_vector(1 DOWNTO 0);
-	wd : IN std_logic_vector(3 DOWNTO 0);
 	rae : IN std_logic;
 	raa : IN std_logic_vector(1 DOWNTO 0);
-	aout : OUT std_logic_vector(3 DOWNTO 0);
 	rbe : IN std_logic;
 	rba : IN std_logic_vector(1 DOWNTO 0);
+	aout : OUT std_logic_vector(3 DOWNTO 0);
 	bout : OUT std_logic_vector(3 DOWNTO 0)
 	);
 END register_file;
@@ -87,14 +87,14 @@ SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_clk : std_logic;
+SIGNAL ww_wd : std_logic_vector(3 DOWNTO 0);
 SIGNAL ww_we : std_logic;
 SIGNAL ww_wa : std_logic_vector(1 DOWNTO 0);
-SIGNAL ww_wd : std_logic_vector(3 DOWNTO 0);
 SIGNAL ww_rae : std_logic;
 SIGNAL ww_raa : std_logic_vector(1 DOWNTO 0);
-SIGNAL ww_aout : std_logic_vector(3 DOWNTO 0);
 SIGNAL ww_rbe : std_logic;
 SIGNAL ww_rba : std_logic_vector(1 DOWNTO 0);
+SIGNAL ww_aout : std_logic_vector(3 DOWNTO 0);
 SIGNAL ww_bout : std_logic_vector(3 DOWNTO 0);
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \clk~input_o\ : std_logic;
@@ -176,14 +176,14 @@ SIGNAL \ALT_INV_registers~22_q\ : std_logic;
 BEGIN
 
 ww_clk <= clk;
+ww_wd <= wd;
 ww_we <= we;
 ww_wa <= wa;
-ww_wd <= wd;
 ww_rae <= rae;
 ww_raa <= raa;
-aout <= ww_aout;
 ww_rbe <= rbe;
 ww_rba <= rba;
+aout <= ww_aout;
 bout <= ww_bout;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;

@@ -22,11 +22,11 @@ begin
             
             -- 2. Shift Right con 0 
             when "01" =>
-                s <= a(2 downto 0) & '0';
+                s <= '0' & a(3 downto 1);				
                 
             -- 3. Shift Left con 0 
             when "10" =>
-                s <= '0' & a(3 downto 1);
+					s <= a(2 downto 0) & '0';
                 
             -- 4. Rotate Right
             when "11" =>

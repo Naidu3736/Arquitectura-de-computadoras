@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mux2a1
-Thu Jan 29 08:14:48 2026
+Fri Jan 30 09:30:57 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jan 29 08:14:48 2026       ;
+; Analysis & Synthesis Status     ; Successful - Fri Jan 30 09:30:57 2026       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; mux2a1                                      ;
 ; Top-level Entity Name           ; mux2a1                                      ;
@@ -257,7 +257,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Jan 29 08:14:33 2026
+    Info: Processing started: Fri Jan 30 09:30:44 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mux2a1 -c mux2a1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -265,8 +265,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux2a1.
     Info (12022): Found design unit 1: mux2a1-Behavioral File: C:/Users/franc/Documents/quartus/mux/mux2a1.vhd Line: 13
     Info (12023): Found entity 1: mux2a1 File: C:/Users/franc/Documents/quartus/mux/mux2a1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file mux2a1_tb.vhd
-    Info (12022): Found design unit 1: mux2a1_tb-tb File: C:/Users/franc/Documents/quartus/mux/mux2a1_tb.vhd Line: 7
-    Info (12023): Found entity 1: mux2a1_tb File: C:/Users/franc/Documents/quartus/mux/mux2a1_tb.vhd Line: 4
+    Info (12022): Found design unit 1: mux2a1_tb-testbench File: C:/Users/franc/Documents/quartus/mux/mux2a1_tb.vhd Line: 8
+    Info (12023): Found entity 1: mux2a1_tb File: C:/Users/franc/Documents/quartus/mux/mux2a1_tb.vhd Line: 5
 Info (12127): Elaborating entity "mux2a1" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -276,9 +276,9 @@ Info (21057): Implemented 17 device resources after synthesis - the final resour
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 4 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Thu Jan 29 08:14:48 2026
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 4863 megabytes
+    Info: Processing ended: Fri Jan 30 09:30:57 2026
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:30
 
 

@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "01/26/2026 12:53:54"
+-- DATE "01/30/2026 10:21:40"
 
 -- 
 -- Device: Altera 5CEBA2F17A7 Package FBGA256
@@ -47,8 +47,8 @@ END shifter;
 -- s[1]	=>  Location: PIN_J3,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- s[2]	=>  Location: PIN_F2,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- s[3]	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- a[1]	=>  Location: PIN_H5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- sh_ctrl[0]	=>  Location: PIN_H4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sh_ctrl[0]	=>  Location: PIN_H5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- a[1]	=>  Location: PIN_H4,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- sh_ctrl[1]	=>  Location: PIN_F3,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- a[0]	=>  Location: PIN_E2,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- a[2]	=>  Location: PIN_F4,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -71,8 +71,8 @@ SIGNAL ww_s : std_logic_vector(3 DOWNTO 0);
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \a[0]~input_o\ : std_logic;
 SIGNAL \sh_ctrl[1]~input_o\ : std_logic;
-SIGNAL \a[1]~input_o\ : std_logic;
 SIGNAL \sh_ctrl[0]~input_o\ : std_logic;
+SIGNAL \a[1]~input_o\ : std_logic;
 SIGNAL \Mux3~0_combout\ : std_logic;
 SIGNAL \a[2]~input_o\ : std_logic;
 SIGNAL \Mux2~0_combout\ : std_logic;
@@ -80,11 +80,11 @@ SIGNAL \a[3]~input_o\ : std_logic;
 SIGNAL \Mux1~0_combout\ : std_logic;
 SIGNAL \Mux0~0_combout\ : std_logic;
 SIGNAL \ALT_INV_sh_ctrl[1]~input_o\ : std_logic;
-SIGNAL \ALT_INV_sh_ctrl[0]~input_o\ : std_logic;
+SIGNAL \ALT_INV_a[1]~input_o\ : std_logic;
 SIGNAL \ALT_INV_a[0]~input_o\ : std_logic;
 SIGNAL \ALT_INV_a[2]~input_o\ : std_logic;
 SIGNAL \ALT_INV_a[3]~input_o\ : std_logic;
-SIGNAL \ALT_INV_a[1]~input_o\ : std_logic;
+SIGNAL \ALT_INV_sh_ctrl[0]~input_o\ : std_logic;
 
 BEGIN
 
@@ -95,11 +95,11 @@ ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 \ALT_INV_sh_ctrl[1]~input_o\ <= NOT \sh_ctrl[1]~input_o\;
-\ALT_INV_sh_ctrl[0]~input_o\ <= NOT \sh_ctrl[0]~input_o\;
+\ALT_INV_a[1]~input_o\ <= NOT \a[1]~input_o\;
 \ALT_INV_a[0]~input_o\ <= NOT \a[0]~input_o\;
 \ALT_INV_a[2]~input_o\ <= NOT \a[2]~input_o\;
 \ALT_INV_a[3]~input_o\ <= NOT \a[3]~input_o\;
-\ALT_INV_a[1]~input_o\ <= NOT \a[1]~input_o\;
+\ALT_INV_sh_ctrl[0]~input_o\ <= NOT \sh_ctrl[0]~input_o\;
 
 -- Location: IOOBUF_X0_Y18_N62
 \s[0]~output\ : cyclonev_io_obuf
@@ -176,17 +176,6 @@ PORT MAP (
 	o => \sh_ctrl[1]~input_o\);
 
 -- Location: IOIBUF_X0_Y20_N4
-\a[1]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_a(1),
-	o => \a[1]~input_o\);
-
--- Location: IOIBUF_X0_Y20_N21
 \sh_ctrl[0]~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -197,22 +186,33 @@ PORT MAP (
 	i => ww_sh_ctrl(0),
 	o => \sh_ctrl[0]~input_o\);
 
+-- Location: IOIBUF_X0_Y20_N21
+\a[1]~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_a(1),
+	o => \a[1]~input_o\);
+
 -- Location: LABCELL_X1_Y20_N0
 \Mux3~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Mux3~0_combout\ = ( \sh_ctrl[0]~input_o\ & ( (!\sh_ctrl[1]~input_o\ & ((\a[1]~input_o\))) # (\sh_ctrl[1]~input_o\ & (\a[0]~input_o\)) ) ) # ( !\sh_ctrl[0]~input_o\ & ( (\sh_ctrl[1]~input_o\ & \a[1]~input_o\) ) )
+-- \Mux3~0_combout\ = ( \a[1]~input_o\ & ( ((\a[0]~input_o\ & !\sh_ctrl[1]~input_o\)) # (\sh_ctrl[0]~input_o\) ) ) # ( !\a[1]~input_o\ & ( (\a[0]~input_o\ & (!\sh_ctrl[1]~input_o\ & !\sh_ctrl[0]~input_o\)) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000001100000011000111010001110100000011000000110001110100011101",
+	lut_mask => "0100000001000000010011110100111101000000010000000100111101001111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
 	dataa => \ALT_INV_a[0]~input_o\,
 	datab => \ALT_INV_sh_ctrl[1]~input_o\,
-	datac => \ALT_INV_a[1]~input_o\,
-	datae => \ALT_INV_sh_ctrl[0]~input_o\,
+	datac => \ALT_INV_sh_ctrl[0]~input_o\,
+	datae => \ALT_INV_a[1]~input_o\,
 	combout => \Mux3~0_combout\);
 
 -- Location: IOIBUF_X0_Y21_N38
@@ -229,20 +229,20 @@ PORT MAP (
 -- Location: LABCELL_X1_Y20_N39
 \Mux2~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Mux2~0_combout\ = ( \sh_ctrl[0]~input_o\ & ( \a[2]~input_o\ & ( (!\sh_ctrl[1]~input_o\) # (\a[1]~input_o\) ) ) ) # ( !\sh_ctrl[0]~input_o\ & ( \a[2]~input_o\ & ( (\a[0]~input_o\) # (\sh_ctrl[1]~input_o\) ) ) ) # ( \sh_ctrl[0]~input_o\ & ( !\a[2]~input_o\ 
--- & ( (\a[1]~input_o\ & \sh_ctrl[1]~input_o\) ) ) ) # ( !\sh_ctrl[0]~input_o\ & ( !\a[2]~input_o\ & ( (!\sh_ctrl[1]~input_o\ & \a[0]~input_o\) ) ) )
+-- \Mux2~0_combout\ = ( \a[1]~input_o\ & ( \a[2]~input_o\ & ( ((!\sh_ctrl[1]~input_o\) # (\a[0]~input_o\)) # (\sh_ctrl[0]~input_o\) ) ) ) # ( !\a[1]~input_o\ & ( \a[2]~input_o\ & ( ((\sh_ctrl[1]~input_o\ & \a[0]~input_o\)) # (\sh_ctrl[0]~input_o\) ) ) ) # ( 
+-- \a[1]~input_o\ & ( !\a[2]~input_o\ & ( (!\sh_ctrl[0]~input_o\ & ((!\sh_ctrl[1]~input_o\) # (\a[0]~input_o\))) ) ) ) # ( !\a[1]~input_o\ & ( !\a[2]~input_o\ & ( (!\sh_ctrl[0]~input_o\ & (\sh_ctrl[1]~input_o\ & \a[0]~input_o\)) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000000011110000000001010000010100001111111111111111010111110101",
+	lut_mask => "0000000000001010101000001010101001010101010111111111010111111111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ALT_INV_a[1]~input_o\,
+	dataa => \ALT_INV_sh_ctrl[0]~input_o\,
 	datac => \ALT_INV_sh_ctrl[1]~input_o\,
 	datad => \ALT_INV_a[0]~input_o\,
-	datae => \ALT_INV_sh_ctrl[0]~input_o\,
+	datae => \ALT_INV_a[1]~input_o\,
 	dataf => \ALT_INV_a[2]~input_o\,
 	combout => \Mux2~0_combout\);
 
@@ -257,43 +257,44 @@ PORT MAP (
 	i => ww_a(3),
 	o => \a[3]~input_o\);
 
--- Location: LABCELL_X1_Y20_N42
+-- Location: LABCELL_X1_Y20_N45
 \Mux1~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Mux1~0_combout\ = ( \sh_ctrl[0]~input_o\ & ( (!\sh_ctrl[1]~input_o\ & ((\a[3]~input_o\))) # (\sh_ctrl[1]~input_o\ & (\a[2]~input_o\)) ) ) # ( !\sh_ctrl[0]~input_o\ & ( (!\sh_ctrl[1]~input_o\ & ((\a[1]~input_o\))) # (\sh_ctrl[1]~input_o\ & 
--- (\a[3]~input_o\)) ) )
+-- \Mux1~0_combout\ = ( \a[1]~input_o\ & ( (!\sh_ctrl[0]~input_o\ & (((\a[2]~input_o\)) # (\sh_ctrl[1]~input_o\))) # (\sh_ctrl[0]~input_o\ & (((\a[3]~input_o\)))) ) ) # ( !\a[1]~input_o\ & ( (!\sh_ctrl[0]~input_o\ & (!\sh_ctrl[1]~input_o\ & 
+-- ((\a[2]~input_o\)))) # (\sh_ctrl[0]~input_o\ & (((\a[3]~input_o\)))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0000111100110011001100110101010100001111001100110011001101010101",
+	lut_mask => "0000010110001101001001111010111100000101100011010010011110101111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ALT_INV_sh_ctrl[0]~input_o\,
+	datab => \ALT_INV_sh_ctrl[1]~input_o\,
+	datac => \ALT_INV_a[3]~input_o\,
+	datad => \ALT_INV_a[2]~input_o\,
+	datae => \ALT_INV_a[1]~input_o\,
+	combout => \Mux1~0_combout\);
+
+-- Location: LABCELL_X1_Y20_N18
+\Mux0~0\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Mux0~0_combout\ = ( \a[0]~input_o\ & ( (!\sh_ctrl[0]~input_o\ & ((!\sh_ctrl[1]~input_o\ & ((\a[3]~input_o\))) # (\sh_ctrl[1]~input_o\ & (\a[2]~input_o\)))) # (\sh_ctrl[0]~input_o\ & (((\sh_ctrl[1]~input_o\)))) ) ) # ( !\a[0]~input_o\ & ( 
+-- (!\sh_ctrl[0]~input_o\ & ((!\sh_ctrl[1]~input_o\ & ((\a[3]~input_o\))) # (\sh_ctrl[1]~input_o\ & (\a[2]~input_o\)))) ) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0011000001010000001100000101111100110000010100000011000001011111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
 	dataa => \ALT_INV_a[2]~input_o\,
 	datab => \ALT_INV_a[3]~input_o\,
-	datac => \ALT_INV_a[1]~input_o\,
+	datac => \ALT_INV_sh_ctrl[0]~input_o\,
 	datad => \ALT_INV_sh_ctrl[1]~input_o\,
-	datae => \ALT_INV_sh_ctrl[0]~input_o\,
-	combout => \Mux1~0_combout\);
-
--- Location: LABCELL_X1_Y20_N21
-\Mux0~0\ : cyclonev_lcell_comb
--- Equation(s):
--- \Mux0~0_combout\ = ( \sh_ctrl[0]~input_o\ & ( (\sh_ctrl[1]~input_o\ & \a[3]~input_o\) ) ) # ( !\sh_ctrl[0]~input_o\ & ( (!\sh_ctrl[1]~input_o\ & ((\a[2]~input_o\))) # (\sh_ctrl[1]~input_o\ & (\a[0]~input_o\)) ) )
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0001000111011101000000110000001100010001110111010000001100000011",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \ALT_INV_a[0]~input_o\,
-	datab => \ALT_INV_sh_ctrl[1]~input_o\,
-	datac => \ALT_INV_a[3]~input_o\,
-	datad => \ALT_INV_a[2]~input_o\,
-	datae => \ALT_INV_sh_ctrl[0]~input_o\,
+	datae => \ALT_INV_a[0]~input_o\,
 	combout => \Mux0~0_combout\);
 
 -- Location: LABCELL_X19_Y35_N0

@@ -12,32 +12,33 @@
 # 
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/mux/mux2a1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:20:54 on Jan 29,2026
+# Start time: 09:32:39 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/mux/mux2a1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux2a1
 # -- Compiling architecture Behavioral of mux2a1
-# End time: 08:20:54 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 09:32:39 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/mux/mux2a1_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:20:55 on Jan 29,2026
+# Start time: 09:32:39 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/mux/mux2a1_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity mux2a1_tb
 # -- Compiling architecture testbench of mux2a1_tb
-# -- Loading entity mux2a1
-# End time: 08:20:55 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 09:32:39 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  mux
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" mux 
-# Start time: 08:20:56 on Jan 29,2026
+# Start time: 09:32:39 on Jan 30,2026
 # ** Error: (vsim-3170) Could not find 'mux'.
 #         Searched libraries:
 #             C:/intelFPGA_lite/20.1/modelsim_ase/altera/vhdl/altera
@@ -52,15 +53,81 @@
 # Error: Error loading design
 #        Pausing macro execution
 # MACRO ./mux2a1_run_msim_rtl_vhdl.do PAUSED at line 12
-vsim work.mux2a1_tb
-# vsim work.mux2a1_tb 
-# Start time: 08:20:56 on Jan 29,2026
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=\"+acc\" rtl_work.mux2a1_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" rtl_work.mux2a1_tb 
+# Start time: 09:32:39 on Jan 30,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
 # Loading work.mux2a1_tb(testbench)
 # Loading work.mux2a1(behavioral)
-add wave -r /*
+add wave -position insertpoint  \
+sim:/mux2a1_tb/A \
+sim:/mux2a1_tb/B \
+sim:/mux2a1_tb/S \
+sim:/mux2a1_tb/Y
 run -all
-# End time: 08:28:18 on Jan 29,2026, Elapsed time: 0:07:22
+# ** Note: === INICIANDO PRUEBA DEL MULTIPLEXOR 2:1 ===
+#    Time: 0 ps  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: Prueba 1: S = 0 (deberia seleccionar A)
+#    Time: 0 ps  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   A = 3, B = 12, S = '0'
+#    Time: 10 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   Y obtenido = 12
+#    Time: 10 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   CORRECTO: Y = B
+#    Time: 10 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: Prueba 2: S = 1 (deberia seleccionar B)
+#    Time: 20 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   A = 3, B = 12, S = '1'
+#    Time: 30 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   Y obtenido = 3
+#    Time: 30 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   CORRECTO: Y = A
+#    Time: 30 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: Prueba 3: Nuevos valores con S = 1
+#    Time: 40 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   A = 10, B = 5, S = '1'
+#    Time: 50 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   Y obtenido = 10
+#    Time: 50 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   CORRECTO: Y = A(1010 = 10)
+#    Time: 50 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: Prueba 4: Mismos valores con S = 0
+#    Time: 60 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   A = 10, B = 5, S = '0'
+#    Time: 70 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   Y obtenido = 5
+#    Time: 70 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   CORRECTO: Y = B (0101 = 5)
+#    Time: 70 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: Prueba 5: Volver a S = 1
+#    Time: 80 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   A = 10, B = 5, S = '1'
+#    Time: 90 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   Y obtenido = 10
+#    Time: 90 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   CORRECTO: Y = A (1010 = 10)
+#    Time: 90 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: ========================================
+#    Time: 100 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: RESUMEN DE PRUEBAS:
+#    Time: 100 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: Se probaron 5 casos diferentes del multiplexor.
+#    Time: 100 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: Cada prueba verifico que:
+#    Time: 100 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   - Cuando S=1, Y = A
+#    Time: 100 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note:   - Cuando S=0, Y = B
+#    Time: 100 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: ========================================
+#    Time: 100 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: PRUEBA COMPLETADA EXITOSAMENTE
+#    Time: 100 ns  Iteration: 0  Instance: /mux2a1_tb
+# ** Note: ========================================
+#    Time: 100 ns  Iteration: 0  Instance: /mux2a1_tb
+# End time: 09:34:28 on Jan 30,2026, Elapsed time: 0:01:49
 # Errors: 1, Warnings: 0

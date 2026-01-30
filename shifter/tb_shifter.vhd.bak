@@ -6,70 +6,106 @@ end tb_shifter;
 
 architecture behavior of tb_shifter is
 
-    -- Señales para conectar al shifter
-    signal a       : std_logic_vector(3 downto 0);
-    signal sh_ctrl : std_logic_vector(1 downto 0);
+    signal a       : std_logic_vector(3 downto 0) := (others => '0');
+    signal sh_ctrl : std_logic_vector(1 downto 0) := (others => '0');
     signal s       : std_logic_vector(3 downto 0);
 
-    -- Instancia del shifter
     component shifter is
         port (
-            a       : in  std_logic_vector(3 downto 0);
             sh_ctrl : in  std_logic_vector(1 downto 0);
+            a       : in  std_logic_vector(3 downto 0);
             s       : out std_logic_vector(3 downto 0)
         );
     end component;
 
 begin
 
-    -- Conexión del shifter
     UUT : shifter
         port map (
-            a       => a,
             sh_ctrl => sh_ctrl,
+            a       => a,
             s       => s
         );
 
-    -- Proceso de estímulos
-    stimulus : process
+    stim_proc: process
     begin
+        report "=== INICIANDO PRUEBAS DEL SHIFTER ===";
+        wait for 10 ns;
 
-        -- Caso 1: Pass through
-        a <= "1010";
+        ------------------------------------------------------------
+        report "Prueba 1: Shift Left con 0 (sh_ctrl = 00)";
+        report "  Entrada: 1111 -> Esperado: 1110";
+        a <= "1111";
         sh_ctrl <= "00";
         wait for 10 ns;
+        
+        report "  Resultado obtenido: " & integer'image(conv_integer(s));
+        if s = "1110" then
+            report "  CORRECTO: Shift Left funcionando";
+        else
+            report "  ERROR: No se obtuvo el resultado esperado";
+        end if;
+        
+        wait for 10 ns;
 
-        -- Caso 2: Shift left lógico
-        a <= "1010";
+        ------------------------------------------------------------
+        report "Prueba 2: Shift Right con 0 (sh_ctrl = 01)";
+        report "  Entrada: 1101 -> Esperado: 0110";
+        a <= "1101";
         sh_ctrl <= "01";
         wait for 10 ns;
-
-        -- Caso 3: Shift right lógico
-        a <= "1010";
+        
+        report "  Resultado obtenido: " & integer'image(conv_integer(s));
+        if s = "0110" then
+            report "  CORRECTO: Shift Right funcionando";
+        else
+            report "  ERROR: No se obtuvo el resultado esperado";
+        end if;
+        
+        wait for 10 ns;
+		  
+        ------------------------------------------------------------
+        report "Prueba 3: Rotate Right (sh_ctrl = 10)";
+        report "  Entrada: 1001 -> Esperado: 1100";
+        a <= "1001";
         sh_ctrl <= "10";
         wait for 10 ns;
+        
+        report "  Resultado obtenido: " & integer'image(conv_integer(s));
+        if s = "1100" then
+            report "  CORRECTO: Rotate Right funcionando";
+        else
+            report "  ERROR: No se obtuvo el resultado esperado";
+        end if;
+        
+        wait for 10 ns;
 
-        -- Caso 4: Shift right aritmético
+        ------------------------------------------------------------
+        report "Prueba 4: Pass through (sh_ctrl = 11)";
+        report "  Entrada: 1010 -> Esperado: 1010";
         a <= "1010";
         sh_ctrl <= "11";
         wait for 10 ns;
-
-        -- Otro valor para ver más claro
-        a <= "0111";
-        sh_ctrl <= "01";
+        
+        report "  Resultado obtenido: " & integer'image(conv_integer(s));
+        if s = "1010" then
+            report "  CORRECTO: Pass through funcionando";
+        else
+            report "  ERROR: No se obtuvo el resultado esperado";
+        end if;
+        
         wait for 10 ns;
+        
+        report "========================================";
+        report "RESUMEN DE PRUEBAS COMPLETADO";
+        report "Se probaron 4 modos de operacion:";
+        report "  00: Shift Left con 0";
+        report "  01: Shift Right con 0";
+        report "  10: Rotate Right";
+        report "  11: Pass through";
+        report "========================================";
 
-        a <= "0111";
-        sh_ctrl <= "10";
-        wait for 10 ns;
-
-        a <= "1111";
-        sh_ctrl <= "11";
-        wait for 10 ns;
-
-        -- Terminar simulación
         wait;
-
     end process;
 
 end architecture behavior;

@@ -10,36 +10,40 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/Jorge/OneDrive/Documentos/QuartusT/Arquitectura-de-computadoras-main/shifter/shifter.vhd}
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/shifter/shifter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:52:24 on Jan 26,2026
-# vcom -reportprogress 300 -93 -work work C:/Users/Jorge/OneDrive/Documentos/QuartusT/Arquitectura-de-computadoras-main/shifter/shifter.vhd 
+# Start time: 10:22:07 on Jan 30,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/shifter/shifter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity shifter
 # -- Compiling architecture structural of shifter
-# End time: 12:52:24 on Jan 26,2026, Elapsed time: 0:00:00
+# End time: 10:22:08 on Jan 30,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/Jorge/OneDrive/Documentos/QuartusT/Arquitectura-de-computadoras-main/shifter/tb_shifter.vhd}
+# vcom -93 -work work {C:/Users/franc/Documents/quartus/shifter/tb_shifter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:52:24 on Jan 26,2026
-# vcom -reportprogress 300 -93 -work work C:/Users/Jorge/OneDrive/Documentos/QuartusT/Arquitectura-de-computadoras-main/shifter/tb_shifter.vhd 
+# Start time: 10:22:08 on Jan 30,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/shifter/tb_shifter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity tb_shifter
 # -- Compiling architecture behavior of tb_shifter
-# End time: 12:52:24 on Jan 26,2026, Elapsed time: 0:00:00
+# End time: 10:22:08 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  tb_shifter
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" tb_shifter 
-# Start time: 12:52:24 on Jan 26,2026
+# Start time: 10:22:08 on Jan 30,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
 # Loading work.tb_shifter(behavior)
 # Loading work.shifter(structural)
 # 
@@ -49,5 +53,75 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 12:53:00 on Jan 26,2026, Elapsed time: 0:00:36
+# ** Note: === INICIANDO PRUEBAS DEL SHIFTER ===
+#    Time: 0 ps  Iteration: 0  Instance: /tb_shifter
+# ** Note: Prueba 1: Pass through (sh_ctrl = 00)
+#    Time: 10 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Entrada: 1111 -> Esperado: 1111
+#    Time: 10 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Resultado obtenido: 1111
+#    Time: 20 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   CORRECTO: Pass through funcionando
+#    Time: 20 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note: Prueba 2: Shift Right con 0 (sh_ctrl = 01)
+#    Time: 30 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Entrada: 1101 -> Esperado: 0110
+#    Time: 30 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Explicacion: 1101 >> 1 con 0 = 0110
+#    Time: 30 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Resultado obtenido: 0110
+#    Time: 40 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   CORRECTO: Shift Right con 0 funcionando
+#    Time: 40 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note: Prueba 3: Shift Left con 0 (sh_ctrl = 10)
+#    Time: 50 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Entrada: 1001 -> Esperado: 0010
+#    Time: 50 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Explicacion: 1001 << 1 con 0 = 0010
+#    Time: 50 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Resultado obtenido: 0010
+#    Time: 60 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   CORRECTO: Shift Left con 0 funcionando
+#    Time: 60 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note: Prueba 4: Rotate Right (sh_ctrl = 11)
+#    Time: 70 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Entrada: 1010 -> Esperado: 0101
+#    Time: 70 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Explicacion: Rotar derecha 1010 = 0101
+#    Time: 70 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Resultado obtenido: 0101
+#    Time: 80 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   CORRECTO: Rotate Right funcionando
+#    Time: 80 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note: Prueba adicional: Mostrando solo bits
+#    Time: 90 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note: --------------------------------------
+#    Time: 90 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Pass through 0101 -> 0101
+#    Time: 100 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Shift Right 0101 -> 0010
+#    Time: 110 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Shift Left 0101 -> 1010
+#    Time: 120 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   Rotate Right 0101 -> 1010
+#    Time: 130 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note: ========================================
+#    Time: 140 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note: RESUMEN DE OPERACIONES:
+#    Time: 140 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   00: Pass through (s = a)
+#    Time: 140 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   01: Shift Right (s = '0' & a(3:1))
+#    Time: 140 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   10: Shift Left (s = a(2:0) & '0')
+#    Time: 140 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note:   11: Rotate Right (s = a(0) & a(3:1))
+#    Time: 140 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note: ========================================
+#    Time: 140 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note: PRUEBAS COMPLETADAS
+#    Time: 140 ns  Iteration: 0  Instance: /tb_shifter
+# ** Note: ========================================
+#    Time: 140 ns  Iteration: 0  Instance: /tb_shifter
+# End time: 10:25:22 on Jan 30,2026, Elapsed time: 0:03:14
 # Errors: 0, Warnings: 0

@@ -190,8 +190,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : H1        :        :                   :         : 2A        :                
 VCCIO2A                      : H2        : power  :                   : 2.5V    : 2A        :                
 a[3]                         : H3        : input  : 2.5 V             :         : 2A        : N              
-sh_ctrl[0]                   : H4        : input  : 2.5 V             :         : 2A        : N              
-a[1]                         : H5        : input  : 2.5 V             :         : 2A        : N              
+a[1]                         : H4        : input  : 2.5 V             :         : 2A        : N              
+sh_ctrl[0]                   : H5        : input  : 2.5 V             :         : 2A        : N              
 GND                          : H6        : gnd    :                   :         :           :                
 VCC                          : H7        : power  :                   : 1.1V    :           :                
 GND                          : H8        : gnd    :                   :         :           :                

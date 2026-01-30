@@ -24,9 +24,9 @@ V?fWClJ53jIRaiIST<ASMP2
 !s100 Z_]23=fT?`N9[Bmk:Pi1I1
 Z7 OV;C;2020.1;71
 31
-Z8 !s110 1769709486
+Z8 !s110 1769758548
 !i10b 1
-Z9 !s108 1769709486.000000
+Z9 !s108 1769758548.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/register_file/register_file.vhd|
 Z11 !s107 C:/Users/franc/Documents/quartus/register_file/register_file.vhd|
 !i113 1
@@ -52,44 +52,46 @@ R11
 !i113 1
 R12
 R13
-Eregister_file_vhd_tst
-Z14 w1769576191
+Eregister_file_tb
+Z14 w1769758390
+R2
 R3
 R4
 !i122 1
 R0
-Z15 8C:/Users/franc/Documents/quartus/register_file/simulation/modelsim/register_file.vht
-Z16 FC:/Users/franc/Documents/quartus/register_file/simulation/modelsim/register_file.vht
+Z15 8C:/Users/franc/Documents/quartus/register_file/register_file_tb.vhd
+Z16 FC:/Users/franc/Documents/quartus/register_file/register_file_tb.vhd
 l0
-L31 1
-VlJN^[_FIlGGFT2ZaJ^je92
-!s100 2c7P3Jbm=Fa4c<^el4g2n1
+L5 1
+V:77XP7miFjc7S`I7aO5nU2
+!s100 3^KgKRn`R4d7j6o:3kRez3
 R7
 31
 R8
 !i10b 1
 R9
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/register_file/simulation/modelsim/register_file.vht|
-!s107 C:/Users/franc/Documents/quartus/register_file/simulation/modelsim/register_file.vht|
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/Documents/quartus/register_file/register_file_tb.vhd|
+!s107 C:/Users/franc/Documents/quartus/register_file/register_file_tb.vhd|
 !i113 1
 R12
 R13
-Aregister_file_arch
+Asimple_test
+R2
 R3
 R4
-DEx4 work 21 register_file_vhd_tst 0 22 lJN^[_FIlGGFT2ZaJ^je92
+DEx4 work 16 register_file_tb 0 22 :77XP7miFjc7S`I7aO5nU2
 !i122 1
-l60
-L33 57
-V68fD7O<jUzLS8LL6U6[3G0
-!s100 N>ecT?c2BZn>@0P3iNDXb3
+l41
+L8 240
+VHK7@aYL<aboTE]^YOVg^F2
+!s100 I6>;MCmnZ@74NgVbW6I[<1
 R7
 31
 R8
 !i10b 1
 R9
 R17
-Z18 !s107 C:/Users/franc/Documents/quartus/register_file/simulation/modelsim/register_file.vht|
+Z18 !s107 C:/Users/franc/Documents/quartus/register_file/register_file_tb.vhd|
 !i113 1
 R12
 R13

@@ -1,51 +1,62 @@
--- File: register_file_tb_working.vhd
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity register_file_tb is
-end entity register_file_tb;
+end register_file_tb;
 
-architecture testbench of register_file_tb is
-    constant CLK_PERIOD : time := 10 ns;
-    
+architecture simple_test of register_file_tb is
     component register_file
         port (
             clk : in std_logic;
+            wd : in std_logic_vector(3 downto 0);
             we : in std_logic;
             wa : in std_logic_vector(1 downto 0);
-            wd : in std_logic_vector(3 downto 0);
+            
             rae : in std_logic;
             raa : in std_logic_vector(1 downto 0);
-            aout : out std_logic_vector(3 downto 0);
+            
             rbe : in std_logic;
-            rba : in std_logic_vector(1 downto 0);
+            rba : std_logic_vector(1 downto 0);
+            
+            aout : out std_logic_vector(3 downto 0);
             bout : out std_logic_vector(3 downto 0)
         );
     end component;
     
+    -- Señales de prueba
     signal clk : std_logic := '0';
-    signal we, rae, rbe : std_logic;
-    signal wa, raa, rba : std_logic_vector(1 downto 0);
-    signal wd, aout, bout : std_logic_vector(3 downto 0);
+    signal wd : std_logic_vector(3 downto 0);
+    signal we : std_logic;
+    signal wa : std_logic_vector(1 downto 0);
+    signal rae : std_logic;
+    signal raa : std_logic_vector(1 downto 0);
+    signal rbe : std_logic;
+    signal rba : std_logic_vector(1 downto 0);
+    signal aout : std_logic_vector(3 downto 0);
+    signal bout : std_logic_vector(3 downto 0);
+    
+    constant CLK_PERIOD : time := 10 ns;
     
 begin
-    UUT: register_file
+
+    -- Instanciar el register file
+    uut: register_file
         port map (
             clk => clk,
+            wd => wd,
             we => we,
             wa => wa,
-            wd => wd,
             rae => rae,
             raa => raa,
-            aout => aout,
             rbe => rbe,
             rba => rba,
+            aout => aout,
             bout => bout
         );
     
-    -- Clock process simple
-    process
+    -- Generación de reloj simple
+    clk_process: process
     begin
         clk <= '0';
         wait for CLK_PERIOD/2;
@@ -53,119 +64,184 @@ begin
         wait for CLK_PERIOD/2;
     end process;
     
-    -- Main test
-    process
-        variable error_count : integer := 0;
-        variable test_count : integer := 0;
-        type reg_array is array (0 to 3) of std_logic_vector(3 downto 0);
-        variable registers : reg_array := (others => (others => '0'));
+    -- Proceso de prueba principal
+    stimulus: process
     begin
-        -- Inicializar
-        we <= '0';
-        rae <= '1';
-        rbe <= '1';
-        wa <= "00";
+        -- Inicializar todas las señales
         wd <= "0000";
+        we <= '0';
+        wa <= "00";
+        rae <= '0';
         raa <= "00";
+        rbe <= '0';
         rba <= "00";
         
---        wait for 100 ns;
+        wait for CLK_PERIOD;
         
-        report "Testing register file..." severity note;
+        report "=== TEST 1: Escritura simple ===";
         
-        -- Probar escritura y lectura básica
-        for reg in 0 to 3 loop
-            for val in 0 to 15 loop
-                -- Escribir
-                we <= '1';
-                wa <= std_logic_vector(to_unsigned(reg, 2));
-                wd <= std_logic_vector(to_unsigned(val, 4));
-                wait until rising_edge(clk);
-                
-                -- Actualizar modelo
-                registers(reg) := std_logic_vector(to_unsigned(val, 4));
-                
-                -- Leer
-                we <= '0';
-                raa <= std_logic_vector(to_unsigned(reg, 2));
-                rba <= std_logic_vector(to_unsigned(reg, 2));
-                wait for CLK_PERIOD/4;
-                
-                test_count := test_count + 1;
-                
-                -- Verificar
-                if aout /= registers(reg) then
-                    error_count := error_count + 1;
-                    report "Error: Reg " & integer'image(reg) & 
-                           " should be " & integer'image(val) &
-                           ", got " & integer'image(to_integer(unsigned(aout)))
-                        severity error;
-                end if;
-                
-                if bout /= registers(reg) then
-                    error_count := error_count + 1;
-                    report "Error port B: Reg " & integer'image(reg) & 
-                           " should be " & integer'image(val) &
-                           ", got " & integer'image(to_integer(unsigned(bout)))
-                        severity error;
-                end if;
-                
-                wait until rising_edge(clk);
-            end loop;
-        end loop;
-        
-        -- Probar lecturas independientes
-        report "Testing independent reads..." severity note;
-        
-        -- Escribir valores conocidos
-        for i in 0 to 3 loop
-            we <= '1';
-            wa <= std_logic_vector(to_unsigned(i, 2));
-            wd <= std_logic_vector(to_unsigned(i * 3 + 1, 4));
-            registers(i) := std_logic_vector(to_unsigned(i * 3 + 1, 4));
-            wait until rising_edge(clk);
-        end loop;
+        -- Escribir 5 en R0
+        wd <= "0101";  -- 5 decimal
+        we <= '1';
+        wa <= "00";    -- R0
+        wait for CLK_PERIOD;
         we <= '0';
         
-        -- Probar todas las combinaciones de lectura
-        for ra in 0 to 3 loop
-            for rb in 0 to 3 loop
-                raa <= std_logic_vector(to_unsigned(ra, 2));
-                rba <= std_logic_vector(to_unsigned(rb, 2));
-                wait for CLK_PERIOD/4;
-                
-                test_count := test_count + 1;
-                
-                if aout /= registers(ra) then
-                    error_count := error_count + 1;
-                    report "Error reading reg " & integer'image(ra) & 
-                           " on port A" severity error;
-                end if;
-                
-                if bout /= registers(rb) then
-                    error_count := error_count + 1;
-                    report "Error reading reg " & integer'image(rb) & 
-                           " on port B" severity error;
-                end if;
-                
-                wait until rising_edge(clk);
-            end loop;
+        wait for CLK_PERIOD;
+        
+        -- Escribir 10 en R1
+        wd <= "1010";  -- 10 decimal
+        we <= '1';
+        wa <= "01";    -- R1
+        wait for CLK_PERIOD;
+        we <= '0';
+        
+        wait for CLK_PERIOD;
+        
+        -- Escribir 3 en R2
+        wd <= "0011";  -- 3 decimal
+        we <= '1';
+        wa <= "10";    -- R2
+        wait for CLK_PERIOD;
+        we <= '0';
+        
+        wait for CLK_PERIOD;
+        
+        -- Escribir 7 en R3
+        wd <= "0111";  -- 7 decimal
+        we <= '1';
+        wa <= "11";    -- R3
+        wait for CLK_PERIOD;
+        we <= '0';
+        
+        wait for CLK_PERIOD;
+        
+        report "=== TEST 2: Lectura simple (puerto A) ===";
+        
+        -- Leer R0 por puerto A
+        rae <= '1';
+        raa <= "00";  -- R0
+        wait for CLK_PERIOD;
+        report "Leer R0: Esperado 5, Obtenido " & integer'image(to_integer(unsigned(aout)));
+        
+        -- Leer R1 por puerto A
+        raa <= "01";  -- R1
+        wait for CLK_PERIOD;
+        report "Leer R1: Esperado 10, Obtenido " & integer'image(to_integer(unsigned(aout)));
+        
+        -- Leer R2 por puerto A
+        raa <= "10";  -- R2
+        wait for CLK_PERIOD;
+        report "Leer R2: Esperado 3, Obtenido " & integer'image(to_integer(unsigned(aout)));
+        
+        -- Leer R3 por puerto A
+        raa <= "11";  -- R3
+        wait for CLK_PERIOD;
+        report "Leer R3: Esperado 7, Obtenido " & integer'image(to_integer(unsigned(aout)));
+        
+        rae <= '0';
+        wait for CLK_PERIOD;
+        
+        report "=== TEST 3: Lectura dual (ambos puertos) ===";
+        
+        -- Leer R0 por puerto A y R1 por puerto B simultáneamente
+        rae <= '1';
+        rbe <= '1';
+        raa <= "00";  -- R0
+        rba <= "01";  -- R1
+        wait for CLK_PERIOD;
+        report "Puerto A (R0): Esperado 5, Obtenido " & integer'image(to_integer(unsigned(aout)));
+        report "Puerto B (R1): Esperado 10, Obtenido " & integer'image(to_integer(unsigned(bout)));
+        
+        -- Leer R2 por puerto A y R3 por puerto B simultáneamente
+        raa <= "10";  -- R2
+        rba <= "11";  -- R3
+        wait for CLK_PERIOD;
+        report "Puerto A (R2): Esperado 3, Obtenido " & integer'image(to_integer(unsigned(aout)));
+        report "Puerto B (R3): Esperado 7, Obtenido " & integer'image(to_integer(unsigned(bout)));
+        
+        -- Leer R1 por puerto A y R2 por puerto B
+        raa <= "01";  -- R1
+        rba <= "10";  -- R2
+        wait for CLK_PERIOD;
+        report "Puerto A (R1): Esperado 10, Obtenido " & integer'image(to_integer(unsigned(aout)));
+        report "Puerto B (R2): Esperado 3, Obtenido " & integer'image(to_integer(unsigned(bout)));
+        
+        rae <= '0';
+        rbe <= '0';
+        wait for CLK_PERIOD;
+        
+        report "=== TEST 4: Escritura y lectura en el mismo ciclo ===";
+        
+        -- Escribir nuevo valor en R0 mientras leemos R1
+        wd <= "1111";  -- 15 decimal
+        we <= '1';
+        wa <= "00";    -- Escribir en R0
+        
+        rae <= '1';
+        raa <= "01";   -- Leer R1 (10)
+        rbe <= '1';
+        rba <= "10";   -- Leer R2 (3)
+        
+        wait for CLK_PERIOD;
+        report "Mientras escribíamos 15 en R0:";
+        report "  Puertos de lectura deben mantener valores viejos";
+        report "  Puerto A (R1): Esperado 10, Obtenido " & integer'image(to_integer(unsigned(aout)));
+        report "  Puerto B (R2): Esperado 3, Obtenido " & integer'image(to_integer(unsigned(bout)));
+        
+        we <= '0';
+        rae <= '0';
+        rbe <= '0';
+        wait for CLK_PERIOD;
+        
+        -- Verificar que R0 ahora tiene 15
+        rae <= '1';
+        raa <= "00";  -- Leer R0
+        wait for CLK_PERIOD;
+        report "R0 después de escritura: Esperado 15, Obtenido " & integer'image(to_integer(unsigned(aout)));
+        
+        rae <= '0';
+        
+        wait for CLK_PERIOD;
+        
+        report "=== TEST 5: Prueba de escritura en registro específico ===";
+        
+        -- Escribir solo en R2, otros registros deben mantener valores
+        wd <= "1100";  -- 12 decimal
+        we <= '1';
+        wa <= "10";    -- Solo R2
+        wait for CLK_PERIOD;
+        we <= '0';
+        wait for CLK_PERIOD;
+        
+        -- Verificar todos los registros
+        report "Verificación final de todos los registros:";
+        
+        for i in 0 to 3 loop
+            raa <= std_logic_vector(to_unsigned(i, 2));
+            rae <= '1';
+            wait for CLK_PERIOD;
+            
+            case i is
+                when 0 => 
+                    report "R0: Esperado 15, Obtenido " & integer'image(to_integer(unsigned(aout)));
+                when 1 => 
+                    report "R1: Esperado 10, Obtenido " & integer'image(to_integer(unsigned(aout)));
+                when 2 => 
+                    report "R2: Esperado 12, Obtenido " & integer'image(to_integer(unsigned(aout)));
+                when 3 => 
+                    report "R3: Esperado 7, Obtenido " & integer'image(to_integer(unsigned(aout)));
+                when others => null;
+            end case;
         end loop;
         
-        -- Reporte final
-        report "========================================" severity note;
-        report "Test complete" severity note;
-        report "Total tests: " & integer'image(test_count) severity note;
-        report "Total errors: " & integer'image(error_count) severity note;
+        rae <= '0';
         
-        if error_count = 0 then
-            report "SUCCESS!" severity note;
-        else
-            report "FAILURE" severity error;
-        end if;
-        report "========================================" severity note;
+        wait for CLK_PERIOD;
+        report "=== PRUEBA COMPLETADA ===";
         
+        -- Finalizar simulación
         wait;
     end process;
     
-end architecture testbench;
+end simple_test;

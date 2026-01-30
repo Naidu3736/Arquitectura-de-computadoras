@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "01/29/2026 21:57:22"
+-- DATE "01/30/2026 08:24:08"
 
 -- 
 -- Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -128,6 +128,7 @@ SIGNAL \U_ALU|Mux0~4_combout\ : std_logic;
 SIGNAL \U_ALU|Mux0~1_combout\ : std_logic;
 SIGNAL \U_ALU|Mux0~6_combout\ : std_logic;
 SIGNAL \U_REG|q\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \U_REG|ALT_INV_q\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \ALT_INV_input[3]~input_o\ : std_logic;
 SIGNAL \ALT_INV_input[2]~input_o\ : std_logic;
 SIGNAL \ALT_INV_input[1]~input_o\ : std_logic;
@@ -160,7 +161,6 @@ SIGNAL \U_MUX|ALT_INV_y[0]~0_combout\ : std_logic;
 SIGNAL \U_ALU|U_SUB|U1|ALT_INV_s~combout\ : std_logic;
 SIGNAL \U_ALU|ALT_INV_Mux2~0_combout\ : std_logic;
 SIGNAL \U_REG|ALT_INV_q[1]~0_combout\ : std_logic;
-SIGNAL \U_REG|ALT_INV_q\ : std_logic_vector(3 DOWNTO 0);
 
 BEGIN
 
@@ -175,6 +175,9 @@ output <= ww_output;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
+\U_REG|ALT_INV_q\(0) <= NOT \U_REG|q\(0);
+\U_REG|ALT_INV_q\(1) <= NOT \U_REG|q\(1);
+\U_REG|ALT_INV_q\(2) <= NOT \U_REG|q\(2);
 \ALT_INV_input[3]~input_o\ <= NOT \input[3]~input_o\;
 \ALT_INV_input[2]~input_o\ <= NOT \input[2]~input_o\;
 \ALT_INV_input[1]~input_o\ <= NOT \input[1]~input_o\;
@@ -208,9 +211,6 @@ ww_devpor <= devpor;
 \U_ALU|ALT_INV_Mux2~0_combout\ <= NOT \U_ALU|Mux2~0_combout\;
 \U_REG|ALT_INV_q[1]~0_combout\ <= NOT \U_REG|q[1]~0_combout\;
 \U_REG|ALT_INV_q\(3) <= NOT \U_REG|q\(3);
-\U_REG|ALT_INV_q\(0) <= NOT \U_REG|q\(0);
-\U_REG|ALT_INV_q\(1) <= NOT \U_REG|q\(1);
-\U_REG|ALT_INV_q\(2) <= NOT \U_REG|q\(2);
 
 -- Location: IOOBUF_X89_Y21_N5
 \output[0]~output\ : cyclonev_io_obuf

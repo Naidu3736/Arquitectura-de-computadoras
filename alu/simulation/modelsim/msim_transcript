@@ -12,129 +12,129 @@
 # 
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/adder/full_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:24 on Jan 28,2026
+# Start time: 07:46:43 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/adder/full_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity full_adder
 # -- Compiling architecture behavioral of full_adder
-# End time: 07:19:24 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:43 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/adder/adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:24 on Jan 28,2026
+# Start time: 07:46:43 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/adder/adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity adder
 # -- Compiling architecture structural of adder
-# End time: 07:19:24 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:44 on Jan 30,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:24 on Jan 28,2026
+# Start time: 07:46:44 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity bitwise_and
 # -- Compiling architecture behavioral of bitwise_and
-# End time: 07:19:24 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:44 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:24 on Jan 28,2026
+# Start time: 07:46:44 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity bitwise_identity
 # -- Compiling architecture behavioral of bitwise_identity
-# End time: 07:19:24 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:44 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:24 on Jan 28,2026
+# Start time: 07:46:45 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity bitwise_or
 # -- Compiling architecture behavioral of bitwise_or
-# End time: 07:19:24 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:45 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:24 on Jan 28,2026
+# Start time: 07:46:45 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity decrementer
 # -- Compiling architecture structural of decrementer
-# End time: 07:19:25 on Jan 28,2026, Elapsed time: 0:00:01
+# End time: 07:46:45 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:25 on Jan 28,2026
+# Start time: 07:46:45 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity incrementer
 # -- Compiling architecture structural of incrementer
-# End time: 07:19:25 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:45 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:25 on Jan 28,2026
+# Start time: 07:46:46 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity subtractor
 # -- Compiling architecture structural of subtractor
-# End time: 07:19:25 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:46 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:25 on Jan 28,2026
+# Start time: 07:46:46 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity full_subtractor
 # -- Compiling architecture behavioral of full_subtractor
-# End time: 07:19:25 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:46 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:25 on Jan 28,2026
+# Start time: 07:46:46 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity bitwise_not
 # -- Compiling architecture behavioral of bitwise_not
-# End time: 07:19:25 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:47 on Jan 30,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/alu/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:25 on Jan 28,2026
+# Start time: 07:46:47 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/alu/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity alu
 # -- Compiling architecture structural of alu
-# End time: 07:19:25 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:47 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/alu/alu_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 07:19:25 on Jan 28,2026
+# Start time: 07:46:47 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/alu/alu_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -142,12 +142,12 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu_tb
 # -- Compiling architecture testbench of alu_tb
-# End time: 07:19:25 on Jan 28,2026, Elapsed time: 0:00:00
+# End time: 07:46:47 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  alu_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" alu_tb 
-# Start time: 07:19:25 on Jan 28,2026
+# Start time: 07:46:48 on Jan 30,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -171,7 +171,63 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: ALU test: 2048 tests, 0 errors
-#    Time: 40960 ns  Iteration: 0  Instance: /alu_tb
-# End time: 07:21:28 on Jan 28,2026, Elapsed time: 0:02:03
+# ** Note: === INICIANDO PRUEBAS DE LA ALU ===
+#    Time: 10 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: TEST 1: Operación IDENTIDAD (000)
+#    Time: 10 ns  Iteration: 0  Instance: /alu_tb
+# ** Note:   Correcto: 13
+#    Time: 20 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: TEST 2: Operación SUMA (001)
+#    Time: 20 ns  Iteration: 0  Instance: /alu_tb
+# ** Note:    Correcto: 10
+#    Time: 30 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: TEST 3: Operación RESTA (010)
+#    Time: 30 ns  Iteration: 0  Instance: /alu_tb
+# ** Note:    Correcto: 7
+#    Time: 40 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: TEST 4: Operación INCREMENTO (011)
+#    Time: 40 ns  Iteration: 0  Instance: /alu_tb
+# ** Note:    Correcto: 13
+#    Time: 50 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: TEST 5: Operación DECREMENTO (100)
+#    Time: 50 ns  Iteration: 0  Instance: /alu_tb
+# ** Note:    Correcto: 1
+#    Time: 60 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: TEST 6: Operación AND (101)
+#    Time: 60 ns  Iteration: 0  Instance: /alu_tb
+# ** Note:    Correcto: 8
+#    Time: 70 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: TEST 7: Operación OR (110)
+#    Time: 70 ns  Iteration: 0  Instance: /alu_tb
+# ** Note:    Correcto: 15
+#    Time: 80 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: TEST 8: Operación NOT (111)
+#    Time: 80 ns  Iteration: 0  Instance: /alu_tb
+# ** Note:    Correcto: 5
+#    Time: 90 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: TEST 9: Suma con overflow
+#    Time: 90 ns  Iteration: 0  Instance: /alu_tb
+# ** Note:    Correcto: 0 (overflow manejado)
+#    Time: 100 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: TEST 10: Resta con underflow
+#    Time: 100 ns  Iteration: 0  Instance: /alu_tb
+# ** Note:    Correcto: 15 (underflow manejado)
+#    Time: 110 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: ========================================
+#    Time: 120 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: RESUMEN DE PRUEBAS DE LA ALU
+#    Time: 120 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: ========================================
+#    Time: 120 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: Pruebas ejecutadas: 10
+#    Time: 120 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: Pruebas aprobadas:  10
+#    Time: 120 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: Pruebas falladas:   0
+#    Time: 120 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: ¡TODAS LAS PRUEBAS PASARON CORRECTAMENTE!
+#    Time: 120 ns  Iteration: 0  Instance: /alu_tb
+# ** Note: === FIN DE LAS PRUEBAS ===
+#    Time: 120 ns  Iteration: 0  Instance: /alu_tb
+# End time: 07:50:45 on Jan 30,2026, Elapsed time: 0:03:57
 # Errors: 0, Warnings: 0

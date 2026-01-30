@@ -12,173 +12,173 @@
 # 
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:12 on Jan 29,2026
+# Start time: 08:45:22 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/incrementer/incrementer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity incrementer
 # -- Compiling architecture structural of incrementer
-# End time: 22:27:13 on Jan 29,2026, Elapsed time: 0:00:01
+# End time: 08:45:22 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:13 on Jan 29,2026
+# Start time: 08:45:22 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/decrementer/decrementer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity decrementer
 # -- Compiling architecture structural of decrementer
-# End time: 22:27:13 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:22 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:13 on Jan 29,2026
+# Start time: 08:45:22 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_or/bitwise_or.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity bitwise_or
 # -- Compiling architecture behavioral of bitwise_or
-# End time: 22:27:14 on Jan 29,2026, Elapsed time: 0:00:01
+# End time: 08:45:22 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:14 on Jan 29,2026
+# Start time: 08:45:22 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_not/bitwise_not.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity bitwise_not
 # -- Compiling architecture behavioral of bitwise_not
-# End time: 22:27:14 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:22 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:14 on Jan 29,2026
+# Start time: 08:45:22 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_identity/bitwise_identity.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity bitwise_identity
 # -- Compiling architecture behavioral of bitwise_identity
-# End time: 22:27:15 on Jan 29,2026, Elapsed time: 0:00:01
+# End time: 08:45:22 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:15 on Jan 29,2026
+# Start time: 08:45:23 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/bitwise_and/bitwise_and.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity bitwise_and
 # -- Compiling architecture behavioral of bitwise_and
-# End time: 22:27:15 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:23 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:15 on Jan 29,2026
+# Start time: 08:45:23 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/subtractor/subtractor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity subtractor
 # -- Compiling architecture structural of subtractor
-# End time: 22:27:16 on Jan 29,2026, Elapsed time: 0:00:01
+# End time: 08:45:23 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:16 on Jan 29,2026
+# Start time: 08:45:23 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/subtractor/full_subtractor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity full_subtractor
 # -- Compiling architecture behavioral of full_subtractor
-# End time: 22:27:16 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:23 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/adder/full_adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:16 on Jan 29,2026
+# Start time: 08:45:23 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/adder/full_adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity full_adder
 # -- Compiling architecture behavioral of full_adder
-# End time: 22:27:16 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:23 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/adder/adder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:17 on Jan 29,2026
+# Start time: 08:45:24 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/adder/adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity adder
 # -- Compiling architecture structural of adder
-# End time: 22:27:17 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:24 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/tri_state_buffer/tri_state_buffer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:17 on Jan 29,2026
+# Start time: 08:45:24 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/tri_state_buffer/tri_state_buffer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity tri_state_buffer
 # -- Compiling architecture behavioral of tri_state_buffer
-# End time: 22:27:17 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:24 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/reg/reg.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:18 on Jan 29,2026
+# Start time: 08:45:24 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/reg/reg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity reg
 # -- Compiling architecture behavioral of reg
-# End time: 22:27:18 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:24 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/alu/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:18 on Jan 29,2026
+# Start time: 08:45:24 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/alu/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity alu
 # -- Compiling architecture structural of alu
-# End time: 22:27:18 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:25 on Jan 30,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/mux/mux2a1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:19 on Jan 29,2026
+# Start time: 08:45:25 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/mux/mux2a1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity mux2a1
 # -- Compiling architecture Behavioral of mux2a1
-# End time: 22:27:19 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:25 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/datapaht_0/datapath.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:19 on Jan 29,2026
+# Start time: 08:45:25 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/datapaht_0/datapath.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity datapath
 # -- Compiling architecture structural of datapath
-# End time: 22:27:19 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:25 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/franc/Documents/quartus/datapaht_0/datapath_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:27:20 on Jan 29,2026
+# Start time: 08:45:25 on Jan 30,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/franc/Documents/quartus/datapaht_0/datapath_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -188,12 +188,12 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity datapath_tb
 # -- Compiling architecture testbench of datapath_tb
-# End time: 22:27:20 on Jan 29,2026, Elapsed time: 0:00:00
+# End time: 08:45:25 on Jan 30,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  datapath_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" datapath_tb 
-# Start time: 22:27:20 on Jan 29,2026
+# Start time: 08:45:25 on Jan 30,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -223,7 +223,135 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# ** Note: ========================================
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_tb
+# ** Note: INICIANDO PRUEBA DEL DATAPATH
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_tb
+# ** Note: ========================================
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_tb
+# ** Note: Objetivo: Sumar números del 1 al 10
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_tb
+# ** Note: ========================================
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_tb
+# ** Note: Paso 1: CLEAR del registro (acumulador = 0)
+#    Time: 10 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Paso 2: Mostrar valor inicial (deberia ser 0)
+#    Time: 30 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Valor mostrado: 0
+#    Time: 40 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO: Acumulador inicializado a 0
+#    Time: 40 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: ========================================
+#    Time: 50 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Paso 3: Iniciar suma de numeros del 1 al 10
+#    Time: 50 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: ========================================
+#    Time: 50 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Iteracion 1: Sumar 1
+#    Time: 50 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado esperado: 1
+#    Time: 50 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado obtenido: 1
+#    Time: 70 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO
+#    Time: 70 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Iteracion 2: Sumar 1
+#    Time: 80 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado esperado: 2
+#    Time: 80 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado obtenido: 2
+#    Time: 100 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO
+#    Time: 100 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Iteracion 3: Sumar 1
+#    Time: 110 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado esperado: 3
+#    Time: 110 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado obtenido: 3
+#    Time: 130 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO
+#    Time: 130 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Iteracion 4: Sumar 1
+#    Time: 140 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado esperado: 4
+#    Time: 140 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado obtenido: 4
+#    Time: 160 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO
+#    Time: 160 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Iteracion 5: Sumar 1
+#    Time: 170 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado esperado: 5
+#    Time: 170 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado obtenido: 5
+#    Time: 190 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO
+#    Time: 190 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Iteracion 6: Sumar 1
+#    Time: 200 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado esperado: 6
+#    Time: 200 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado obtenido: 6
+#    Time: 220 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO
+#    Time: 220 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Iteracion 7: Sumar 1
+#    Time: 230 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado esperado: 7
+#    Time: 230 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado obtenido: 7
+#    Time: 250 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO
+#    Time: 250 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Iteracion 8: Sumar 1
+#    Time: 260 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado esperado: 8
+#    Time: 260 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado obtenido: 8
+#    Time: 280 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO
+#    Time: 280 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Iteracion 9: Sumar 1
+#    Time: 290 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado esperado: 9
+#    Time: 290 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado obtenido: 9
+#    Time: 310 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO
+#    Time: 310 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Iteracion 10: Sumar 1
+#    Time: 320 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado esperado: 10
+#    Time: 320 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:   Acumulado obtenido: 10
+#    Time: 340 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note:    CORRECTO
+#    Time: 340 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: ========================================
+#    Time: 350 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Paso 4: Verificar resultado final
+#    Time: 350 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: ========================================
+#    Time: 350 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Resultado final obtenido: 10
+#    Time: 360 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: Resultado final esperado: 10 (suma de 1+1+...+1, 10 veces)
+#    Time: 360 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: ========================================
+#    Time: 360 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: ¡PRUEBA EXITOSA!
+#    Time: 360 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: El datapath suma correctamente.
+#    Time: 360 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: ========================================
+#    Time: 360 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: ========================================
+#    Time: 380 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: FIN DE LA SIMULACION
+#    Time: 380 ns  Iteration: 0  Instance: /datapath_tb
+# ** Note: ========================================
+#    Time: 380 ns  Iteration: 0  Instance: /datapath_tb
 # Break key hit
-# Break in Process line__19 at C:/Users/franc/Documents/quartus/reg/reg.vhd line 19
-# End time: 22:30:57 on Jan 29,2026, Elapsed time: 0:03:37
+# Simulation stop requested.
+# End time: 08:47:15 on Jan 30,2026, Elapsed time: 0:01:50
 # Errors: 0, Warnings: 0

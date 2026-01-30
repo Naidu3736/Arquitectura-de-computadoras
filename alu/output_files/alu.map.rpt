@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Wed Jan 28 04:46:08 2026
+Fri Jan 30 07:43:03 2026
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jan 28 04:46:08 2026       ;
+; Analysis & Synthesis Status     ; Successful - Fri Jan 30 07:43:03 2026       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; alu                                         ;
 ; Top-level Entity Name           ; alu                                         ;
@@ -367,7 +367,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -377,7 +377,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Jan 28 04:46:00 2026
+    Info: Processing started: Fri Jan 30 07:42:49 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -415,8 +415,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: alu-structural File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 13
     Info (12023): Found entity 1: alu File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file alu_tb.vhd
-    Info (12022): Found design unit 1: alu_tb-testbench File: C:/Users/franc/Documents/quartus/alu/alu_tb.vhd Line: 9
-    Info (12023): Found entity 1: alu_tb File: C:/Users/franc/Documents/quartus/alu/alu_tb.vhd Line: 6
+    Info (12022): Found design unit 1: alu_tb-testbench File: C:/Users/franc/Documents/quartus/alu/alu_tb.vhd Line: 8
+    Info (12023): Found entity 1: alu_tb File: C:/Users/franc/Documents/quartus/alu/alu_tb.vhd Line: 5
 Info (12127): Elaborating entity "alu" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at alu.vhd(89): object "c_add" assigned a value but never read File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 89
 Warning (10036): Verilog HDL or VHDL warning at alu.vhd(90): object "c_sub" assigned a value but never read File: C:/Users/franc/Documents/quartus/alu/alu.vhd Line: 90
@@ -440,9 +440,9 @@ Info (21057): Implemented 33 device resources after synthesis - the final resour
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 18 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4857 megabytes
-    Info: Processing ended: Wed Jan 28 04:46:08 2026
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4859 megabytes
+    Info: Processing ended: Fri Jan 30 07:43:03 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
 
 

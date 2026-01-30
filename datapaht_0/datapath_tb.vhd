@@ -51,24 +51,60 @@ begin
     end process;
     
     stim_proc: process
+        variable expected_sum : integer := 0;
+        variable current_output : integer;
     begin
-        -- Inicializar
+        report "========================================";
+        report "INICIANDO PRUEBA DEL DATAPATH";
+        report "========================================";
+        report "Objetivo: Sumar numeros del 1 al 10";
+        report "========================================";
+        
+        -- Inicializar señales
+        input <= "0000";
+        ie <= '0';
+        alu_ctrl <= "000";
+        load <= '0';
+        clear <= '0';
+        oe <= '0';
+        
+        wait for CLK_PERIOD;
         
         -- 1. CLEAR registro (acumulador = 0)
+        report "Paso 1: CLEAR del registro (acumulador = 0)";
         clear <= '1';
         wait for CLK_PERIOD;
         clear <= '0';
         wait for CLK_PERIOD;
         
         -- Mostrar 0
+        report "Paso 2: Mostrar valor inicial (deberia ser 0)";
         oe <= '1';
         wait for CLK_PERIOD;
+        current_output := to_integer(unsigned(output));
+        report "  Valor mostrado: " & integer'image(current_output);
+        
+        if current_output = 0 then
+            report "   CORRECTO: Acumulador inicializado a 0";
+        else
+            report "   ERROR: Esperado 0, obtenido " & integer'image(current_output) severity error;
+        end if;
+        
         oe <= '0';
         wait for CLK_PERIOD;
         
-        -- Sumar números 1 hasta  10
-        for i in 1 to 16 loop
-            -- Configurar número a sumar
+        report "========================================";
+        report "Paso 3: Iniciar suma de numeros del 1 al 10";
+        report "========================================";
+        
+        -- Sumar números del 1 al 10
+        for i in 1 to 10 loop
+            expected_sum := expected_sum + 1;
+            
+            report "Iteracion " & integer'image(i) & ": Sumar 1";
+            report "  Acumulado esperado: " & integer'image(expected_sum);
+            
+            -- Configurar número a sumar (1)
             input <= "0001";
             ie <= '1';          -- Usar input
             alu_ctrl <= "001";  -- SUMA (a + b)
@@ -79,13 +115,52 @@ begin
             load <= '0';
             oe <= '1';
             wait for CLK_PERIOD;
-
+            
+            current_output := to_integer(unsigned(output));
+            report "  Acumulado obtenido: " & integer'image(current_output);
+            
+            -- Verificar
+            if current_output = expected_sum then
+                report "   CORRECTO";
+            else
+                report "   ERROR: Esperado " & integer'image(expected_sum) & 
+                       ", obtenido " & integer'image(current_output) severity error;
+            end if;
+            
             oe <= '0';
             wait for CLK_PERIOD;
         end loop;
         
+        report "========================================";
+        report "Paso 4: Verificar resultado final";
+        report "========================================";
+        
+        -- Mostrar resultado final por más tiempo
         oe <= '1';
+        wait for CLK_PERIOD;
+        
+        current_output := to_integer(unsigned(output));
+        report "Resultado final obtenido: " & integer'image(current_output);
+        report "Resultado final esperado: 10 (suma de 1+1+...+1, 10 veces)";
+        
+        if current_output = 10 then
+            report "========================================";
+            report "¡PRUEBA EXITOSA!";
+            report "El datapath suma correctamente.";
+            report "========================================";
+        else
+            report "========================================";
+            report "¡PRUEBA FALLIDA!";
+            report "Error en la suma acumulativa.";
+            report "========================================" severity error;
+        end if;
+        
         wait for 2*CLK_PERIOD;
+        
+        report "========================================";
+        report "FIN DE LA SIMULACION";
+        report "========================================";
+        
         wait;
     end process;
     
